@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario</title>
+    <title>Acceso</title>
+    <link rel="stylesheet" href="/Cuestionario01/cues01.css">
 </head>
 <body>
     
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt itaque deleniti maxime ratione nihil corrupti.
+    <div class="contenedor">
+        <div class="izquierda">
+            <img class="logo" src="/media/04LogoLSTransSlogan.png" alt="LiberSalus">
+            <div class="slogan">
+                <img class="estetoscopio" src="/media/estetoscopio.png" alt="">
+                <p class="slogan-txt">CUESTIONARIO MÉDICO <br> INTEGRAL <br> PARA TU BIENESTAR</p>
+            </div>
+
+            <div class="pie">
+                <p>LIBER SALUS MÉXICO 2025</p>
+                <p>Consulta nuestro aviso de privacidad en <a href="#">www.libersalusmexico.com/avisodeprivacidad</a></p>
+                <p>Para mayor información confirma términos y condiciones de uso en los links señalados o comunicate a la linea LiberSalus 01 800 54237 12587</p>
+            </div>
+        </div>
+        <div class="derecha">
+            <P class="tit">HISTRIAL CÍNICO DIGITAL</P>
+            <div class="campo">
+                <p>NOMBRE</p>
+                <input type="text" required spellcheck="false">
+                <label for="">Ingresa tu nombre</label>
+            </div>
+
+            <div class="campo">
+                <p>CORREO</p>
+                <input type="mail" required spellcheck="false">
+                <label for="">Ingresa tu correo</label>
+            </div>
+
+            <div class="campo">
+                <p>CURP</p>
+                <input type="text" required spellcheck="false">
+                <label for="">Ingresa tu CURP</label>
+            </div>
+
+            <div class="consentimiento">
+                <p>CONSENTIMIENTO</p>
+                <div class="avisos">
+                    <div class="check">
+                        <input type="checkbox" id="terminos" required>
+                        <label for="terminos"><a href="#">Términos y condiciones</a> de uso</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="terminos" required>
+                        <label for="terminos"><a href="#">Política de privacidad y uso de datos particulares</a> </label>
+                    </div>
+                     
+                </div>
+
+            </div>
+
+            <button type="submit">ACCESO </button>
+
+
+        </div>
+    </div>
+
+    
 
 </body>
 </html>
