@@ -1,0 +1,75 @@
+@import url("/Cuestionario01/cues01.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "poppins";
+    
+}
+
+.header{
+    /* border: 2px dotted darkgoldenrod; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
+    .logo-header{
+        display: block;
+        width: 200px;
+    }
+
+    .encabezado{
+        width: 70%;
+        border-bottom: 2px solid #0081B6;
+        text-align: end;
+
+        p{
+            font-size: clamp(1rem, 0.875rem + 0.5556vw, 3.55rem);
+            line-height: 1.7;
+        }
+    }
+
+}
+
+.main-cnt{
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 1.4;
+
+    .weigth{
+        font-weight: 800;
+    }
+    
+    .link{
+        color: #0081B6;
+    }
+}
+
+
+.foot-cues{
+    display: flex;
+    justify-content: end;
+    /* border: 2px dotted darkgoldenrod; */
+    width: 95%;
+    margin: 20px auto;
+    font-size: 12px;
+    border-right: 3px solid #0081B6;
+    padding: 15px;
+    padding-bottom: 5px;
+    line-height: 1.2;
+    text-align: end;
+    p{
+        color: #b4aeae;
+    }
+    a{
+        color: #0081B6;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
