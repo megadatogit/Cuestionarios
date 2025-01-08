@@ -1,0 +1,45 @@
+@import url("./cues01.css");
+@import url("./bienvenida.css");
+
+body{
+    position: relative;
+    height: 100vh;
+}
+.foot-cues{
+    position: absolute;
+    bottom: 0;
+}
+
+.tit-instr{
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 200px;
+    line-height: 1.4;
+}
+
+.cnt-instrucciones{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.explicacion, .ejemplo{
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.tipo1, .tipo2, .tipo3, .tipo4, .ejemplo{
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+}
