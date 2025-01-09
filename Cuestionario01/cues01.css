@@ -84,14 +84,17 @@
         padding: 10px;
         border: none;
         border-bottom: 1px solid;
-        
+        border-left: 1px solid;
+        border-color: #0081B6;
         border-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 0px;
         border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
         padding: 0 5px;
         margin-bottom: 20px;
         outline: none;
-        font-size: 16px;
+        font-size: 20px;
+        color: #064d69;
 
     }
 
@@ -107,7 +110,7 @@
     
     input:focus + label,
     input:valid + label{
-        font-size: 14px;
+        font-size: 16px;
         color: #59686b;
         top: 5px;
         left: 15px;

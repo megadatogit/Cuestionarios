@@ -1,0 +1,45 @@
+@import url("./cues01.css");
+@import url("./bienvenida.css");
+@import url("./instrucciones.css");
+
+.color{
+    color: #0081B6;
+}
+ul li{
+    margin-left: 50px;
+    list-style: none;
+}
+
+.main-cnt{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-img{
+    /* border: 2px dotted darkgoldenrod; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    img{
+        width: 150px;
+    }
+}
+
+.cnt-btn{
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+    .main-cnt{
+        flex-direction: column;
+    }
+    .main-img{
+        margin-top: 70px;
+        width: 100%;
+        flex-direction: row;
+    }
+}

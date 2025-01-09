@@ -31,18 +31,22 @@
     <div class="tipo1">
 
       <div class="explicacion">
-        <div class="cir"><p id="num"><strong>1</strong></p></div>
+        <div class="cir">
+          <p id="num"><strong>1</strong></p>
+        </div>
         <p><strong>Campos de Texto</strong><br>En estos espacios, escribe la información <br> solicitada con claridad y
           precisión.
         </p>
       </div>
 
       <div class="ejemplo">
-        <p class="pregunta"><strong>17. Describe alguno de los procesos <br> a los que te has sometido bajo anestecia.</p>
-          <div class="campo">
-            
-            <input type="text" required spellcheck="false">
-            <label for=""></label>
+        <p class="ej">Ejemplo</p><br>
+        <p class="pregunta"><strong>17. Describe alguno de los procesos <br> a los que te has sometido bajo anestecia.
+        </p>
+        <div class="campo">
+
+          <input type="text" required spellcheck="false" placeholder="max 40 palabras">
+          <label for=""></label>
         </div>
         </strong></p>
       </div>
@@ -53,45 +57,63 @@
     <div class="tipo2">
 
       <div class="explicacion">
-        <div class="cir"><p id="num"><strong>2</strong></p></div>
+        <div class="cir">
+          <p id="num"><strong>2</strong></p>
+        </div>
         <p><strong>Opciones múltiples</strong> (casillas de verificación)<br>Algunas preguntas te permitirán seleccionar
           más <br> de una opción.
         </p>
       </div>
 
       <div class="ejemplo">
+        <p class="ej">Ejemplo</p><br>
         <p><strong>17. Selecciona la cantidad de veces que tomas siesta al día.
-        </strong></p>
+          </strong></p>
         <div class="check">
           <input class="checkbox" type="checkbox" id="terminos" required>
           <label for="terminos">Nunca</label>
-      </div>
+        </div>
         <div class="check">
           <input class="checkbox" type="checkbox" id="terminos" required>
           <label for="terminos">solo en ocasiones</label>
-      </div>
+        </div>
         <div class="check">
           <input class="checkbox" type="checkbox" id="terminos" required>
           <label for="terminos">1 vez al dia</label>
-      </div>
+        </div>
         <div class="check">
           <input class="checkbox" type="checkbox" id="terminos" required>
           <label for="terminos">mas de 3 veces</label>
-      </div>
+        </div>
       </div>
     </div>
 
 
     <div class="tipo3">
       <div class="explicacion">
-        <p><strong>Menú despegables</strong> (combos de seleecion)<br>En ciertas preguntas, deberás elegir una sola opción
+        <div class="cir">
+          <p id="num"><strong>3</strong></p>
+        </div>
+        <p><strong>Menú despegables</strong> (combos de seleecion)<br>En ciertas preguntas, deberás elegir una sola
+          opción
           de una lista.
         </p>
       </div>
 
       <div class="ejemplo">
+        <p class="ej">Ejemplo</p><br>
         <p><strong>17. Selecciona la opción según sea el caso
-        </strong></p>
+          </strong></p>
+
+        <div class="combo">
+          <select name="combo" id="combo">
+            <option value="opcion1">Odontología</option>
+            <option value="opcion2">Pediatría</option>
+            <option value="opcion3">Ginecología</option>
+            <option value="opcion4">Psicología</option>
+            
+          </select>
+        </div>
       </div>
     </div>
 
@@ -100,16 +122,41 @@
 
 
       <div class="explicacion">
+        <div class="cir">
+          <p id="num"><strong>4</strong></p>
+        </div>
         <p><strong>Indicador de rango</strong><br>En este tipo de preguntas, podrás deslizar el indicador de frecuencia
           que deifna tu respuesta
         </p>
       </div>
 
       <div class="ejemplo">
-        <p><strong>17. Desliza el indicador gradual para registrar la cantidad de agua que consumes al día 
-        </strong></p>
+        <p class="ej">Ejemplo</p><br>
+        <p><strong>17. Desliza el indicador gradual para registrar la cantidad de agua que consumes al día
+          </strong></p>
+
+        <div class="indicador">
+          <span id="rangeValue">0 lts</span> <br>
+          <input class="slider" type="range" min="0" max="5" onChange="rangeSlider(this.value)" onmouseover="rangeSlider(this.value)" value="0" list="tickmarks">
+          <datalist id="tickmarks">
+            <option value="0" label="0%">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" label="100%">5</option>
+          </datalist>
+          <script type="text/javascript">
+            function rangeSlider(value) {
+              document.getElementById('rangeValue').innerHTML = value + ' lts.';
+            }
+          </script>
+        </div>
       </div>
     </div>
+    <div class="cnt-btn">
+      <button id="bienvenida"><a href="/Cuestionario01/tutores.html">SIGUIENTE</a></button>
+  </div>
 
   </div>
 
