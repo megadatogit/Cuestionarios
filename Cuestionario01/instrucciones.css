@@ -11,14 +11,15 @@ body{
 }
 
 .tit-instr{
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
-    margin-left: 200px;
+    margin-left: 20%;
     line-height: 1.4;
 }
 
 .cnt-instrucciones{
-    width: 90%;
+    /* border: 2px dotted darkgoldenrod; */
+    width: 80%;
     margin: 0 auto;
     margin-top: 50px;
     font-size: 16px;
@@ -29,17 +30,44 @@ body{
     gap: 70px;
 }
 
-.explicacion, .ejemplo{
+.explicacion{
+    /* border: 2px dotted darkgoldenrod; */
     margin: 0 auto;
     width: 100%;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.4;
+    display: flex;
+    align-items: center;
+    
+    .cir{
+        width: 70px;
+        height: 70px;
+        
+        border: 2px solid #0081B6;
+        border-radius: 50%;
+        margin-right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #num{
+            color: white;
+            font-size: 30px;
+        }
+        
+    }
 }
 
-.tipo1, .tipo2, .tipo3, .tipo4, .ejemplo{
+.tipo1, .tipo2, .tipo3, .tipo4{
+    
     margin: 0 auto;
     width: 100%;
-
     display: flex;
+    flex-direction: column;
+    
+}
+
+.ejemplo{
+    margin-left: 10%;
 }

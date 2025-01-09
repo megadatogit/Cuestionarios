@@ -31,29 +31,53 @@
     <div class="tipo1">
 
       <div class="explicacion">
-        <p><strong>Campos de Texto</strong><br>En estos espacios, escribe la información solicitada con claridad y
+        <div class="cir"><p id="num"><strong>1</strong></p></div>
+        <p><strong>Campos de Texto</strong><br>En estos espacios, escribe la información <br> solicitada con claridad y
           precisión.
         </p>
       </div>
 
       <div class="ejemplo">
-        <p><strong>17. Describe alguno de los procesos que te has sometido bajo anestecia.
+        <p class="pregunta"><strong>17. Describe alguno de los procesos <br> a los que te has sometido bajo anestecia.</p>
+          <div class="campo">
+            
+            <input type="text" required spellcheck="false">
+            <label for=""></label>
+        </div>
         </strong></p>
       </div>
+
     </div>
 
 
     <div class="tipo2">
 
       <div class="explicacion">
+        <div class="cir"><p id="num"><strong>2</strong></p></div>
         <p><strong>Opciones múltiples</strong> (casillas de verificación)<br>Algunas preguntas te permitirán seleccionar
-          más de una opción.
+          más <br> de una opción.
         </p>
       </div>
 
       <div class="ejemplo">
         <p><strong>17. Selecciona la cantidad de veces que tomas siesta al día.
         </strong></p>
+        <div class="check">
+          <input class="checkbox" type="checkbox" id="terminos" required>
+          <label for="terminos">Nunca</label>
+      </div>
+        <div class="check">
+          <input class="checkbox" type="checkbox" id="terminos" required>
+          <label for="terminos">solo en ocasiones</label>
+      </div>
+        <div class="check">
+          <input class="checkbox" type="checkbox" id="terminos" required>
+          <label for="terminos">1 vez al dia</label>
+      </div>
+        <div class="check">
+          <input class="checkbox" type="checkbox" id="terminos" required>
+          <label for="terminos">mas de 3 veces</label>
+      </div>
       </div>
     </div>
 
