@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family:  "poppins";
     color: #59686b;
+    transition:  0.5s ease-in-out;
 }
 
 .contenedor{
@@ -13,16 +14,17 @@
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    
 }
 
 
 
 .logo{
     display: block;
-    width: 300px;
+    width: 50%;
     margin: 0px auto;
-    margin-left: 10%;
+    
 
     
 }
@@ -55,6 +57,7 @@
 
 .izquierda{
     /* border: 2px dotted darkgoldenrod; */
+    margin-top: 70px;
 }
 
 

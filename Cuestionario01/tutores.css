@@ -2,6 +2,10 @@
 @import url("./bienvenida.css");
 @import url("./instrucciones.css");
 
+*{
+    
+}
+
 .color{
     color: #0081B6;
 }
@@ -22,6 +26,7 @@ ul li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     img{
         width: 150px;
@@ -36,10 +41,13 @@ ul li{
 @media (max-width: 960px) {
     .main-cnt{
         flex-direction: column;
+        
     }
     .main-img{
         margin-top: 70px;
         width: 100%;
         flex-direction: row;
+        transition: flex-direction 0.5s ease-in-out;
+        
     }
 }
