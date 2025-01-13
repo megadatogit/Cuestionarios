@@ -1,0 +1,76 @@
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+
+@font-face{
+    font-family: "zrnic rg";
+    src: url("../media/zrnic\ rg.otf")
+}
+
+*{
+    transition: 0.5s ease-in-out;
+}
+
+main{
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px dotted darkorange;
+}
+.cnt-engranes{
+    border: 2px dotted darkorange;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    
+}
+
+.engrane{
+    position: absolute;
+}
+.e-chico{
+    width: 100px;
+    animation: chico 25s linear infinite;
+    top: -95px;
+    left: 80px;
+}
+.e-grande{
+    top: 0px;
+    width: 200px;
+    animation: grande 25s linear infinite;
+}
+.cnt-txt{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.liber{
+    font-family: "zrnic rg";
+}
+@keyframes chico {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes grande {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+
+}
+
+
+@media (max-width: 960px){
+    main{
+        flex-direction: column;
+        
+    }
+    .cnt-txt{
+        margin-top: 300px;
+        margin:  auto;
+        text-align: center;
+    }
+}
