@@ -12,16 +12,16 @@
 
 main{
     width: 70%;
-    height: 80vh;
-    margin: 0 auto;
+    height: 50vh;
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border: 2px dotted darkorange;
+    /* border: 2px dotted darkorange; */
 }
 .cnt-engranes{
-    border: 2px dotted darkorange;
+    /* border: 2px dotted darkorange; */
     width: 50%;
     height: 100%;
     display: flex;
@@ -35,11 +35,13 @@ main{
 .e-chico{
     width: 100px;
     animation: chico 25s linear infinite;
-    top: -95px;
-    left: 80px;
+    top: 20%;
+    left: 28%;
 }
 .e-grande{
-    top: 0px;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
     width: 200px;
     animation: grande 25s linear infinite;
 }
@@ -66,11 +68,11 @@ main{
 @media (max-width: 960px){
     main{
         flex-direction: column;
-        
+        height: 70vh;
     }
     .cnt-txt{
-        margin-top: 300px;
-        margin:  auto;
+        margin-top: 50px;
+        
         text-align: center;
     }
 }

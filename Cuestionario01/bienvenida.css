@@ -38,10 +38,7 @@
         font-weight: 800;
     }
     
-    .link{
-        color: #0081B6;
     }
-}
 
 .txt-ini{
     text-align: end;
@@ -71,11 +68,6 @@
     p{
         color: #b4aeae;
     }
-    a{
-        color: #0081B6;
-    }
-    a:hover{
-        text-decoration: underline;
-    }
+    
 }
 
