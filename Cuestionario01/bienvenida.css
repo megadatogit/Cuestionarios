@@ -33,12 +33,12 @@
     margin-top: 50px;
     font-size: 16px;
     line-height: 1.4;
-
+    position: relative;
     .weigth{
         font-weight: 800;
     }
     
-    }
+}
 
 .txt-ini{
     text-align: end;
@@ -70,4 +70,10 @@
     }
     
 }
+
+ul{
+    margin-left: px;
+}
+
+
 
