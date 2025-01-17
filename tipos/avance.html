@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario</title>
+  <link rel="stylesheet" href="/tipos/avance.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>AVANCE DEL CUESTIONARIO</h2>
+    <p id="progress-text">0 de 30</p>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <form id="questionnaire">
+      <!-- Preguntas -->
+      <div class="question">
+        <label>Pregunta 1:</label>
+        <input type="text">
+      </div>
+      <div class="question">
+        <label>Pregunta 2:</label>
+        <input type="checkbox"> Opción 1
+        <input type="checkbox"> Opción 2
+      </div>
+      <div class="question">
+        <label>Pregunta 3:</label>
+        <input type="range" min="0" max="100">
+      </div>
+      <!-- Repite las preguntas necesarias -->
+    </form>
+  </div>
+
+  <script src="/tipos/avance.js"></script>
+</body>
+</html>
