@@ -1,84 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acceso</title>
-    <link rel="stylesheet" href="/Cuestionario01/acceso.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="/Cuestionario01/acceso.css" />
+  </head>
+  <body>
     <div class="contenedor">
-        <div class="izquierda">
-            <img class="logo" src="/media/04LogoLSTransSlogan.png" alt="LiberSalus">
-            <div class="slogan">
-                <P class="tit-media">HISTORIAL <br> CLÍNICO <br> DIGITAL</P>
-                <p class="slogan-txt">CUESTIONARIO MÉDICO <br> INTEGRAL <br> PARA TU BIENESTAR</p>
-                <br>
-                <p class="slogan-txt-ext">Estamos comprometidos con su salud y bienestar. A continuación, le solicitaremos que complete una serie de cuestionarios diseñados para evaluar su estado de salud actual. Esto nos permitirá ofrecerle una atención más personalizada y adecuada a sus necesidades.</p>
-
-            </div>
-
-            
+      <div class="izquierda">
+        <img
+          class="logo"
+          src="/media/04LogoLSTransSlogan.png"
+          alt="LiberSalus"
+        />
+        <div class="slogan">
+          <p class="tit-media">HISTORIAL CLÍNICO DIGITAL</p>
+          <p class="slogan-txt">
+            CUESTIONARIO MÉDICO <br />
+            INTEGRAL <br />
+            PARA TU BIENESTAR
+          </p>
+          <br />
+          <p class="slogan-txt-ext">
+            Estamos comprometidos con su salud y bienestar. A continuación, le
+            solicitaremos que complete una serie de cuestionarios diseñados para
+            evaluar su estado de salud actual. Esto nos permitirá ofrecerle una
+            atención más personalizada y adecuada a sus necesidades.
+          </p>
         </div>
-        <div class="derecha">
-            <P class="tit">HISTORIAL CLÍNICO DIGITAL</P>
-            <div class="campo">
-                <p>NOMBRE</p>
-                <input type="text" required spellcheck="false">
-                <label for="">Ingresa tu nombre </label>
-            </div>
-
-            <div class="campo">
-                <p>CORREO</p>
-                <input type="mail" required spellcheck="false">
-                <label for="">Ingresa tu correo </label>
-            </div>
-
-            <div class="campo">
-                <p>CURP</p>
-                <input type="text" required spellcheck="false">
-                <label for="">Ingresa tu CURP </label>
-            </div>
-
-            <details>
-                <summary></summary>
-            </details>
-
-            <div class="consentimiento">
-                <p>CONSENTIMIENTO</p>
-                <div class="avisos">
-                    <div class="check">
-                        <input class="checkbox" type="checkbox" id="terminos" required>
-                        <label for="terminos"><a class="terminos" href="./terminos.html">Consentimiento informado</a></label>
-                    </div>
-                    <div class="check">
-                        <input class="checkbox" type="checkbox" id="terminos" required>
-                        <label for="terminos"><a class="terminos" href="./terminos.html">Términos y condiciones</a></label>
-                    </div>
-                    <div class="check">
-                        <input class="checkbox" type="checkbox" id="terminos" required>
-                        <label for="terminos"><a class="terminos" href="./terminos.html">Aviso de privacidad</a> </label>
-                    </div>
-                     
-                </div>
-
-            </div>
-
-            <button type="submit"><a class="boton" href="/Cuestionario01/bienvenida.html">ACCESO</a> </button>
-
-
+      </div>
+      <div class="derecha">
+        <p class="tit">
+          Confirma el roll que tomas al participar en estos cuestionarios
+        </p>
+        <div class="perfil">
+          <div class="perfil-titular">
+            <img src="/media/titular.png " alt="" />
+            <label class="lab" for="titular">TITULAR</label>
+            <input class="checkbox" type="checkbox" id="titular" />
+          </div>
+          <div class="perfil-asistente">
+            <img src="/media/asistente.png " alt="" />
+            <label class="lab" for="titular">TUTOR O ASISTENTE</label>
+            <input class="checkbox" type="checkbox" id="asistente" />
+          </div>
         </div>
+
+        <div class="regTit" id="regTit">
+          <p class="tit">Ingresa datos<span class="indice">(titular)</span></p>
+          <div class="campo">
+            <p>NOMBRE</p>
+            <input type="text" required spellcheck="false" />
+            <label for="">Ingresa tu nombre </label>
+          </div>
+
+          <div class="campo">
+            <p>CORREO</p>
+            <input type="mail" required spellcheck="false" />
+            <label for="">Ingresa tu correo </label>
+          </div>
+
+          <div class="campo">
+            <p>CURP</p>
+            <input type="text" required spellcheck="false" />
+            <label for="">Ingresa tu CURP </label>
+          </div>
+        </div>
+
+        <div class="regAsis" id="regAsis">
+          <p class="tit">Ingresa tus datos <span class="indice">(asistente)</span></p>
+          <div class="campo">
+            <p>NOMBRE</p>
+            <input type="text" required spellcheck="false" />
+            <label for="">Ingresa tu nombre </label>
+          </div>
+
+          <div class="campo">
+            <p>CORREO</p>
+            <input type="mail" required spellcheck="false" />
+            <label for="">Ingresa tu correo </label>
+          </div>
+
+          <div class="campo">
+            <p>CURP</p>
+            <input type="text" required spellcheck="false" />
+            <label for="">Ingresa tu CURP </label>
+          </div>
+        </div>
+
+        <div class="consentimiento">
+          <p>CONSENTIMIENTO</p>
+          <div class="avisos">
+            <div class="check">
+              <input class="checkbox" type="checkbox" id="terminos" required />
+              <label for="terminos"
+                ><a class="terminos" href="./terminos.html"
+                  >Consentimiento informado</a
+                ></label
+              >
+            </div>
+            <div class="check">
+              <input class="checkbox" type="checkbox" id="terminos" required />
+              <label for="terminos"
+                ><a class="terminos" href="./terminos.html"
+                  >Términos y condiciones</a
+                ></label
+              >
+            </div>
+            <div class="check">
+              <input class="checkbox" type="checkbox" id="terminos" required />
+              <label for="terminos"
+                ><a class="terminos" href="./terminos.html"
+                  >Aviso de privacidad</a
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">
+          <a class="boton" href="/Cuestionario01/bienvenida.html">ACCESO</a>
+        </button>
+      </div>
     </div>
     <div class="foot">
-        <div class="pie">
-            <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
-            <p>Consulta nuestro aviso de privacidad, terminos y condiciones en <a class="terminos" href="/Cuestionario01/legales.html" target="_blank">www.libersalusmexico.com/legales</a></p>
-            <p>Para mayor información comunicate a la linea LiberSalus 01 800 54237 72587 de Lunes a Viernes de 10:00 a 16:00 Hrs</p>
-        </div>
+      <div class="pie">
+        <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
+        <p>
+          Consulta nuestro aviso de privacidad, terminos y condiciones en
+          <a
+            class="terminos"
+            href="/Cuestionario01/legales.html"
+            target="_blank"
+            >www.libersalusmexico.com/legales</a
+          >
+        </p>
+        <p>
+          Para mayor información comunicate a la linea LiberSalus 01 800 54237
+          72587 de Lunes a Viernes de 10:00 a 16:00 Hrs
+        </p>
+      </div>
     </div>
 
-    
-
-</body>
+    <script src="/Cuestionario01/acceso.js"></script>
+  </body>
 </html>

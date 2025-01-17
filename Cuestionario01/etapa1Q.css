@@ -1,0 +1,22 @@
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+@import url("./instrucciones.css");
+
+
+.preguntas{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.cnt-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p{
+        font-size: clamp(1rem, 0.5625rem + 1.9444vw, 1.875rem);
+    }
+}

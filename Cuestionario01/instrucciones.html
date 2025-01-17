@@ -113,7 +113,6 @@
             <option value="opcion2">Pediatría</option>
             <option value="opcion3">Ginecología</option>
             <option value="opcion4">Psicología</option>
-            
           </select>
         </div>
       </div>
@@ -136,7 +135,6 @@
         <p class="ej">Ejemplo</p><br>
         <p><strong>17. Desliza el indicador gradual para registrar la cantidad de agua que consumes al día
           </strong></p>
-
         <div class="indicador">
           <span id="rangeValue">0 lts</span> <br>
           <input class="slider" type="range" min="0" max="5" onChange="rangeSlider(this.value)" onmouseover="rangeSlider(this.value)" value="0" list="tickmarks">
@@ -153,6 +151,26 @@
               document.getElementById('rangeValue').innerHTML = value + ' lts.';
             }
           </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo5">
+      <div class="explicacion">
+        <div class="cir">
+          <p id="num"><strong>5</strong></p>
+        </div>
+        <p><strong>Indicador de fecha</strong><br>Algunas preguntas pueden ser respondidas con fechas.
+        </p>
+      </div>
+
+      <div class="ejemplo">
+        <p class="ej">Ejemplo</p><br>
+        <p><strong>17. Selecciona la opción según sea el caso
+          </strong></p>
+
+        <div class="combo">
+          <input type="datetime-local">
         </div>
       </div>
     </div>
