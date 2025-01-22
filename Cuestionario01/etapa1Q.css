@@ -1,6 +1,6 @@
 @import url("./acceso.css");
 @import url("./bienvenida.css");
-@import url("./instrucciones.css");
+
 
 
 .header{
@@ -8,6 +8,7 @@
     top: 0;
     width: 95%;
     background-color: white;
+    z-index: 2;
 }
 .preguntas{
     /* border: 2px dotted darkolivegreen; */
@@ -16,7 +17,7 @@
     gap: 120px;
     margin: 140px 5% 130px 30%;
     width: 65%;
-    height: 300vh;
+    height: auto;
 }
 
 .fixed{
@@ -38,21 +39,28 @@
     z-index: 1;
 }
 
+.perfil, .usuario{
+    font-size: 30px;
+    
+}
 .numero{
     width:100px;
     height:100px;
     border: 2px solid #0081B6;
     border-radius: 50%;
-    margin: 10px auto;
+    margin: 30px auto 10px;
     align-content: center;
     text-align: center;
     font-size: 54px;
     flex: 0 0 auto;
+    
 }
 
 .texto{
+    margin-top:40px ;
     font-size: 20px;
     color: #0081B6;
+    line-height: 1.6;
 }
 
 .cnt-progreso{
@@ -61,7 +69,7 @@
     align-items: center;
     justify-content: start;
     margin-bottom: 20px;
-    width: 90%;
+    width: 60%;
     height: 14px;
     background-color: #eee;
     position: sticky;
@@ -73,6 +81,18 @@
     width: 0;
     
 }
+
+.help{
+    display: block;
+    width:  50px;
+    height: 50px;
+    border: 2px solid #575757;
+    border-radius: 50%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    padding-top: 3px;
+}
 .cnt-item{
     display: flex;
     flex-direction: column;
@@ -81,3 +101,75 @@
         font-size: clamp(1rem, 0.5625rem + 1.9444vw, 1.875rem);
     }
 }
+.tipo{
+    margin: 20px;
+}
+
+.item{
+    /* border: 2px dotted darkolivegreen; */
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.cnt-campo{
+    /* border: 2px dotted darkolivegreen; */
+    width: 40%;
+    
+}
+.campo{
+    position: relative;
+    margin-top: 50px;
+
+
+    p{
+        font-size: clamp(1rem, 0.875rem + 0.5556vw, 1.55rem);
+        margin-bottom: 10px;
+    }
+
+    input, select{
+        width: 90%;
+        height: 60px;
+        border: none;
+        border-bottom: 1px solid;
+        border-bottom-left-radius: 0px;
+        border-color: #0081B6;
+        
+        padding: 0 15px;
+        margin-bottom: 10px;
+        outline: none;
+        font-size: 20px;
+        color: #064d69;
+        text-transform: uppercase;
+
+    }
+
+    label{
+        position: absolute;
+        top: -3px;
+        left: 30px;
+        transform: translateY(-50%);
+        color: #59686b;
+        font-size: 16px;
+        font-weight: 100;
+        transition: all 0.3s ease;
+    }
+    
+    ::placeholder{
+        color: #dae2e6;
+    }
+
+    input:focus + label,
+    input:valid + label{
+        font-size: 16px;
+        color: #59686b;
+        top: 5px;
+        left: 15px;
+        transform: translateX(100%);
+        
+
+    
+
+    }
+}
+

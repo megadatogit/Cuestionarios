@@ -16,9 +16,11 @@
     </div>
   </header>
 
+  <!-- CONTENEDOR FIJO -->
+
   <div class="fixed">
-    <p>TITULAR</p>
-    <p>(USUARIO)</p>
+    <p class="perfil">TITULAR</p>
+    <p class="usuario">(USUARIO)</p>
 
     <div class="etapa">
       <p class="numero">1</p>
@@ -34,27 +36,169 @@
     </div>
 
     <div class="cnt-pregunta">
-      <p>?</p>
+      <p class="help">?</p>
     </div>
-    <p>Da clic en el icono para consultar informacion</p>
+    <p>Da clic en el icono <br> para consultar <br> informacion</p>
 
   </div>
 
+  <!-- CONTENEDOR DE PREGUNTAS -->
+
   <div class="preguntas">
-    
+
+    <p class="pregunta"><strong>1. Recaba la información necesaria para identificar tus datos, conforme a los campos
+        correspondientes
+    </p>
+    <div class="item">
+
+      <div class="tipo"><strong>IDENTIDAD</strong></div>
+
+      <div class="cnt-campo">
+        <div class="campo">
+
+          <label for="">NOMBRES</label>
+          <input type="text" required spellcheck="false" placeholder="NOMBRE">
+
+        </div>
+        <div class="campo">
+
+          <label for="">PRIMER APELLIDO</label>
+          <input type="text" required spellcheck="false" placeholder="PRIMER APELLIDO">
+
+        </div>
+        <div class="campo">
+
+          <label for="">SEGUNDO APELLIDO</label>
+          <input type="text" required spellcheck="false" placeholder="SEGUNDO APELLIDO">
+
+        </div>
+      </div>
+      <div class="cnt-campo">
+        <div class="campo">
+
+          <label for="">LUGAR DE NACIMIENTO</label>
+          <input type="text" required spellcheck="false" placeholder="ENTIDAD FEDERATIVA DE NACIMIENTO">
+
+        </div>
+        <div class="campo">
+
+          <label for="">FEHCA DE NACIMIENTO</label>
+          <input type="date" required spellcheck="false" placeholder="max 40 palabras">
+
+        </div>
+        <div class="campo">
+
+          <label for="">SEXO BIOLOGICO</label>
+          <select name="combo" id="combo">
+            <option value="opcion1">MASCULINO</option>
+            <option value="opcion2">FEMENINO</option>
+            <option value="opcion3">NO SABE</option>
+            <option value="opcion4"></option>
+          </select>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="item">
+
+      <div class="tipo"><strong>DOMICILIO <br> ACTUAL</strong></div>
+
+      <div class="cnt-campo">
+        <div class="campo">
+
+          <label for="">CÓDIGO POSTAL</label>
+          <input type="text" required spellcheck="false" placeholder="CP A 5 DIGITOS">
+
+        </div>
+        <div class="campo">
+
+          <label for="">ENTIDAD FEDERATIVA</label>
+          <input type="text" required spellcheck="false" placeholder="DIGITE ESTADO">
+
+        </div>
+        <div class="campo">
+
+          <label for="">MUNICIPIO ó DEMARCACIÓN TERRITORIAL</label>
+          <input type="text" required spellcheck="false" placeholder="DELEGACIÓN O MUNICIPIO">
+
+        </div>
+      </div>
+
+      <div class="cnt-campo">
+        <div class="campo">
+
+          <label for="">CALLE</label>
+          <input type="text" required spellcheck="false" placeholder="AVENIDA CALLE CERRADA ... ">
+
+        </div>
+        <div class="campo">
+
+          <label for="">COLONIA</label>
+          <input type="TEXT" required spellcheck="false" placeholder="COLONIA">
+          
+        </div>
+        <div class="campo">
+          
+          <label for="">NO. EXTERIOR</label>
+          <input type="TEXT" required spellcheck="false" placeholder="NÚMERO EXTERIOR ">
+          
+          
+        </div>
+        <div class="campo">
+          <label for="">NO. INTERIOR </label>
+          <input type="TEXT" required spellcheck="false" placeholder="NÚMERO INTERIOR ">
+          
+        </div>
+      </div>
+
+
+    </div>
+    <div class="item">
+
+      <div class="tipo"><strong>DATOS <br>CONTACTO</strong></div>
+
+      <div class="cnt-campo">
+        <div class="campo">
+
+          <label for="">TELEFONO 1</label>
+          <input type="tel" required spellcheck="false" placeholder="a 10 dígitos">
+
+        </div>
+        <div class="campo">
+
+          <label for="">TELEFONO 2</label>
+          <input type="tel" required spellcheck="false" placeholder="a 10 dígitos">
+
+        </div>
+        <div class="campo">
+
+          <label for="">CORREO ELECTRONICO</label>
+          <input type="email" required spellcheck="false" placeholder="correo@dominio.ext">
+
+        
+      </div>
+
+      
+
+
+    </div>
+
+
+
   </div>
 
 
   <div class="foot">
     <div class="pie">
       <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
-      <p>Consulta nuestro aviso de privacidad, terminos y condiciones en <a class="terminos"
-          href="/Cuestionario01/legales.html" target="_blank">www.libersalusmexico.com/legales</a></p>
-      <p>Para mayor información comunicate a la linea LiberSalus 01 800 54237 72587 de Lunes a Viernes de 10:00 a 16:00
-        Hrs</p>
+
     </div>
   </div>
 </body>
 
 <script src="/Cuestionario01/etapa1Q.js"></script>
+
 </html>
