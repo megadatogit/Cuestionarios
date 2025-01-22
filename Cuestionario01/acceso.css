@@ -136,7 +136,7 @@
         border: none;
         border-bottom: 1px solid;
         border-left: 1px solid;
-        border-color: #0081B6;
+        border-color: #0082b67c;
         border-radius: 6px;
         border-bottom-left-radius: 6px;
         border-top-left-radius: 0px;
@@ -145,7 +145,7 @@
         margin-bottom: 20px;
         outline: none;
         font-size: 20px;
-        color: #064d69;
+        color: #064d692f;
         text-transform: uppercase;
 
     }
