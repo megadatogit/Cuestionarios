@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Archivo</title>
+</head>
+<body>
+  <h1>Subir Archivo</h1>
+  <form id="uploadForm">
+    <input type="file" id="fileInput" name="file" />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+      event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+      // Obtener el archivo del input
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0]; // Seleccionar el primer archivo
+
+      if (!file) {
+        alert('Por favor selecciona un archivo.');
+        return;
+      }
+
+      // Crear un objeto FormData y agregar el archivo
+      const formData = new FormData();
+      formData.append('file', file);
+
+      try {
+        // Enviar la petición con fetch
+        const response = await fetch('http://104.198.174.83:8000/user/process_ine/', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          console.log('Archivo enviado exitosamente:', result);
+          alert('Archivo enviado exitosamente');
+        } else {
+          console.error('Error al enviar el archivo:', response.statusText);
+          alert('Hubo un error al enviar el archivo.');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+        alert('Hubo un error en la solicitud.');
+      }
+    });
+  </script>
+</body>
+</html>
