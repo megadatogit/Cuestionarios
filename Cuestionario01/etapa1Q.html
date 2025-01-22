@@ -1,116 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario Etapa 1</title>
-    <link rel="stylesheet" href="/Cuestionario01/etapa1Q.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario Etapa 1</title>
+  <link rel="stylesheet" href="/Cuestionario01/etapa1Q.css">
 </head>
+
 <body>
-    <header class="header">
-        <img
-          class="logo-header"
-          src="/media/04LogoLSTransSlogan.png"
-          alt="LiberSalus"
-        />
-        <div class="encabezado"><p>HISTORIAL CLÍNICO DIGITAL</p></div>
-      </header>
-
-      <div class="preguntas">
-
-
-
-
-          <form method="post" action="#">
-
-            <div class="cnt-item">
-                
-                <p class="pregunta">1. Nombre del paciente
-                </p>
-                <div class="campo">
-        
-                  <input id="nombrePaciente" type="text" required spellcheck="false" placeholder="max 40 palabras">
-                  <label for=""></label>
-                </div>
-
-            <div class="cnt-item">
-                <p>2. ¿como se entero de este cuestionario?
-                </p>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="terminos" required>
-                <label for="terminos">Nunca</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="terminos" required>
-                <label for="terminos">Solo en ocasiones</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="terminos" required>
-                <label for="terminos">Una vez al dia</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="terminos" required>
-                <label for="terminos">Más de tres veces</label>
-              </div>
-            </div>
-    
-            <div class="cnt-item">
-                <label for="sexo">3. sexo</label><br>
-    
-            <div class="combo" id="sexo">
-                <select name="combo" id="combo">
-                  <option value="opcion1">masculino</option>
-                  <option value="opcion2">femenino</option>
-                  <option value="opcion3">otro</option>
-                  <option value="opcion4">no se</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="cnt-item">
-                <label for="sexo">4. estado civil</label><br>
-    
-            <div class="combo" id="sexo">
-                <select name="combo" id="combo">
-                  <option value="opcion1">soltero</option>
-                  <option value="opcion2">casado</option>
-                  <option value="opcion3">divorciado</option>
-                  <option value="opcion4">otro</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="cnt-item">
-                <label for="sexo">5. escolaridad</label><br>
-    
-            <div class="combo" id="sexo">
-                <select name="combo" id="combo">
-                  <option value="opcion1">primaria</option>
-                  <option value="opcion2">secundaria</option>
-                  <option value="opcion3">preparatoria</option>
-                  <option value="opcion4">licenciatura</option>
-                  <option value="opcion5">maestria</option>
-                  <option value="opcion6">doctorado</option>
-                  <option value="opcion7">otro</option>
-                </select>
-              </div>
-            </div>
-
-
-    
-    
-          </form>
-
-          <button type="submit">enviar</button>
-      </div>
-
-
-      <div class="foot">
-        <div class="pie">
-            <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
-            <p>Consulta nuestro aviso de privacidad, terminos y condiciones en <a class="terminos" href="/Cuestionario01/legales.html" target="_blank">www.libersalusmexico.com/legales</a></p>
-            <p>Para mayor información comunicate a la linea LiberSalus 01 800 54237 72587 de Lunes a Viernes de 10:00 a 16:00 Hrs</p>
-        </div>
+  <header class="header">
+    <img class="logo-header" src="/media/04LogoLSTransSlogan.png" alt="LiberSalus" />
+    <div class="encabezado">
+      <p>HISTORIAL CLÍNICO DIGITAL</p>
     </div>
+  </header>
+
+  <div class="fixed">
+    <p>TITULAR</p>
+    <p>(USUARIO)</p>
+
+    <div class="etapa">
+      <p class="numero">1</p>
+      <p class="texto">Primera etapa
+        <br>
+        Datos personales
+      </p>
+    </div>
+
+
+    <div class="cnt-progreso">
+      <div id="progreso"></div>
+    </div>
+
+    <div class="cnt-pregunta">
+      <p>?</p>
+    </div>
+    <p>Da clic en el icono para consultar informacion</p>
+
+  </div>
+
+  <div class="preguntas">
+    
+  </div>
+
+
+  <div class="foot">
+    <div class="pie">
+      <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
+      <p>Consulta nuestro aviso de privacidad, terminos y condiciones en <a class="terminos"
+          href="/Cuestionario01/legales.html" target="_blank">www.libersalusmexico.com/legales</a></p>
+      <p>Para mayor información comunicate a la linea LiberSalus 01 800 54237 72587 de Lunes a Viernes de 10:00 a 16:00
+        Hrs</p>
+    </div>
+  </div>
 </body>
+
+<script src="/Cuestionario01/etapa1Q.js"></script>
 </html>

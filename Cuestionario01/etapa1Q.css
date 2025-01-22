@@ -3,15 +3,76 @@
 @import url("./instrucciones.css");
 
 
+.header{
+    position: fixed;
+    top: 0;
+    width: 95%;
+    background-color: white;
+}
 .preguntas{
+    /* border: 2px dotted darkolivegreen; */
     display: flex;
     flex-direction: column;
     gap: 120px;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 80%;
+    margin: 140px 5% 130px 30%;
+    width: 65%;
+    height: 300vh;
 }
 
+.fixed{
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 30%;
+    
+    /* border: 2px dotted darkcyan; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.numero{
+    width:100px;
+    height:100px;
+    border: 2px solid #0081B6;
+    border-radius: 50%;
+    margin: 10px auto;
+    align-content: center;
+    text-align: center;
+    font-size: 54px;
+    flex: 0 0 auto;
+}
+
+.texto{
+    font-size: 20px;
+    color: #0081B6;
+}
+
+.cnt-progreso{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 14px;
+    background-color: #eee;
+    position: sticky;
+}
+
+#progreso{
+    height: 10px;
+    background-color: chartreuse;
+    width: 0;
+    
+}
 .cnt-item{
     display: flex;
     flex-direction: column;
