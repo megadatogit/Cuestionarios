@@ -18,13 +18,17 @@
 
   <!-- CONTENEDOR FIJO -->
   <div class="fixed">
-    <p class="perfil">TITULAR</p>
-    <p class="usuario">(USUARIO)</p>
+
+    <div class="cnt-user">
+
+      <p class="perfil">TITULAR</p>
+      <p class="usuario">(USUARIO)</p>
+    </div>
 
     <div class="etapa">
       <p class="numero">1</p>
       <p class="texto">Primera etapa
-        <br>
+        
         Datos personales
       </p>
     </div>
@@ -35,8 +39,8 @@
 
     <div class="cnt-pregunta">
       <p class="help">?</p>
+      <p>Da clic en el icono <br> para consultar <br> informacion</p>
     </div>
-    <p>Da clic en el icono <br> para consultar <br> informacion</p>
   </div>
 
   <!-- CONTENEDOR DE PREGUNTAS -->
@@ -68,12 +72,16 @@
             <option value="masculino">MASCULINO</option>
             <option value="femenino">FEMENINO</option>
             <option value="no_sabe">NO SABE</option>
-          <label for="">FECHA DE NACIMIENTO</label>
-          <input type="date" required spellcheck="false" placeholder="max 40 palabras">
+          </select>
+        </div>
 
+        
+        <div class="campo">
+          <label for="">FECHA DE NACIMIENTO</label>
+          <input id="fecha_nacimiento" type="date" required spellcheck="false" placeholder="max 40 palabras">                 
         </div>
       </div>
-    </div>
+
 
     <div class="item">
       <div class="tipo"><strong>DOMICILIO ACTUAL</strong></div>
@@ -147,22 +155,22 @@
   <script>
     document.getElementById('enviar').addEventListener('click', function() {
       const data = {
-  nombres: document.getElementById('nombres').value,
-  primerApellido: document.getElementById('primer_apellido').value,
-  segundoApellido: document.getElementById('segundo_apellido').value,
-  lugarNacimiento: document.getElementById('lugar_nacimiento').value,
-  fechaNacimiento: document.getElementById('fecha_nacimiento').value,
-  sexo: document.getElementById('sexo').value,
-  codigoPostal: document.getElementById('codigo_postal').value,
-  entidadFederativa: document.getElementById('entidad_federativa').value,
-  municipio: document.getElementById('municipio').value,
-  calle: document.getElementById('calle').value,
-  colonia: document.getElementById('colonia').value,
-  numeroExterior: document.getElementById('numero_exterior').value,
-  numeroInterior: document.getElementById('numero_interior').value,
-  telefono1: document.getElementById('telefono1').value,
-  telefono2: document.getElementById('telefono2').value,
-  correoElectronico: document.getElementById('correo_electronico').value,
+                     nombres: document.getElementById('nombres').value,
+              primerApellido: document.getElementById('primer_apellido').value,
+             segundoApellido: document.getElementById('segundo_apellido').value,
+             lugarNacimiento: document.getElementById('lugar_nacimiento').value,
+             fechaNacimiento: document.getElementById('fecha_nacimiento').value,
+                        sexo: document.getElementById('sexo').value,
+                codigoPostal: document.getElementById('codigo_postal').value,
+           entidadFederativa: document.getElementById('entidad_federativa').value,
+                   municipio: document.getElementById('municipio').value,
+                       calle: document.getElementById('calle').value,
+                     colonia: document.getElementById('colonia').value,
+              numeroExterior: document.getElementById('numero_exterior').value,
+              numeroInterior: document.getElementById('numero_interior').value,
+                   telefono1: document.getElementById('telefono1').value,
+                   telefono2: document.getElementById('telefono2').value,
+           correoElectronico: document.getElementById('correo_electronico').value,
 };
 
       // Enviar los datos como JSON

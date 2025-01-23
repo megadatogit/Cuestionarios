@@ -76,4 +76,10 @@ ul{
 }
 
 
+@media (max-width: 960px){
 
+    .header .logo-header{
+        width: 100px;
+    }
+
+}
