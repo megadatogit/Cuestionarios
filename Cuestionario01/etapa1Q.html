@@ -5,19 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cuestionario Etapa 1</title>
-  <link rel="stylesheet" href="/Cuestionario01/etapa1Q.css">
+  <link rel="stylesheet" href="../Cuestionario01/etapa1Q.css">
 </head>
 
 <body>
   <header class="header">
-    <img class="logo-header" src="/media/04LogoLSTransSlogan.png" alt="LiberSalus" />
+    <img class="logo-header" src="../media/04LogoLSTransSlogan.png" alt="LiberSalus" />
     <div class="encabezado">
       <p>HISTORIAL CLÍNICO DIGITAL</p>
     </div>
   </header>
 
   <!-- CONTENEDOR FIJO -->
-
   <div class="fixed">
     <p class="perfil">TITULAR</p>
     <p class="usuario">(USUARIO)</p>
@@ -30,7 +29,6 @@
       </p>
     </div>
 
-
     <div class="cnt-progreso">
       <div id="progreso"></div>
     </div>
@@ -39,194 +37,156 @@
       <p class="help">?</p>
     </div>
     <p>Da clic en el icono <br> para consultar <br> informacion</p>
-
   </div>
 
   <!-- CONTENEDOR DE PREGUNTAS -->
-
   <div class="preguntas">
-
-    <p class="pregunta"><strong>1. Recaba la información necesaria para identificar tus datos, conforme a los campos
-        correspondientes
-    </p>
     <div class="item">
-
       <div class="tipo"><strong>IDENTIDAD</strong></div>
-
       <div class="cnt-campo">
         <div class="campo">
-
-          <label for="">NOMBRES</label>
-          <input type="text" required spellcheck="false" placeholder="NOMBRE">
-
+          <label for="nombres">NOMBRES</label>
+          <input type="text" id="nombres" required spellcheck="false" placeholder="NOMBRE">
         </div>
         <div class="campo">
-
-          <label for="">PRIMER APELLIDO</label>
-          <input type="text" required spellcheck="false" placeholder="PRIMER APELLIDO">
-
+          <label for="primer_apellido">PRIMER APELLIDO</label>
+          <input type="text" id="primer_apellido" required spellcheck="false" placeholder="PRIMER APELLIDO">
         </div>
         <div class="campo">
-
-          <label for="">SEGUNDO APELLIDO</label>
-          <input type="text" required spellcheck="false" placeholder="SEGUNDO APELLIDO">
-
+          <label for="segundo_apellido">SEGUNDO APELLIDO</label>
+          <input type="text" id="segundo_apellido" required spellcheck="false" placeholder="SEGUNDO APELLIDO">
         </div>
       </div>
       <div class="cnt-campo">
         <div class="campo">
-
-          <label for="">LUGAR DE NACIMIENTO</label>
-          <input type="text" required spellcheck="false" placeholder="ENTIDAD FEDERATIVA DE NACIMIENTO">
-
+          <label for="lugar_nacimiento">LUGAR DE NACIMIENTO</label>
+          <input type="text" id="lugar_nacimiento" required spellcheck="false" placeholder="ENTIDAD FEDERATIVA DE NACIMIENTO">
         </div>
         <div class="campo">
-
+          <label for="sexo">SEXO BIOLOGICO</label>
+          <select id="sexo">
+            <option value="masculino">MASCULINO</option>
+            <option value="femenino">FEMENINO</option>
+            <option value="no_sabe">NO SABE</option>
           <label for="">FECHA DE NACIMIENTO</label>
           <input type="date" required spellcheck="false" placeholder="max 40 palabras">
 
         </div>
-        <div class="campo">
-
-          <label for="">SEXO BIOLÓGICO</label>
-          <select name="combo" id="combo">
-            <option value="opcion1">MASCULINO</option>
-            <option value="opcion2">FEMENINO</option>
-            <option value="opcion3">NO SABE</option>
-            <option value="opcion4"></option>
-          </select>
-
-        </div>
       </div>
-
-
     </div>
 
     <div class="item">
-
-      <div class="tipo"><strong>DOMICILIO <br> ACTUAL</strong></div>
-
+      <div class="tipo"><strong>DOMICILIO ACTUAL</strong></div>
       <div class="cnt-campo">
         <div class="campo">
-
-          <label for="">CÓDIGO POSTAL</label>
-          <input type="text" required spellcheck="false" placeholder="CP A 5 DIGITOS">
-
+          <label for="codigo_postal">CÓDIGO POSTAL</label>
+          <input type="text" id="codigo_postal" required spellcheck="false" placeholder="CP A 5 DIGITOS">
         </div>
         <div class="campo">
-
-          <label for="">ENTIDAD FEDERATIVA</label>
-          <input type="text" required spellcheck="false" placeholder="DIGITE ESTADO">
-
+          <label for="entidad_federativa">ENTIDAD FEDERATIVA</label>
+          <input type="text" id="entidad_federativa" required spellcheck="false" placeholder="DIGITE ESTADO">
         </div>
         <div class="campo">
-
-          <label for="">MUNICIPIO O DEMARCACIÓN TERRITORIAL</label>
-          <input type="text" required spellcheck="false" placeholder="DELEGACIÓN O MUNICIPIO">
+          <label for="municipio">MUNICIPIO ó DEMARCACIÓN TERRITORIAL</label>
+          <input type="text" id="municipio" required spellcheck="false" placeholder="DELEGACIÓN O MUNICIPIO">
 
         </div>
       </div>
-
       <div class="cnt-campo">
         <div class="campo">
-
-          <label for="">CALLE</label>
-          <input type="text" required spellcheck="false" placeholder="AVENIDA CALLE CERRADA ... ">
-
+          <label for="calle">CALLE</label>
+          <input type="text" id="calle" required spellcheck="false" placeholder="AVENIDA CALLE CERRADA ... ">
         </div>
         <div class="campo">
-
-          <label for="">COLONIA</label>
-          <input type="TEXT" required spellcheck="false" placeholder="COLONIA">
-          
+          <label for="colonia">COLONIA</label>
+          <input type="text" id="colonia" required spellcheck="false" placeholder="COLONIA">
         </div>
         <div class="campo">
-          
-          <label for="">NO. EXTERIOR</label>
-          <input type="TEXT" required spellcheck="false" placeholder="NÚMERO EXTERIOR ">
-          
-          
+          <label for="numero_exterior">NO. EXTERIOR</label>
+          <input type="text" id="numero_exterior" required spellcheck="false" placeholder="NÚMERO EXTERIOR">
         </div>
         <div class="campo">
-          <label for="">NO. INTERIOR </label>
-          <input type="TEXT" required spellcheck="false" placeholder="NÚMERO INTERIOR ">
-          
+          <label for="numero_interior">NO. INTERIOR</label>
+          <input type="text" id="numero_interior" required spellcheck="false" placeholder="NÚMERO INTERIOR">
         </div>
       </div>
-
-
     </div>
     <div class="item">
 
       <div class="tipo"><strong>DATOS <br>COMPLEMENTARIOS</strong></div>
 
+    <div class="item">
+      <div class="tipo"><strong>DATOS DE CONTACTO</strong></div>
       <div class="cnt-campo">
         <div class="campo">
-
-          <label for="">RELIGIÓN</label>
-          <input type="text" required spellcheck="false" placeholder="religión que profesa">
-
+          <label for="telefono1">TELEFONO 1</label>
+          <input type="tel" id="telefono1" required spellcheck="false" placeholder="a 10 dígitos">
         </div>
         <div class="campo">
-
-          <label for="">ESCOLARIDAD</label>
-          <select name="combo" id="combo">
-            <option value="opcion1">SIN ESTUDIOS</option>
-            <option value="opcion2">PRIMARIA</option>
-            <option value="opcion3">SECUNDARIA</option>
-            <option value="opcion4">BACHILLERATO</option>
-            <option value="opcion4">TÉCNICO</option>
-            <option value="opcion4">LICENCIATURA</option>
-            <option value="opcion4">ESPECIALIDAD</option>
-            <option value="opcion4">MAESTRIA</option>
-            <option value="opcion4">DOCTORADO</option>
-          </select>
-
+          <label for="telefono2">TELEFONO 2</label>
+          <input type="tel" id="telefono2" required spellcheck="false" placeholder="a 10 dígitos">
         </div>
         <div class="campo">
-
-          <label for="">ESTADO CIVIL</label>
-          <select name="combo" id="combo">
-            <option value="opcion1">SOLTERO</option>
-            <option value="opcion2">UNION LIBRE</option>
-            <option value="opcion3">CONCUBINATO</option>
-            <option value="opcion3">CASADO</option>
-            <option value="opcion3">DIVORCIADO</option>
-            <option value="opcion3">VIUDO</option>
-            
-          </select>
-
+          <label for="correo_electronico">CORREO ELECTRONICO</label>
+          <input type="email" id="correo_electronico" required spellcheck="false" placeholder="correo@dominio.ext">
         </div>
-
-        
-          <div class="campo">
-  
-            <label for="">OCUPACIÓN</label>
-            <input type="text" required spellcheck="false" placeholder="A QUÉ SE DEDICA">
-  
-          </div>
-          
-            
       </div>
-
-
-
-
     </div>
 
-
-
+    <div class="cnt-btn">
+      <button type="button" id="enviar">ENVIAR</button>
+    </div>
   </div>
-
 
   <div class="foot">
     <div class="pie">
       <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
-
     </div>
   </div>
+
+  <script>
+    document.getElementById('enviar').addEventListener('click', function() {
+      const data = {
+  nombres: document.getElementById('nombres').value,
+  primerApellido: document.getElementById('primer_apellido').value,
+  segundoApellido: document.getElementById('segundo_apellido').value,
+  lugarNacimiento: document.getElementById('lugar_nacimiento').value,
+  fechaNacimiento: document.getElementById('fecha_nacimiento').value,
+  sexo: document.getElementById('sexo').value,
+  codigoPostal: document.getElementById('codigo_postal').value,
+  entidadFederativa: document.getElementById('entidad_federativa').value,
+  municipio: document.getElementById('municipio').value,
+  calle: document.getElementById('calle').value,
+  colonia: document.getElementById('colonia').value,
+  numeroExterior: document.getElementById('numero_exterior').value,
+  numeroInterior: document.getElementById('numero_interior').value,
+  telefono1: document.getElementById('telefono1').value,
+  telefono2: document.getElementById('telefono2').value,
+  correoElectronico: document.getElementById('correo_electronico').value,
+};
+
+      // Enviar los datos como JSON
+      fetch('http://localhost:3000/guardar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
+      }).then(response => {
+        if (response.ok) {
+          alert('Formulario enviado correctamente');
+        } else {
+          alert('Hubo un error al enviar el formulario');
+        }
+      }).catch(error => {
+        alert('Error en la conexión');
+      });
+    });
+  </script>
 </body>
 
-<script src="/Cuestionario01/etapa1Q.js"></script>
+<script src="../Cuestionario01/etapa1Q.js"></script>
 
 </html>
+
+
