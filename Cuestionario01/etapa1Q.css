@@ -150,7 +150,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
         border-bottom: 1px solid;
         border-bottom-left-radius: 0px;
         border-color: #0082b673;
-        
+        background-color: #ffffff;
         padding: 0 15px;
         margin-bottom: 10px;
         outline: none;
