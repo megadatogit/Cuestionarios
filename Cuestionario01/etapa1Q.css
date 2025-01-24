@@ -180,7 +180,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     input:focus + label,
     input:valid + label{
         font-size: 16px;
-        color: #59686b;
+        color: #f0f0f0;
         top: 5px;
         left: 15px;
         transform: translateX(100%);
