@@ -200,7 +200,7 @@ option{
 }
 @media (max-width: 960px){
 
-
+    
     .fixed{
         flex-direction: column;
         width: 90%;
@@ -289,5 +289,11 @@ option{
     ::placeholder{
         color: #dae2e6;
         font-family: 16px;
+    }
+
+    select, option {
+        appearance: none;
+        background-color: #ffffff;
+        
     }
 }
