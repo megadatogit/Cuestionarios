@@ -114,6 +114,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
 }
 .tipo{
     margin: 10px 0 10px 0;
+    color: #064d69;
 }
 
 .item{
@@ -166,7 +167,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
         top: -15px;
         left: 30px;
         transform: translateY(-50%);
-        color: #59686b;
+        color: #242829;
         font-size: 16px;
         font-weight: 100;
         transition: all 0.3s ease;
