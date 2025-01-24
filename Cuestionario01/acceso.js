@@ -34,7 +34,7 @@ let curpTitular = document.getElementById("curpTitular");
 let nombreAsistente = document.getElementById("nombreAsistente");
 let correoAsistente = document.getElementById("correoAsistente");
 let curpAsistente = document.getElementById("curpAsistente");
-
+export {nombreTitular};
 const btnRegistro = document.getElementById("btnRegistro");
 console.log(btnRegistro)
 btnRegistro.addEventListener("click", (event)=>{
