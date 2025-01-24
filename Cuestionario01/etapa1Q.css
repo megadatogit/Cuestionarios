@@ -25,7 +25,8 @@
 .fixed{
     position: fixed;
     top: 140px;
-    
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
     left: 0;
     width: 30%;
     
@@ -162,7 +163,7 @@
 
     label{
         position: absolute;
-        top: -3px;
+        top: -15px;
         left: 30px;
         transform: translateY(-50%);
         color: #59686b;
@@ -194,14 +195,14 @@
 
     .fixed{
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         top: 65px;
         /* border: 2px dotted darkcyan; */
         
         right: 0;
         gap: 0;
         position: fixed;
-        background-color: white;
+        z-index: 1;
     }
 
     .cnt-user {
@@ -242,7 +243,7 @@
         
     }
     .numero{
-        
+        transform: translateY(7px);
         display: block;
         width: auto;
         border: none;
@@ -257,9 +258,9 @@
     .cnt-progreso{
         /* border: 2px dotted darkblue; */
         position: absolute;
-        top: 65px;
-        left: 0;
-        width: 20%;
+        top: 30px;
+        right: -15%;
+        width: 25%;
         
         transform: rotate(-90deg);
         
@@ -271,7 +272,10 @@
     .preguntas{
         margin-top: 210px;
         width: 90%;
-        margin: 0 auto;
+        margin: 240px 5% 100px 5%;
+    }
+    .cnt-campo{
+        margin-left: 2%;
     }
 
     ::placeholder{
