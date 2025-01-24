@@ -195,6 +195,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     text-transform: lowercase;
 }
 
+select{
+    background-color: #ffffff;
+}
 @media (max-width: 960px){
 
 
