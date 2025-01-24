@@ -35,7 +35,12 @@ mongoose.connect('mongodb://104.198.174.83:27017/db_mongo_etapaQ1', {
     numeroInterior: String,
     telefono1: String,
     telefono2: String,
-    correoElectronico: String
+    correoElectronico: String,
+    escolaridad: String,
+    religion: String,
+    estadoCivil: String,
+    ocupacion: String,
+    ingresos: String
   })
 const Usuario = mongoose.model('Usuario', usuarioSchema);
 
