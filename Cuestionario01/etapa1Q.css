@@ -150,7 +150,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
         border-bottom: 1px solid;
         border-bottom-left-radius: 0px;
         border-color: #0082b673;
-        
+        background-color: #ffffff;
         padding: 0 15px;
         margin-bottom: 10px;
         outline: none;
@@ -180,7 +180,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     input:focus + label,
     input:valid + label{
         font-size: 16px;
-        color: #59686b;
+        color: #f0f0f0;
         top: 5px;
         left: 15px;
         transform: translateX(100%);
@@ -195,9 +195,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     text-transform: lowercase;
 }
 
+option{
+    background-color: #ffffff;
+}
 @media (max-width: 960px){
 
-
+    
     .fixed{
         flex-direction: column;
         width: 90%;
@@ -286,5 +289,11 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     ::placeholder{
         color: #dae2e6;
         font-family: 16px;
+    }
+
+    select, option {
+        appearance: none;
+        background-color: #ffffff;
+        
     }
 }
