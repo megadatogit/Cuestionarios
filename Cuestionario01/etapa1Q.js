@@ -1,5 +1,8 @@
 let docElem = document.documentElement;  
-let barrita = document.getElementById("progreso"); 
+let barrita = document.getElementById("progreso");
+
+
+
 
 window.addEventListener("scroll", () => {  
     let winScroll = docElem.scrollTop;  

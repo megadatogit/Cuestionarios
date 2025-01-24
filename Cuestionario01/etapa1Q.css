@@ -191,6 +191,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     }
 }
 
+#correo_electronico{
+    text-transform: lowercase;
+}
+
 @media (max-width: 960px){
 
 
