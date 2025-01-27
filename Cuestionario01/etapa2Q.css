@@ -17,9 +17,10 @@
 }
 
 .respuesta{
-    border: 2px dotted darkblue;
+    /* border: 2px dotted darkblue; */
 
     margin: 30px;
+    margin-top: 10px;
     display: flex;
     gap: 10%;
     flex-direction: column;
