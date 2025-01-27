@@ -1,0 +1,12 @@
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+@import url("./instrucciones.css");
+@import url("./terminos.css");
+@import url("./etapa1.css");
+
+
+
+.etapa:nth-child(2){
+    filter: grayscale(0%) opacity(1);
+    
+}

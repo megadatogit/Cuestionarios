@@ -1,0 +1,28 @@
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+@import url("./etapa1Q.css");
+@import url("./instrucciones.css");
+
+p{
+    line-height: 1.6;
+    width: 90%;
+}
+
+.ejemplo{
+    display: flex;
+    flex-direction: column;
+}
+
+.respuesta{
+    margin: 30px 10%;
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    text-align: start;
+    line-height: 2;
+    
+}
+
+
+.check1{
+}         
