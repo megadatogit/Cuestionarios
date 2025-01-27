@@ -122,6 +122,10 @@
 
 }
 
+.correo{
+    text-transform: lowercase;
+}
+
 .campo{
     position: relative;
 
@@ -163,7 +167,7 @@
     input:focus + label,
     input:valid + label{
         font-size: 16px;
-        color: #59686b;
+        color: #086072;
         top: 5px;
         left: 15px;
         transform: translateX(100%);
