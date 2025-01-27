@@ -3,9 +3,12 @@
 @import url("./etapa1Q.css");
 @import url("./instrucciones.css");
 
-p{
-    line-height: 1.6;
-    width: 90%;
+
+/* 
+.descripcion{
+    margin: 0 auto;
+    line-height: 1.2;
+    
 }
 
 .ejemplo{
@@ -19,10 +22,11 @@ p{
     gap: 10%;
     flex-direction: column;
     text-align: start;
-    line-height: 2;
+    
     
 }
 
 
-.check1{
-}         
+@media (max-width: 960px){
+
+} */

@@ -217,15 +217,33 @@ option{
         width: 100%;
         display: flex;
         justify-content: end;
+        align-items: end;
         /* border: 2px dotted darkblue; */
         
         
     }
+
+    
+
     .perfil, .usuario{
+        display: flex;
         font-size: 20px;
         text-align: end;
         margin-left: 10px;
         margin-bottom: 0;
+        padding-bottom: 0;
+        align-items: start;
+    }
+    
+    .usuario{
+        margin-bottom: 0;
+        
+    }
+    
+    .perfil{
+        
+        /* border: 2px solid red; */
+        
     }
 
     .etapa{
