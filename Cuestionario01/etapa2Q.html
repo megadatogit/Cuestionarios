@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/media/favicon.ico" type="image/x-icon" />
     <title>Cuestionario Etapa 2</title>
     <link rel="stylesheet" href="../Cuestionario01/etapa2Q.css" />
   </head>
@@ -75,7 +75,6 @@
         </div>
 
         <div class="ejemplo">
-          
           <p><strong>HIPERTENSIÓN</strong></p>
 
           <div class="respuesta">
@@ -88,11 +87,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>CONVULSIONES</strong></p>
 
           <div class="respuesta">
@@ -105,11 +102,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
 
         <div class="ejemplo">
-          
           <p><strong>ASMA</strong></p>
 
           <div class="respuesta">
@@ -122,11 +117,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>ENFERMEDADES DEL CORAZÓN</strong></p>
 
           <div class="respuesta">
@@ -139,11 +132,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>ENFERMEDADES DEL RIÑÓN</strong></p>
 
           <div class="respuesta">
@@ -156,11 +147,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>CANCER</strong></p>
 
           <div class="respuesta">
@@ -173,11 +162,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>HEPATITIS</strong></p>
 
           <div class="respuesta">
@@ -190,11 +177,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>ENFERMEDADES PULMONARES</strong></p>
 
           <div class="respuesta">
@@ -207,11 +192,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>ENFERMEDADES MENTALES</strong></p>
 
           <div class="respuesta">
@@ -224,11 +207,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>ENFERMEDADES DE TRANSMISIÓN SEXUAL</strong></p>
 
           <div class="respuesta">
@@ -241,11 +222,9 @@
               <label for="">NO</label>
             </div>
           </div>
-
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>DE ALGUN OTRO TIPO (especifique)</strong></p>
 
           <div class="campo">
@@ -258,17 +237,41 @@
               placeholder="DESCRIBA EN CASO POSITIVO     "
             />
           </div>
-
         </div>
 
         <!-- ITEMS CONDICIONADOS -->
+        <div class="ejemplo">
+          <p><strong>¿ACTUALMENTE CONSUME ALGÚN MEDICAMENTO?</strong></p>
+          <div class="respuesta">
+            <div class="check">
+              <input
+                class="checkbox"
+                type="radio"
+                name="consume"
+                id="consumeSi"
+                required
+              />
+              <label for="consumeSi">SI</label>
+            </div>
+            <div class="check">
+              <input
+                class="checkbox"
+                type="radio"
+                name="consume"
+                id="consumeNo"
+                required
+              />
+              <label for="consumeNo">NO</label>
+            </div>
+          </div>
+        </div>
 
-        <div class="condicionadas">
-
+        <div class="condicionadas" id="cntConsume">
           <div class="ejemplo">
-          
-            <p><strong>¿TOMAS MEDICAMENTO EN EL HORARIO ESTABLECIDO?</strong></p>
-  
+            <p>
+              <strong>¿TOMAS MEDICAMENTO EN EL HORARIO ESTABLECIDO?</strong>
+            </p>
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -279,51 +282,47 @@
                 <label for="">NO</label>
               </div>
             </div>
-  
-          </div>  
-
-          <div class="ejemplo">
-          
-            <p><strong>¿SE TOMA TODAS LAS DOSIS INDICADAS?</strong></p>
-  
-            <div class="respuesta">
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">SI</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">NO</label>
-              </div>
-            </div>
-  
-          </div>  
-
-          <div class="ejemplo">
-          
-            <p><strong>¿NECESITA APOYO PARA EL SEGUIMIENTO DE SU TRATAMIENTO?</strong></p>
-  
-            <div class="respuesta">
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">SI</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">NO</label>
-              </div>
-            </div>
-
-            
           </div>
 
-             <!-- ITEMS SUB-CONDICIONADOS -->
-          <div class="subcondicionadas">
+          <div class="ejemplo">
+            <p><strong>¿SE TOMA TODAS LAS DOSIS INDICADAS?</strong></p>
 
+            <div class="respuesta">
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">SI</label>
+              </div>
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">NO</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ejemplo">
+            <p>
+              <strong
+                >¿NECESITA APOYO PARA EL SEGUIMIENTO DE SU TRATAMIENTO?</strong
+              >
+            </p>
+
+            <div class="respuesta">
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">SI</label>
+              </div>
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">NO</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEMS SUB-CONDICIONADOS -->
+          <div class="subcondicionadas">
             <div class="ejemplo">
-          
               <p><strong>¿QUÉ O QUIÉNES LO APOYAN?</strong></p>
-    
+
               <div class="respuesta">
                 <div class="check1">
                   <input class="checkbox" type="checkbox" id="" required />
@@ -338,16 +337,12 @@
                   <label for="">ALARMA</label>
                 </div>
               </div>
-  
-              
             </div>
-          </div>  
+          </div>
 
-          
           <div class="ejemplo">
-          
             <p><strong>CUANDO SE ENCUENTRA BIEN ¿DEJA DE TOMARLOS?</strong></p>
-  
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -358,34 +353,15 @@
                 <label for="">NO</label>
               </div>
             </div>
-
-            
-          </div>
-          
-          <div class="ejemplo">
-          
-            <p><strong>SI PRESENTA MALESTAR AL INGERIRLOS ¿DEJA DE TOMARLOS?</strong></p>
-  
-            <div class="respuesta">
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">SI</label>
-              </div>
-              <div class="check">
-                <input class="checkbox" type="checkbox" id="" required />
-                <label for="">NO</label>
-              </div>
-            </div>
-
-            
           </div>
 
-          
-
           <div class="ejemplo">
-          
-            <p><strong>CUANDO VIAJA O SALE ¿OLVIDA LLEVAR SUS MEDICAMENTOS?</strong></p>
-  
+            <p>
+              <strong
+                >SI PRESENTA MALESTAR AL INGERIRLOS ¿DEJA DE TOMARLOS?</strong
+              >
+            </p>
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -396,17 +372,33 @@
                 <label for="">NO</label>
               </div>
             </div>
-            
+          </div>
+
+          <div class="ejemplo">
+            <p>
+              <strong
+                >CUANDO VIAJA O SALE ¿OLVIDA LLEVAR SUS MEDICAMENTOS?</strong
+              >
+            </p>
+
+            <div class="respuesta">
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">SI</label>
+              </div>
+              <div class="check">
+                <input class="checkbox" type="checkbox" id="" required />
+                <label for="">NO</label>
+              </div>
+            </div>
           </div>
 
           <!-- ITEMS SUB-CONDICIONADO -->
 
           <div class="subcondicionas">
-
             <div class="ejemplo">
-          
               <p><strong>EN CASO DE OLVIDO ¿QUÉ HACE?</strong></p>
-    
+
               <div class="respuesta">
                 <div class="check">
                   <input class="checkbox" type="checkbox" id="" required />
@@ -417,15 +409,16 @@
                   <label for="">LO DEJA PASAR</label>
                 </div>
               </div>
-              
             </div>
-
           </div>
 
           <div class="ejemplo">
-          
-            <p><strong>¿CON QUÉ FRECUENCIA DECIDE NO TOMAR SU MEDICAMENTO?</strong></p>
-  
+            <p>
+              <strong
+                >¿CON QUÉ FRECUENCIA DECIDE NO TOMAR SU MEDICAMENTO?</strong
+              >
+            </p>
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -444,13 +437,16 @@
                 <label for="">FRECUENTEMENTE</label>
               </div>
             </div>
-            
           </div>
 
           <div class="ejemplo">
-          
-            <p><strong>¿CON QUÉ FRECUENCIA RETRASA IR A RECOGER SUS MEDICAMENTOS?</strong></p>
-  
+            <p>
+              <strong
+                >¿CON QUÉ FRECUENCIA RETRASA IR A RECOGER SUS
+                MEDICAMENTOS?</strong
+              >
+            </p>
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -469,14 +465,11 @@
                 <label for="">FRECUENTEMENTE</label>
               </div>
             </div>
-
-            
           </div>
 
           <div class="ejemplo">
-          
             <p><strong>¿CUÁL ES EL MOTIVO?</strong></p>
-  
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -495,13 +488,11 @@
                 <label for="">REQUIERO ACOMPAÑANTE</label>
               </div>
             </div>
-            
           </div>
 
           <div class="ejemplo">
-          
             <p><strong>¿TOMA MEDICAMENTO SIN PRESCRIPCIÓN MÉDICA?</strong></p>
-  
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -520,13 +511,11 @@
                 <label for="">FRECUENTEMENTE</label>
               </div>
             </div>
-            
           </div>
 
           <div class="ejemplo">
-          
             <p><strong>¿CUAL ES EL MOTIVO?</strong></p>
-  
+
             <div class="respuesta">
               <div class="check">
                 <input class="checkbox" type="checkbox" id="" required />
@@ -540,20 +529,14 @@
                 <input class="checkbox" type="checkbox" id="" required />
                 <label for="">EVITAR GASTO INNECESARIO</label>
               </div>
-              
             </div>
-            
           </div>
-        
         </div>
 
-        <p>
-          RESPONDA SI A PRESENTADO ALGUNO DE LOS SIGUIENTES PROBLEMAS
-        </p>
+        <p>RESPONDA SÍ HA PRESENTADO ALGÚNO DE LOS SIGUIENTES PROBLEMAS</p>
         <br />
-        
+
         <div class="ejemplo">
-          
           <p><strong>PROBLEMAS MENTALES</strong></p>
 
           <div class="respuesta">
@@ -566,11 +549,9 @@
               <label for="">NO</label>
             </div>
           </div>
-          
         </div>
-        
+
         <div class="ejemplo">
-          
           <p><strong>DIFICULTAD MOTRIZ</strong></p>
 
           <div class="respuesta">
@@ -583,11 +564,7 @@
               <label for="">NO</label>
             </div>
           </div>
-          
         </div>
-        
-              
-
 
         <div class="cnt-btn">
           <button type="button" id="enviar">ENVIAR</button>
@@ -603,5 +580,6 @@
 
     <script type="module" src="../Cuestionario01/progreso.js"></script>
     <script type="module" defer src="./etapaQ1db.js"></script>
+    <script src="./etapa2Q.js"></script>
   </body>
 </html>
