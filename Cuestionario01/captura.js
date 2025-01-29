@@ -9,11 +9,13 @@ let stream;
 // Habilitar la cámara
 enableCameraBtn.addEventListener('click', async () => {
     try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
         video.srcObject = stream;
+        video.play();
+        captureBtn.disabled = false;
     } catch (err) {
         console.error("Error al acceder a la cámara: ", err);
-        alert("No se pudo acceder a la cámara. Por favor, asegúrate de que los permisos estén habilitados.");
+        alert("No se pudo acceder a la cámara. Por favor, asegúrate de que los permisos estén habilitados y que no haya otra aplicación usando la cámara.");
     }
 });
 
@@ -24,6 +26,7 @@ captureBtn.addEventListener('click', () => {
     canvas.height = video.videoHeight;
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     canvas.style.display = 'block';
+    uploadBtn.disabled = false;
 });
 
 // Subir la imagen capturada

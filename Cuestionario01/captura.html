@@ -7,14 +7,26 @@
     <link rel="stylesheet" href="captura.css">
 </head>
 <body>
+    <header class="header">
+        <img
+          class="logo-header"
+          src="/media/04LogoLSTransSlogan.png"
+          alt="LiberSalus"
+        />
+        <div class="encabezado"><p>HISTORIAL CLÍNICO DIGITAL</p></div>
+      </header>
+
     <div class="container">
-        <h1>Subir Documentos</h1>
+        <h1>Subir documentos</h1>
         <p>Por favor, centra tu documento en la cámara y captura la imagen.</p>
         
         <div class="camera-container">
             <video id="video" autoplay></video>
-            <button id="capture-btn">Capturar</button>
-            <button id="enable-camera-btn">Habilitar Cámara</button>
+
+            <div class="cnt-botones">
+                <button id="enable-camera-btn">Habilitar</button>
+                <button id="capture-btn">Capturar</button>
+            </div>
         </div>
 
         <div class="preview-container">
@@ -23,6 +35,25 @@
             <button id="upload-btn">Subir Documento</button>
         </div>
     </div>
+
+    <div class="foot">
+        <div class="pie">
+          <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
+          <p>
+            Consulta nuestro aviso de privacidad, terminos y condiciones en
+            <a
+              class="terminos"
+              href="../Cuestionario01/legales.html"
+              target="_blank"
+              >www.libersalusmexico.com/legales</a
+            >
+          </p>
+          <p>
+            Para mayor información comunicate a la linea LiberSalus 01 800 54237
+            72587 de Lunes a Viernes de 10:00 a 16:00 Hrs
+          </p>
+        </div>
+      </div>
 
     <script src="captura.js"></script>
 </body>
