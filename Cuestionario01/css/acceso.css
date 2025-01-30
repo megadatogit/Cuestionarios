@@ -312,6 +312,7 @@ a{
     }
 
     .izquierda, .derecha{
+        align-items: start;
         margin: 0px auto;
         width: 90%;
     }
@@ -339,7 +340,7 @@ a{
     }
 
     .tit{
-        display: none;
+        display: block;
     }
     
 
