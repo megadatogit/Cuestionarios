@@ -1,7 +1,7 @@
-@import url("./css/acceso.css");
-@import url("./css/bienvenida.css");
-@import url("./css/instrucciones.css");
-@import url("./css/terminos.css");
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+@import url("./instrucciones.css");
+@import url("./terminos.css");
 
 *{
     margin: 0;
