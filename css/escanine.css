@@ -15,7 +15,7 @@
     /* height: 50vh; */
     
     overflow: hidden;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1.49 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ video, img {
     
     border: 4px solid rgba(0, 255, 0, 0.8);
     border-radius: 8px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1.49 / 1;
     z-index: 1;
 }
 
