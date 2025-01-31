@@ -40,8 +40,9 @@ video, img {
 }
 
 #captureContainer{
-    
-    
+    position: absolute;
+    width: 100%;
+    height: 100%;
     
     
 
