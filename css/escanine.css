@@ -13,13 +13,14 @@
     margin: 50px auto;
     width: 90%;
     /* height: 50vh; */
-    border: 2px dotted rgb(139, 137, 0);
+    
     overflow: hidden;
     aspect-ratio: 16 / 9;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    /* background-color: black; */
 }
 
 video, img {
