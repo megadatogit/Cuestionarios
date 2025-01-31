@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/acceso.css">
+    <link rel="stylesheet" href="../css/escanine.css">
+    
     <title>Escáner de INE</title>
     <style>
+
+        /*
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,8 +21,8 @@
         body {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Alinea los elementos en el centro horizontal */
-            justify-content: center; /* Alinea los elementos en el centro vertical */
+            align-items: center; 
+            justify-content: center; 
             height: 100vh;
             background-color: #000;
             color: white;
@@ -24,7 +30,7 @@
             overflow: hidden;
         }
 
-        /* Contenedor de la cámara y vista previa */
+        
         .camera-container, .preview-container {
             position: relative;
             width: 90vw;
@@ -36,7 +42,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: -30px; /* Subir la posición de la cámara y vista previa (aumenta o disminuye este valor) */
+            margin-top: -30px; 
         }
 
         video, img {
@@ -59,7 +65,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 100px; /* Modifica el valor para ajustar la separación entre el botón y la cámara (más grande = más espacio) */
+            margin-top: 100px; 
         }
 
         .capture-btn {
@@ -76,21 +82,21 @@
             transform: scale(0.9);
         }
 
-        /* Ajuste de la posición de la vista previa */
+        
         .preview-container {
             display: none;
-            margin-top: 5px; /* Subir la vista previa (aumenta o disminuye para moverla hacia arriba o abajo) */
+            margin-top: 5px; 
             background-color: rgba(0, 0, 0, 0.9);
             border: 2px solid white;
         }
 
-        /* Botones de Enviar, Reintentar y Subir Foto */
+        
         .button-group {
             display: none;
             justify-content: space-between;
             width: 90%;
             max-width: 600px;
-            margin-top: 90px; /* Baja los botones (aumenta el valor para bajarlos más) */
+            margin-top: 90px; 
         }
 
         .btn {
@@ -122,21 +128,21 @@
             display: none;
         }
 
-        /* Ajustes para la orientación horizontal */
+        
         @media (orientation: landscape) {
             body {
                 justify-content: flex-start;
             }
 
             h2 {
-                display: none; /* Ocultar el letrero en la vista horizontal */
+                display: none; 
             }
 
             .camera-container {
-                margin-top: 0px; /* Mover el contenedor de captura hacia arriba */
-                width: 100vw; /* Contenedor de captura en toda la pantalla */
-                height: 80vh; /* Hacer el contenedor de captura más pequeño de abajo hacia arriba */
-                justify-content: flex-end; /* Asegurarse de que el botón de captura esté en la esquina inferior derecha */
+                margin-top: 0px; 
+                width: 100vw; 
+                height: 80vh; 
+                justify-content: flex-end; 
             }
 
             .button-container {
@@ -148,21 +154,34 @@
             .capture-btn {
                 width: 80px;
                 height: 80px;
-                background-color: rgba(255, 255, 255, 0.7); /* Botón gris transparente */
+                background-color: rgba(255, 255, 255, 0.7); 
                 border: 5px solid rgba(255, 255, 255, 0.5);
             }
         }
 
-        /* Ajustes para la orientación vertical */
+        
         @media (orientation: portrait) {
             .camera-container {
-                margin-top: 20vh; /* Centrar el contenedor de captura en la pantalla en la orientación vertical */
+                margin-top: 20vh; 
             }
         }
+
+        */
     </style>
 </head>
 <body>
-    <h2>Escáner de INE</h2>
+
+    <header class="header">
+        <!-- <img
+          class="logo-header"
+          src="../src/images/04LogoLSTransSlogan.png"
+          alt="LiberSalus"
+        /> -->
+        <div class="encabezado"><p>HISTORIAL CLÍNICO DIGITAL</p></div>
+      </header>
+    <h3 class="txt-ini">Registro de Documentación</h3>
+
+
     
     <!-- Contenedor de la cámara -->
     <div class="camera-container" id="cameraContainer">
@@ -187,7 +206,17 @@
         <button class="btn btn-send" onclick="sendImage()">Enviar</button>
     </div>
 
+    <div class="foot">
+        <div class="pie">
+            <p>LIBER SALUS S.A. DE C.V. MÉXICO 2025</p>
+            <p>Consulta nuestro aviso de privacidad, terminos y condiciones en <a class="terminos" href="./legales.html" target="_blank">www.libersalusmexico.com/legales</a></p>
+            <p>Para mayor información comunicate a la linea LiberSalus 01 800 54237 72587 de Lunes a Viernes de 10:00 a 16:00 Hrs</p>
+        </div>
+    </div>
+
     <script>
+
+    
         const video = document.getElementById("videoStream");
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
@@ -288,6 +317,8 @@
 
         // Iniciar la cámara al cargar la página
         window.addEventListener("load", startCamera);
+
+        
     </script>
 </body>
 </html>
