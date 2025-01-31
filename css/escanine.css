@@ -13,7 +13,7 @@
     margin: 50px auto;
     width: 90%;
     /* height: 50vh; */
-    border: 2px dotted darkblue;
+    border: 2px dotted rgb(139, 137, 0);
     overflow: hidden;
     aspect-ratio: 16 / 9;
     display: flex;
@@ -36,8 +36,33 @@ video, img {
     border: 4px solid rgba(0, 255, 0, 0.8);
     border-radius: 8px;
     aspect-ratio: 16 / 9;
+    z-index: 1;
 }
 
+#captureContainer{
+    
+    
+    
+    
+
+    #capture-btn{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom:  0;
+        right: 50%;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #0082b600 ;
+    }
+    
+    
+}
+
+.logo-header{
+    position: relative;
+    
+}
 
 .videoStream {
     width: 70%;
@@ -45,10 +70,18 @@ video, img {
     border: 2px dotted darkblue;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 900px){
+
+    header{
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+
 
     .camera-container {
-        
+        width: 50%;
     }
 
 }

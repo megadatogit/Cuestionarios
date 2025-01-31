@@ -172,11 +172,11 @@
 <body>
 
     <header class="header">
-        <!-- <img
+        <img
           class="logo-header"
           src="../src/images/04LogoLSTransSlogan.png"
           alt="LiberSalus"
-        /> -->
+        />
         <div class="encabezado"><p>HISTORIAL CLÍNICO DIGITAL</p></div>
       </header>
     <h3 class="txt-ini">Registro de Documentación</h3>
@@ -187,11 +187,11 @@
     <div class="camera-container" id="cameraContainer">
         <video id="videoStream" autoplay></video>
         <div class="overlay"></div>
+        <div class="button-container" id="captureContainer">
+            <button id="capture-btn" class="capture-btn" onclick="captureImage()"><img src="/src/svg/btncamara.svg" alt="boton camara"></button>
+        </div>
     </div>
 
-    <div class="button-container" id="captureContainer">
-        <button class="capture-btn" onclick="captureImage()">Capturar Imagen</button>
-    </div>
     
     <canvas id="canvas"></canvas>
 
