@@ -24,8 +24,8 @@
 }
 
 #previewImage{
-    box-sizing: content-box;
-    width: 100%;
+    
+    width: 70%;
 }
 
 video, img {
