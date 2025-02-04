@@ -195,15 +195,18 @@
     
     <canvas id="canvas"></canvas>
 
-    <!-- Vista previa con el mismo tamaño que la cámara -->
-    <div class="preview-container" id="previewContainer">
-        <img id="previewImage" src="" alt="Imagen recortada aparecerá aquí">
-    </div>
+    <div class="cnt-landscape">
 
-    <!-- Botones debajo de la vista previa -->
-    <div class="button-group" id="buttonGroup">
-        <button class="btn btn-retry" onclick="retryCapture()">Reintentar</button>
-        <button class="btn btn-send" onclick="sendImage()">Enviar</button>
+        <!-- Vista previa con el mismo tamaño que la cámara -->
+        <div class="preview-container" id="previewContainer">
+            <img id="previewImage" src="" alt="Imagen recortada aparecerá aquí">
+        </div>
+    
+        <!-- Botones debajo de la vista previa -->
+        <div class="button-group" id="buttonGroup">
+            <button class="btn btn-retry" onclick="retryCapture()">Reintentar</button>
+            <button class="btn btn-send" onclick="sendImage()">Enviar</button>
+        </div>
     </div>
 
     <div class="foot">
@@ -312,6 +315,8 @@
             // Ocultar la vista previa y botones
             previewContainer.style.display = "none";
             buttonGroup.style.display = "none";
+
+        
         }
 
         // Función para enviar la imagen

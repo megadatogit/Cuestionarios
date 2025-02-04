@@ -89,6 +89,20 @@ video, img {
         
         transform: scale(.7);
     }
+
+    .cnt-landscape{
+        display: flex;
+        width: 95%;
+        .preview-container{
+            width: 75%;
+        }
+        
+        .button-group{
+            width: 25%;
+        }
+
+
+    }
 }
 
 @media (orientation: landscape) {
@@ -96,6 +110,20 @@ video, img {
 
     .camera-container {
         width: 50%;
+    }
+
+    .cnt-landscape{
+        display: flex;
+        width: 95%;
+        .preview-container{
+            width: 75%;
+        }
+        
+        .button-group{
+            width: 25%;
+        }
+
+
     }
 
 }
