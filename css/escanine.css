@@ -23,14 +23,7 @@
     /* background-color: black; */
 }
 
-#previewContainer{
-    width: 100%;
-}
 
-#previewImage{
-    
-    transform: scale(.7);
-}
 
 video, img {
     position: absolute;
@@ -86,6 +79,15 @@ video, img {
 
     header{
         display: none;
+    }
+
+    #previewContainer{
+        width: 100%;
+    }
+    
+    #previewImage{
+        
+        transform: scale(.7);
     }
 }
 
