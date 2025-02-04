@@ -23,6 +23,11 @@
     /* background-color: black; */
 }
 
+#previewImage{
+    box-sizing: content-box;
+    width: 100%;
+}
+
 video, img {
     position: absolute;
     width: 100%;
