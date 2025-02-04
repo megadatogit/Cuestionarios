@@ -29,7 +29,7 @@
 
 #previewImage{
     
-    width: 85%;
+    transform: scale(.7);
 }
 
 video, img {
