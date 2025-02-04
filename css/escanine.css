@@ -23,9 +23,13 @@
     /* background-color: black; */
 }
 
+#previewContainer{
+    width: 100%;
+}
+
 #previewImage{
     
-    width: 70%;
+    width: 85%;
 }
 
 video, img {
