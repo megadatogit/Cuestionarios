@@ -10,8 +10,7 @@
 .contenedor{
     width: 90%;
     
-    border-left: 1px solid;
-    border-right: 1px solid; 
+    
     margin: 0px auto;
     
     display: flex;
@@ -68,11 +67,11 @@
     /* border: 2px dotted darkgoldenrod; */
     display: flex;
     margin-bottom: 30px;
-    img{
-        width: 50%;
-    }
 }
 
+img{
+    width: 50%;
+}
 .indice{
     margin-left: 10px;
     color: #0081B6;   
@@ -216,6 +215,7 @@
 }
 
 .checkbox{
+    -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
