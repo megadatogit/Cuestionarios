@@ -142,3 +142,90 @@ hr{
     100%{transform: rotate(-360deg) scale(1.2);}
 }
 
+/* coil */
+
+.cnt-coil{
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+
+.cr1{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr2{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr3{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr4{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr5{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr6{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr7{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr8{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr9{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr10{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr11{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr12{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr13{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+.cr14{
+    stroke-dasharray: 0 2121;
+    animation: cr1 5s 1.5s ease-in-out infinite alternate forwards;
+}
+
+
+
+@keyframes cr1 {
+    from {stroke-dasharray: 0 2121;}
+    to {stroke-dasharray: 1760 2121;}
+}
+
+.cr2,
+.cr3,
+.cr4,
+.cr5,
+.cr5,
+.cr6,
+.cr7,
+.cr8,
+.cr9,
+.cr10,
+.cr11,
+.cr12,
+.cr13,
+.cr14,
