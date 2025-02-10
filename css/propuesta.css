@@ -1,0 +1,208 @@
+/* 
+@import url("./acceso.css");
+@import url("./bienvenida.css");
+@import url("./instrucciones.css");
+@import url("./terminos.css");
+ */
+
+
+ *{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "poppins", "Helvetica Neue", Helvetica, Arial;
+    max-width: 1336px;
+
+}
+
+header  { 
+    width: 100%;
+    height: 100px;
+    background-color: #f4f4f7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .cnt-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 800;
+        width: 30%;
+        height: 70px;
+        margin-left:3% ;
+        background-color: black;
+        color: white;
+    }
+
+    nav{
+        
+        width: 60%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 20px;
+
+        .link{
+            color: black;
+            
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 120px;
+            background-color: black;
+            color: white;
+            padding: 5px 30px;
+            border-radius:20px;
+            span{
+                margin: 0 10px;
+                img{
+                    width: 15px;
+                }
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+.cnt-hero{
+    background-color: #f4f4f7;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 2;
+    }
+    button{
+        font-size: 17px;
+        margin-top: 40px;
+        padding: 10px 30px;
+        border-radius:20px;
+        
+    }
+}
+
+.cnt-mv{
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .mision, .vision{
+        display: flex;
+        font-size: 20px;
+        background-color: #f4f4f7;
+        margin: 0 auto;
+        text-align: center;
+        width: 40%;
+        height: 400px;
+        justify-content: center;
+        align-items:center;
+    }
+}
+
+aside{
+    background-color: #f4f4f7;
+    width: 100%;
+    height: 500px ;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        margin-bottom: 100px;
+    }
+    p{
+        text-align: start;
+        margin: 0 auto;
+        width: 70%;
+        line-height: 1.2;
+    }
+}
+
+.cnt-circulo{
+    margin-top: 100px;
+    width: 80%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .cnt-txt{
+        
+        text-align: end;
+
+        h1{
+            margin-bottom: 20px;
+        }
+    }
+    .circulo{
+        background-color: #f4f4f7;
+        width:  400px;
+        height: 400px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+    }
+}
+
+.msj{
+    width: 100%;
+    height: 600px;
+    background-color: #f4f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        width: 80%;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+#entrar{
+    display: block;
+    text-align: center;
+}
+
+.cnt-timeline{
+    margin-top: 100px;
+    width: 80%;
+    height: 400px;
+    p{
+        text-align: center;
+    }
+    .timeline-item{
+        display: flex;
+        width: 100%;
+
+        .txt{
+            width: 40%;
+            font-size: 20px;
+            text-align: end;
+        }
+        .cir{
+            width: 50%;
+        }
+    }
+    
+}
+
