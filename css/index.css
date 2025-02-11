@@ -56,7 +56,7 @@ header  {
             width: 130px;
             height: 35px;
             background-color: white;
-            /* padding: 10px 30px; */
+            padding: 10px 30px;
             border-radius:16px;
             font-size: 1.125rem;
             
@@ -112,7 +112,7 @@ button:hover{
         margin-top: 40px;
         padding: none;
         border-radius:20px;
-        
+        padding: 10px 30px;
     }
 }
 
@@ -176,7 +176,7 @@ aside{
             display: flex;
             border: 2px dotted darkblue;
             gap: 20px;
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             bottom: 0;
