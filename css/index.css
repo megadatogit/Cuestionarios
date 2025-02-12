@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    font-family:  "poppins", "Helvetica Neue", Helvetica, Arial;
+    font-family: "poppins", "Helvetica Neue", Helvetica, Arial;
     max-width: 1920px;
     transition: 0.3s ease;
 }
 
-header  { 
+header {
     /* border: 2px dotted darkblue; */
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .cnt-logo{
+
+    .cnt-logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,34 +23,36 @@ header  {
         font-weight: 800;
         width: 10%;
         height: 70px;
-        margin-left:3%;
-        
-        
+        margin-left: 3%;
+
+
     }
 
-    nav{
-        
+    nav {
+
         width: 50%;
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 20px;
 
-        .link{
+        .link {
             padding-bottom: 5px;
             color: black;
             font-size: 1.125rem;
             position: relative;
-            
-            
+
+
             text-decoration: none;
 
-            
+
         }
 
-        .boton{text-decoration: none;}
+        .boton {
+            text-decoration: none;
+        }
 
-        button{
+        button {
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -57,28 +60,29 @@ header  {
             height: 35px;
             background-color: white;
             padding: 10px 30px;
-            border-radius:16px;
+            border-radius: 16px;
             font-size: 1.125rem;
-            
-            
+
+
         }
-        
+
     }
-    
+
 
 }
 
-.abrir, .cerrar{
+.abrir,
+.cerrar {
     display: none;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: black;
     color: white;
 }
 
-.link:before{
+.link:before {
     position: absolute;
     content: "";
     width: 100%;
@@ -89,11 +93,12 @@ button:hover{
     transition: 0.3s ease;
 
 }
-.link:hover::before{
+
+.link:hover::before {
     transform: scale(1);
 }
 
-.cnt-hero{
+.cnt-hero {
     background-color: #f4f4f7;
     text-align: center;
     height: 400px;
@@ -102,34 +107,38 @@ button:hover{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    h2{
+
+    h2 {
         font-size: 2.5rem;
         font-weight: 300;
         line-height: 2;
     }
-    button{
+
+    button {
         font-size: 17px;
         margin-top: 40px;
         padding: none;
-        border-radius:20px;
+        border-radius: 20px;
         padding: 10px 30px;
     }
 }
 
-aside{
+aside {
     background-color: #f4f4f7;
     width: 100%;
-    height: auto ;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    h1{
+
+    h1 {
         margin: 100px;
     }
-    p{
+
+    p {
         text-align: center;
         margin: 0 auto 100px;
         width: 60%;
@@ -137,8 +146,7 @@ aside{
     }
 }
 
-.testimonios{
-    border: 2px solid #ccc;
+.testimonios {
     padding: 70px 0;
     width: 100%;
     display: flex;
@@ -148,10 +156,12 @@ aside{
     gap: 20px;
     flex-wrap: wrap;
     margin: 100px auto;
-    :nth-child(1){
+
+    :nth-child(1) {
         font-size: 2rem;
     }
-    .cnt-trj{
+
+    .cnt-trj {
         display: flex;
         width: 90%;
         margin: 0 auto;
@@ -162,21 +172,21 @@ aside{
     }
 }
 
-#trj{
+#trj {
     flex-wrap: wrap;
     width: 300px;
     height: 350px;
     flex-direction: column;
     padding: 30px;
     gap: 20px;
-    background-color: #ececec;
     border-radius: 15px;
     cursor: pointer;
     transition: 0.5s ease;
-    
-    
+
+
 }
-.cnt-img{
+
+.cnt-img {
     display: block;
     display: flex;
     justify-content: center;
@@ -190,7 +200,8 @@ aside{
     transform: translate(0);
     transition: 0.7s ease;
 }
-.nombre{
+
+.nombre {
     font-size: 1.25rem;
     transform: scale(1) translateY(30px);
     text-align: center;
@@ -198,7 +209,8 @@ aside{
     transition: 0.9s ease;
     line-height: 1.3;
 }
-.test{
+
+.test {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.4;
@@ -209,55 +221,64 @@ aside{
     transition: 1s ease;
 }
 
-#trj:hover{
-    box-shadow: 3px 3px 7px rgba(0,0,0);
-}
-#trj:hover .cnt-img{
-    transform: translate(-80px, -25px) scale(0.6);
-}
-#trj:hover .test{
-    filter: opacity(1);
-    transform: translateY(-30px);
-    
-}
-#trj:hover .nombre{
-    
-    transform: scale(.9) translate(50px, -128px);
+#trj:hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 760px){
-    .abrir, .cerrar{
+#trj:hover .cnt-img {
+    transform: translate(-80px, -25px) scale(0.6);
+}
+
+#trj:hover .test {
+    filter: opacity(1);
+    transform: translateY(-30px);
+
+}
+
+#trj:hover .nombre {
+
+    transform: scale(.9) translate(50px, -126px);
+}
+
+@media (max-width: 760px) {
+
+    .abrir,
+    .cerrar {
         display: block;
         border: 0;
         width: 30px;
         background-color: transparent;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             background-color: transparent;
             transform: scale(1.1);
         }
     }
-    #abrir {color: #1c1c1c;
+
+    #abrir {
+        color: #1c1c1c;
         position: absolute;
         top: 10px;
         right: 10px;
-        
-        
+
+
     }
-    .cerrar{
-        width: 30px; 
-        z-index: 100; 
+
+    .cerrar {
+        width: 30px;
+        z-index: 100;
         color: #ececec;
         position: absolute;
         top: 10px;
         right: 10px;
-}
-    
-    header{
-        
-        
-        
-        nav{
+    }
+
+    header {
+
+
+
+        nav {
             opacity: 0;
             visibility: hidden;
             flex-direction: column;
@@ -270,25 +291,38 @@ aside{
             bottom: 0;
             background-color: #1c1c1c;
             padding: 2rem;
-            box-shadow: 0 0 0 1000vmax rgba(0,0,0, 0.5);
-            .link{
+            box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
+
+            .link {
                 display: flex;
                 justify-content: end;
                 margin-right: 10px;
                 gap: 20px;
                 color: #ececec;
-                
+
             }
-            
+
         }
     }
-    header nav.boton{
+
+    header nav.boton {
         width: 100%;
         margin-top: 20px;
     }
-}
-nav.visible{
-    opacity: 1;
-    visibility: visible;
-    
+
+    nav.visible {
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .cnt-logo {
+        padding: 15%;
+    }
+
+    .cnt-hero {
+        h2 {
+            width: 80%;
+        }
+    }
 }
