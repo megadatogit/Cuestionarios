@@ -1,0 +1,68 @@
+@import url("./index.css");
+
+aside{
+    height: 600px;
+    margin-bottom: 200px;
+    
+}
+
+.cnt-misvis{
+    width: 90%;
+    display: flex;
+    margin: 100px auto;
+
+}
+
+.cnt-mis, .cnt-vis{
+    width: 40%;
+    padding: 70px;
+    background-image: url("../src/svg/img.svg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center   ;
+    
+    p{
+        color: rgb(31, 30, 30);
+        line-height: 1.4;
+    }
+
+    & :nth-child(1){
+        margin-bottom: 20px;
+    }
+}
+
+.valores{
+    margin: 300px auto;
+    width: 100%;
+    h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .cnt-val{
+        margin-top: 100px;
+        display: flex;
+
+        .val{
+            width:  150px;
+            height: 150px;
+            border: 1px solid;
+            border-radius: 50%;
+            position: relative;
+        }
+        .val::before, .val::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            top: 50%;
+            
+        }
+        .val::before{
+            transform: rotate(45deg);
+        }
+        .val::after{
+            transform: rotate(-45deg);
+        }
+    }
+}
