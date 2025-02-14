@@ -42,13 +42,14 @@ header {
     
 }
 nav {
-    position: absolute;
+    
     position: sticky;
     width: 50%;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 20px;
+    z-index: 10;
 
     .link {
         padding-bottom: 5px;
