@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0 auto;
     padding: 0;
@@ -7,6 +5,11 @@
     font-family: "poppins", "Helvetica Neue", Helvetica, Arial;
     max-width: 1920px;
     transition: 0.3s ease;
+    
+}
+
+body{
+    position: relative;
 }
 
 header {
@@ -18,78 +21,80 @@ header {
     align-items: center;
 
     .cnt-logo {
-        
+
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
         font-weight: 800;
         width: 10%;
-        
+
         margin-left: 3%;
-        img{
-            width: 30%;
+
+        img {
+            width: 10%;
         }
 
 
     }
 
-    nav {
+    
+    
+}
+nav {
+    position: absolute;
+    position: sticky;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
 
-        width: 50%;
+    .link {
+        padding-bottom: 5px;
+        color: black;
+        font-size: 1.125rem;
+        position: relative;
+
+
+        text-decoration: none;
+
+
+    }
+
+    .boton {
+        text-decoration: none;
+    }
+
+    button {
         display: flex;
-        justify-content: end;
         align-items: center;
-        gap: 20px;
+        justify-content: space-around;
+        width: 130px;
+        height: 35px;
+        background-color: white;
+        padding: 10px 30px;
+        border-radius: 16px;
+        font-size: 1.125rem;
 
-        .link {
-            padding-bottom: 5px;
-            color: black;
-            font-size: 1.125rem;
-            position: relative;
-
-
-            text-decoration: none;
-
-
-        }
-
-        .boton {
-            text-decoration: none;
-        }
-
-        button {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 130px;
-            height: 35px;
-            background-color: white;
-            padding: 10px 30px;
-            border-radius: 16px;
-            font-size: 1.125rem;
-
-
-        }
-
-        .acceso {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 130px;
-            height: 35px;
-            background-color: rgb(190, 182, 182);
-            padding: 10px 30px;
-            border-radius: 16px;
-            font-size: 1.125rem;
-            border: none;
-            color: #1c1c1c;
-
-
-        }
 
     }
 
+    .acceso {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 130px;
+        height: 35px;
+        background-color: rgb(190, 182, 182);
+        padding: 10px 30px;
+        border-radius: 16px;
+        font-size: 1.125rem;
+        border: none;
+        color: #1c1c1c;
+
+
+    }
 
 }
 
@@ -106,7 +111,7 @@ button:hover {
     color: white;
 }
 
-.acceso:hover{
+.acceso:hover {
     background-color: rgb(128, 125, 125);
     color: black;
 }
@@ -128,16 +133,40 @@ button:hover {
 }
 
 .cnt-hero {
-    background-color: #f4f4f7;
+    /* background-color: #f4f4f7; */
     text-align: center;
-    height: 400px;
+    height: 100vh;
     width: 100%;
-    margin: 70px auto;
+    margin: 0px auto 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 
-    
+    #particles-js{
+        z-index: -1;
+    }
+
+    .cnt-logo {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        width: 10%;
+
+        
+
+        img {
+            width: 100%;
+            margin-bottom: 50px ;
+        }
+
+
+    }
+
+
     button {
         font-size: 17px;
         margin-top: 40px;
@@ -146,6 +175,7 @@ button:hover {
         padding: 10px 30px;
     }
 }
+
 h2 {
     font-size: 2.5rem;
     font-weight: 300;
@@ -169,15 +199,73 @@ aside {
 
     p {
         text-align: center;
-        margin: 0px auto 100px ;
+        margin: 0px auto 100px;
         width: 60%;
         line-height: 1.6;
     }
 }
-:root{
-    --widht-horiz:150px;
+
+/* ---- reset ---- */
+
+
+canvas {
+    display: block;
+    vertical-align: bottom;
 }
-.cnt-line{
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+:root {
+    --widht-horiz: 150px;
+}
+
+.cnt-line {
     margin: 100px auto;
     width: 100%;
     height: 150vh;
@@ -190,10 +278,11 @@ aside {
     overflow: hidden;
     position: relative;
 
-    
-    
+
+
 }
-.tit{
+
+.tit {
     margin: 100px auto;
     width: 100%;
     top: 0px;
@@ -203,7 +292,7 @@ aside {
 
 }
 
-.line{
+.line {
     margin: 70px auto;
     width: 1px;
     background-color: black;
@@ -212,34 +301,43 @@ aside {
     position: relative;
 }
 
-.line::before{
+.line::before {
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     top: 0;
     left: -2.5px;
 }
-.line::after{
+
+.line::after {
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     bottom: 0;
     left: -2.5px;
 }
 
-@keyframes vertical{
-    0%  {height:  0px;}
-    20% {height: 900px;}
-    100%{height: 900px;}
+@keyframes vertical {
+    0% {
+        height: 0px;
+    }
+
+    20% {
+        height: 900px;
+    }
+
+    100% {
+        height: 900px;
+    }
 }
 
 
 
-.elm-izqarb{
+.elm-izqarb {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -249,47 +347,66 @@ aside {
     left: calc(50% - 300px);
     transform: scale(0);
     animation: elments 10s ease infinite;
-    
+
 }
 
-.txt-iza{
+.txt-iza {
     position: absolute;
     top: calc(50% - 312px);
     left: calc(50% + 50px);
-    animation: txtderecha 10s ease-in-out infinite ;
+    animation: txtderecha 10s ease-in-out infinite;
 }
-.txt-izb{
+
+.txt-izb {
     position: absolute;
     bottom: calc(50% - 312px);
     left: calc(50% + 50px);
-    animation: txtderecha 10s ease-in-out infinite ;
+    animation: txtderecha 10s ease-in-out infinite;
 }
-.txt-dea{
+
+.txt-dea {
     position: absolute;
     top: calc(50% - 162px);
     right: calc(50% + 50px);
-    animation: txtizquierda 10s ease-in-out infinite ;
+    animation: txtizquierda 10s ease-in-out infinite;
 }
-.txt-deb{
+
+.txt-deb {
     position: absolute;
     bottom: calc(50% - 162px);
     right: calc(50% + 50px);
-    animation: txtizquierda 10s ease-in-out infinite ;
+    animation: txtizquierda 10s ease-in-out infinite;
 }
 
 @keyframes txtderecha {
-    0%{transform: scale(0);}
-    20%{transform: scale(1);}
-    100%{transform: scale(1);}
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes txtizquierda {
-    0%{transform: scale(0);}
-    20%{transform: scale(1);}
-    100%{transform: scale(1);}
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.elm-izqaba{
+.elm-izqaba {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -299,10 +416,10 @@ aside {
     left: calc(50% - 300px);
     transform: scale(0);
     animation: elments 10s ease infinite;
-    
+
 }
 
-.elm-derarb{
+.elm-derarb {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -312,9 +429,10 @@ aside {
     right: calc(50% - 300px);
     transform: scale(0);
     animation: elments 10s ease infinite;
-    
+
 }
-.elm-deraba{
+
+.elm-deraba {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -325,16 +443,24 @@ aside {
     right: calc(50% - 300px);
     transform: scale(0);
     animation: elments 10s ease infinite;
-    
+
 }
 
 @keyframes elments {
-    0%{transform: scale(0);}
-    20%{transform: scale(1);}
-    100%{transform: scale(1);}
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.izquierda-arriba{
+.izquierda-arriba {
     position: absolute;
     content: "";
     top: calc(50% - 300px);
@@ -346,25 +472,33 @@ aside {
     animation: izquierdarriba 10s ease infinite;
 }
 
-.izquierda-arriba::before{
-    
+.izquierda-arriba::before {
+
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     left: 0;
     top: -2px;
 }
 
 
-@keyframes izquierdarriba{
-    0%  { width: 0px;}
-    20% { width: var(--widht-horiz);}
-    100%{ width: var(--widht-horiz);}
+@keyframes izquierdarriba {
+    0% {
+        width: 0px;
+    }
+
+    20% {
+        width: var(--widht-horiz);
+    }
+
+    100% {
+        width: var(--widht-horiz);
+    }
 }
 
-.izquierda-abajo{
+.izquierda-abajo {
     position: absolute;
     content: "";
     top: calc(50% + 300px);
@@ -375,24 +509,34 @@ aside {
     transform: translateX(0px);
     animation: izquierdabajo 10s ease infinite;
 }
-.izquierda-abajo::before{
-    
+
+.izquierda-abajo::before {
+
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     left: 0;
     top: -2px;
 }
-@keyframes izquierdabajo{
-    0%{  width:  0px;}
-    20% { width: var(--widht-horiz);}
-    100%{width: var(--widht-horiz);}
+
+@keyframes izquierdabajo {
+    0% {
+        width: 0px;
+    }
+
+    20% {
+        width: var(--widht-horiz);
+    }
+
+    100% {
+        width: var(--widht-horiz);
+    }
 }
 
 
-.derecha-arriba{
+.derecha-arriba {
     position: absolute;
     content: "";
     top: calc(50% - 150px);
@@ -404,23 +548,32 @@ aside {
     animation: derecharriba 10s ease infinite;
 }
 
-.derecha-arriba::before{
-    
+.derecha-arriba::before {
+
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     right: 0;
     top: -2px;
 }
-@keyframes derecharriba{
-    0%{  width:  0px;}
-    20% { width: var(--widht-horiz);}
-    100%{width: var(--widht-horiz);}
+
+@keyframes derecharriba {
+    0% {
+        width: 0px;
+    }
+
+    20% {
+        width: var(--widht-horiz);
+    }
+
+    100% {
+        width: var(--widht-horiz);
+    }
 }
 
-.derecha-abajo{
+.derecha-abajo {
     position: absolute;
     content: "";
     top: calc(50% + 150px);
@@ -432,20 +585,29 @@ aside {
     animation: derechabajo 10s ease infinite;
 }
 
-.derecha-abajo::before{
-    
+.derecha-abajo::before {
+
     position: absolute;
     content: "";
     width: 5px;
     height: 5px;
-    background-color:black;
+    background-color: black;
     right: 0;
     top: -2px;
 }
-@keyframes derechabajo{
-    0%{  width:  0px;}
-    20% { width: var(--widht-horiz);}
-    100%{width: var(--widht-horiz);}
+
+@keyframes derechabajo {
+    0% {
+        width: 0px;
+    }
+
+    20% {
+        width: var(--widht-horiz);
+    }
+
+    100% {
+        width: var(--widht-horiz);
+    }
 }
 
 
@@ -543,7 +705,7 @@ aside {
     transform: scale(.9) translate(50px, -126px);
 }
 
-footer{
+footer {
     margin: 100px auto 0;
     width: 100%;
     background-color: #000000;
@@ -551,7 +713,8 @@ footer{
     flex-direction: column;
     align-items: end;
     color: white;
-    .arriba{
+
+    .arriba {
         /* border: 2px dotted white; */
         margin-top: 50px;
         margin-bottom: 30px;
@@ -560,38 +723,46 @@ footer{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        .cnt-logo, .cnt-redes {
+
+        .cnt-logo,
+        .cnt-redes {
             display: block;
             display: flex;
-            
+
             width: 30%;
             height: 100px;
             justify-content: center;
             align-items: center;
-            
-            a{
+
+            a {
                 display: block;
-                img{
+
+                img {
                     width: 30px;
                 }
             }
         }
-        .cnt-logo{
-            img{
+
+        .cnt-logo {
+            img {
                 width: 60%;
-            };
+            }
+
+            ;
         }
-        
-        .tt{
+
+        .tt {
             filter: invert(1);
         }
     }
-    .ligas{
+
+    .ligas {
         display: flex;
         flex-direction: row;
         width: 90%;
         flex-wrap: wrap;
-        .col{
+
+        .col {
             display: flex;
             justify-content: center;
             align-items: start;
@@ -599,39 +770,44 @@ footer{
             margin-bottom: 50px;
             color: #b6b6b6;
 
-            .encabezado{
+            .encabezado {
                 font-size: 1.2rem;
                 line-height: 2;
                 margin-bottom: 15px;
                 color: white;
             }
-            a{
+
+            a {
                 text-decoration: none;
                 color: #b6b6b6;
                 margin: 0 30px;
                 line-height: 1.5;
                 transition: 0.3s ease;
-                &:hover{
+
+                &:hover {
                     /* text-decoration-line: underline; */
                     color: white;
                 }
             }
         }
-        
-        & :nth-child(4){
+
+        & :nth-child(4) {
             flex: 2;
         }
     }
-    .abajo{
-        hr{
+
+    .abajo {
+        hr {
             width: 80%;
             border-color: #5a5757;
         }
+
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
-        p{
+
+        p {
             padding: 5px 0;
             font-size: 10px;
             align-items: end;
@@ -725,53 +901,59 @@ footer{
         }
     }
 
-    .cnt-line{
+    .cnt-line {
+
         :nth-child(10),
         :nth-child(11),
         :nth-child(12),
-        :nth-child(13){
+        :nth-child(13) {
             display: none;
         }
+
         :nth-child(2),
         :nth-child(3),
         :nth-child(4),
-        :nth-child(5){
+        :nth-child(5) {
             font-size: 16px;
         }
     }
 
-    footer{
-        .arriba{
+    footer {
+        .arriba {
             flex-direction: column;
-            .cnt-logo{
+
+            .cnt-logo {
                 text-align: center;
                 margin: 0 auto;
                 padding: 0;
                 width: 70%;
             }
-            .cnt-redes{
+
+            .cnt-redes {
                 width: 80%;
-                .encabezado{
+
+                .encabezado {
                     display: none;
                 }
-                
+
             }
 
         }
-        .ligas{
-            .col{
+
+        .ligas {
+            .col {
                 align-items: center;
-                a{
-                    
+
+                a {
+
                     padding: 10px 0;
                 }
             }
         }
-        .abajo{
-            p{
-                .mr{
-                    
-                }
+
+        .abajo {
+            p {
+                .mr {}
 
             }
         }
