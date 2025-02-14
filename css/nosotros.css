@@ -41,13 +41,14 @@ aside{
     .cnt-val{
         margin-top: 100px;
         display: flex;
-
+        flex-wrap: wrap;
         .val{
             width:  150px;
             height: 150px;
             border: 1px solid;
             border-radius: 50%;
             position: relative;
+            
         }
         .val::before, .val::after{
             position: absolute;
@@ -63,6 +64,33 @@ aside{
         }
         .val::after{
             transform: rotate(-45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    aside{
+        p{width: 80%;}
+    }
+
+    .cnt-misvis{
+        width: 80%;
+        flex-direction: column;
+        .cnt-mis, .cnt-vis{
+            width: 100%;
+            p{line-height: 1.2;}
+        }
+    }
+    .valores{
+        .cnt-val{
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            .val{
+                gap: 20%;
+                margin-bottom: 30px;
+                
+            }
         }
     }
 }
