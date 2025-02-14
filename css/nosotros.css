@@ -14,7 +14,7 @@ aside{
 }
 
 .cnt-mis, .cnt-vis{
-    width: 40%;
+    min-width: 40%;
     padding: 70px;
     background-image: url("../src/svg/img.svg");
     background-repeat: no-repeat;
@@ -74,18 +74,19 @@ aside{
     }
 
     .cnt-misvis{
-        width: 80%;
+        width: 90%;
         flex-direction: column;
         .cnt-mis, .cnt-vis{
             width: 100%;
             p{line-height: 1.2;}
+            text-align: center;
         }
     }
     .valores{
         .cnt-val{
             flex-wrap: wrap;
             justify-content: center;
-            width: 80%;
+            width: 90%;
             .val{
                 gap: 20%;
                 margin-bottom: 30px;
