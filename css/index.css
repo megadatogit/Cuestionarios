@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -16,14 +18,18 @@ header {
     align-items: center;
 
     .cnt-logo {
+        
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
         font-weight: 800;
         width: 10%;
-        height: 70px;
+        
         margin-left: 3%;
+        img{
+            width: 30%;
+        }
 
 
     }
@@ -546,6 +552,9 @@ footer{
     align-items: end;
     color: white;
     .arriba{
+        /* border: 2px dotted white; */
+        margin-top: 50px;
+        margin-bottom: 30px;
         width: 90%;
         height: 100%;
         display: flex;
@@ -566,6 +575,11 @@ footer{
                     width: 30px;
                 }
             }
+        }
+        .cnt-logo{
+            img{
+                width: 60%;
+            };
         }
         
         .tt{
@@ -733,6 +747,7 @@ footer{
                 text-align: center;
                 margin: 0 auto;
                 padding: 0;
+                width: 70%;
             }
             .cnt-redes{
                 width: 80%;
@@ -741,6 +756,7 @@ footer{
                 }
                 
             }
+
         }
         .ligas{
             .col{
