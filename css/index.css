@@ -15,19 +15,25 @@ body{
 header {
     /* border: 2px dotted darkblue; */
     width: 100%;
-    height: 100px;
+    height: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
-
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    
+    transition: opacity 0.9s ease;
     .cnt-logo {
-
+        opacity: 0;
+        transition: opacity 0.5s ease;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
         font-weight: 800;
-        width: 10%;
+        width: 22%;
 
         margin-left: 3%;
 
@@ -35,21 +41,20 @@ header {
             width: 10%;
         }
 
-
     }
 
-    
-    
 }
 nav {
     
-    position: sticky;
+    filter: opacity(0.3);
+    transform: scale(.7) translateX(300px);
+    transition: 1.2s ease;
     width: 50%;
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 20px;
-    z-index: 10;
+    gap: 10px;
+    /* z-index: 1; */
 
     .link {
         padding-bottom: 5px;
@@ -65,9 +70,11 @@ nav {
 
     .boton {
         text-decoration: none;
+        z-index: 101;
     }
 
     button {
+        appearance: none;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -77,6 +84,8 @@ nav {
         padding: 10px 30px;
         border-radius: 16px;
         font-size: 1.125rem;
+        border:none;
+        transition: border 1s ease;
 
 
     }
@@ -87,7 +96,7 @@ nav {
         justify-content: space-around;
         width: 130px;
         height: 35px;
-        background-color: rgb(190, 182, 182);
+        background-color: none;
         padding: 10px 30px;
         border-radius: 16px;
         font-size: 1.125rem;
@@ -110,6 +119,7 @@ button:hover {
     cursor: pointer;
     background-color: black;
     color: white;
+    
 }
 
 .acceso:hover {
@@ -133,6 +143,21 @@ button:hover {
     transform: scale(1);
 }
 
+header:hover #nav{
+    filter: opacity(1);
+    transform: scale(1) translateX(0px);
+    
+}
+
+header:hover #nav button{
+    border: 1px solid;
+    transition: 1s ease-in-out;
+}
+header:hover .acceso{
+    border: 1px solid;
+    transition: 1s ease-in-out;
+}
+
 .cnt-hero {
     /* background-color: #f4f4f7; */
     text-align: center;
@@ -145,17 +170,20 @@ button:hover {
     position: relative;
 
     #particles-js{
-        z-index: -1;
+        z-index: 1;
     }
 
     .cnt-logo {
-
+        top: calc(50% - 35%);
+        left: calc(50% - 10%/2);
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
         font-weight: 800;
         width: 10%;
+        z-index: 2;
 
         
 
@@ -169,6 +197,10 @@ button:hover {
 
 
     button {
+        position: absolute;
+        top: calc(50%);
+        left: calc(50% - 200px/2);
+        z-index: 150;
         font-size: 17px;
         margin-top: 40px;
         padding: none;
