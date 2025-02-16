@@ -863,6 +863,32 @@ footer {
     }
 }
 
+/* 
+.ani-tit{
+    animation: aparecer both;
+    animation-timeline: view();
+}
+
+@keyframes aparecer {
+    from{
+        filter: blur(10px);
+        transform: translateY(-200px) scale(0);
+    }
+    5%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(0);
+
+    }
+    6%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(0);
+
+    }
+    
+}
+ */
 
 @media (max-width: 760px) {
 
