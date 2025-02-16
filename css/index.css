@@ -191,7 +191,7 @@ header:hover .acceso{
 
     button {
         position: absolute;
-        top: calc(50%);
+        top: calc(65%);
         left: calc(50% - 200px/2);
         z-index: 150;
         font-size: 17px;
@@ -953,7 +953,10 @@ footer {
 
     .cnt-hero {
         h2 {
-            width: 80%;
+            width: 70%;
+        }
+        .boton{
+            
         }
     }
 
@@ -982,11 +985,11 @@ footer {
                 text-align: center;
                 margin: 0 auto;
                 padding: 0;
-                width: 70%;
+                min-width: 70%;
             }
 
             .cnt-redes {
-                width: 80%;
+                max-width: 80%;
 
                 .encabezado {
                     display: none;
