@@ -23,8 +23,8 @@ header {
     top: 0px;
     backdrop-filter: blur(3px);
     z-index: 1;
-    
     transition: opacity 0.9s ease;
+    
     .cnt-logo {
         opacity: 0;
         transition: opacity 0.5s ease;
@@ -34,7 +34,6 @@ header {
         font-size: 1.5rem;
         font-weight: 800;
         width: 22%;
-
         margin-left: 3%;
 
         img {
@@ -45,9 +44,8 @@ header {
 
 }
 nav {
-    
     filter: opacity(0.3);
-    transform: scale(.7) translateX(300px);
+    transform: scale(.8) translateX(50px);
     transition: 1.2s ease;
     width: 50%;
     display: flex;
@@ -61,20 +59,31 @@ nav {
         color: black;
         font-size: 1.125rem;
         position: relative;
-
-
         text-decoration: none;
-
-
     }
 
     .boton {
         text-decoration: none;
-        z-index: 101;
+        z-index: 1;
     }
 
     button {
-        appearance: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 130px;
+        height: 35px;
+        background-color: rgb(0, 0, 0);
+        padding: 10px 30px;
+        border-radius: 16px;
+        font-size: 1.125rem;
+        border:none;
+        transition: border 0.3s ease;
+        color: white;
+        
+    }
+
+    .acceso {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -84,47 +93,31 @@ nav {
         padding: 10px 30px;
         border-radius: 16px;
         font-size: 1.125rem;
-        border:none;
-        transition: border 1s ease;
-
-
-    }
-
-    .acceso {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 130px;
-        height: 35px;
-        background-color: none;
-        padding: 10px 30px;
-        border-radius: 16px;
-        font-size: 1.125rem;
         border: none;
         color: #1c1c1c;
 
-
+        
     }
-
 }
 
+.icn-menu{
+    display:none;
+    width: 35px;
+}
 .abrir,
 .cerrar {
     display: none;
 }
 
-
-
 button:hover {
     cursor: pointer;
-    background-color: black;
-    color: white;
-    
+    background-color: rgb(255, 255, 255);
+    color: black;    
 }
 
 .acceso:hover {
-    background-color: rgb(128, 125, 125);
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .link:before {
@@ -136,7 +129,6 @@ button:hover {
     bottom: 0;
     transform: scale(0);
     transition: 0.3s ease;
-
 }
 
 .link:hover::before {
@@ -151,11 +143,13 @@ header:hover #nav{
 
 header:hover #nav button{
     border: 1px solid;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 header:hover .acceso{
     border: 1px solid;
-    transition: 1s ease-in-out;
+    background-color: #000000;
+    color: white;
+    transition: 0.3s ease-in-out;
 }
 
 .cnt-hero {
@@ -168,15 +162,14 @@ header:hover .acceso{
     justify-content: center;
     flex-direction: column;
     position: relative;
-
     #particles-js{
         z-index: 1;
     }
 
     .cnt-logo {
+        position: absolute;
         top: calc(50% - 35%);
         left: calc(50% - 10%/2);
-        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -885,7 +878,9 @@ footer {
     }
 
     header {
-
+        position: sticky;
+        top: 1vh;
+        backdrop-filter: none;
         nav {
             opacity: 0;
             visibility: hidden;
@@ -900,7 +895,9 @@ footer {
             background-color: #1c1c1c;
             padding: 2rem;
             box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
-
+            transform: translate(0);
+            transform: scale(1);
+            height: 100vh;
             .link {
                 display: flex;
                 justify-content: end;
@@ -908,15 +905,34 @@ footer {
                 gap: 20px;
                 color: #ececec;
 
+                
             }
-
         }
+        
+        
+        .icn-menu{
+            border: 2px dotted white;
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: end;
+            color: white;
+            img{
+                
+                width: 30px;
+            }
+        }
+
+    button {
+        display: none;
+        
     }
 
-    header nav.boton {
-        width: 100%;
-        margin-top: 20px;
+    .acceso {
+        display: none;
     }
+
 
     nav.visible {
         opacity: 1;
@@ -984,11 +1000,6 @@ footer {
             }
         }
 
-        .abajo {
-            p {
-                .mr {}
-
-            }
-        }
     }
+}
 }

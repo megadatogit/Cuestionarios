@@ -5,6 +5,7 @@ const menu = document.querySelector('header');
 const footer = document.querySelector('footer');  
 const logo = document.querySelector('.logo');
 
+
 // Abrir y cerrar el menú al hacer click en el botón abrir
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
