@@ -5,10 +5,10 @@
     font-family: "poppins", "Helvetica Neue", Helvetica, Arial;
     max-width: 1920px;
     transition: 0.3s ease;
-    
+
 }
 
-body{
+body {
     position: relative;
 }
 
@@ -24,7 +24,7 @@ header {
     backdrop-filter: blur(3px);
     z-index: 1;
     transition: opacity 0.9s ease;
-    
+
     .cnt-logo {
         opacity: 0;
         transition: opacity 0.5s ease;
@@ -43,6 +43,7 @@ header {
     }
 
 }
+
 nav {
     filter: opacity(0.3);
     transform: scale(.8) translateX(50px);
@@ -77,10 +78,10 @@ nav {
         padding: 10px 30px;
         border-radius: 16px;
         font-size: 1.125rem;
-        border:none;
+        border: none;
         transition: border 0.3s ease;
         color: white;
-        
+
     }
 
     .acceso {
@@ -96,14 +97,15 @@ nav {
         border: none;
         color: #1c1c1c;
 
-        
+
     }
 }
 
-.icn-menu{
-    display:none;
+.icn-menu {
+    display: none;
     width: 35px;
 }
+
 .abrir,
 .cerrar {
     display: none;
@@ -112,7 +114,7 @@ nav {
 button:hover {
     cursor: pointer;
     background-color: rgb(255, 255, 255);
-    color: black;    
+    color: black;
 }
 
 .acceso:hover {
@@ -135,17 +137,18 @@ button:hover {
     transform: scale(1);
 }
 
-header:hover #nav{
+header:hover #nav {
     filter: opacity(1);
     transform: scale(1) translateX(0px);
-    
+
 }
 
-header:hover #nav button{
+header:hover #nav button {
     border: 1px solid;
     transition: 0.3s ease-in-out;
 }
-header:hover .acceso{
+
+header:hover .acceso {
     border: 1px solid;
     background-color: #000000;
     color: white;
@@ -162,7 +165,8 @@ header:hover .acceso{
     justify-content: center;
     flex-direction: column;
     position: relative;
-    #particles-js{
+
+    #particles-js {
         z-index: 1;
     }
 
@@ -178,11 +182,11 @@ header:hover .acceso{
         width: 10%;
         z-index: 2;
 
-        
+
 
         img {
             width: 100%;
-            margin-bottom: 50px ;
+            margin-bottom: 50px;
         }
 
 
@@ -749,25 +753,36 @@ footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
 
         .cnt-logo,
         .cnt-redes {
             display: block;
             display: flex;
-
+            
             width: 30%;
             height: 100px;
             justify-content: center;
             align-items: center;
+            #encabezado{
+                margin-right: 10px;
+            }
+            .icn-red {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
 
             a {
                 display: block;
 
                 img {
                     width: 30px;
-                    filter: opacity(0.6);
+                    filter: opacity(0.7);
                     transition: filter 0.3 ease;
-                    &:hover{
+
+                    &:hover {
                         filter: opacity(1);
                     }
 
@@ -887,6 +902,7 @@ footer {
         position: sticky;
         top: 1vh;
         backdrop-filter: none;
+
         nav {
             opacity: 0;
             visibility: hidden;
@@ -904,6 +920,7 @@ footer {
             transform: translate(0);
             transform: scale(1);
             height: 100vh;
+
             .link {
                 display: flex;
                 justify-content: end;
@@ -911,53 +928,56 @@ footer {
                 gap: 20px;
                 color: #ececec;
 
-                
+
             }
         }
-        
-        
-        .icn-menu{
-            
+
+
+        .icn-menu {
+
             display: flex;
             width: 100%;
             flex-direction: row-reverse;
             align-items: center;
             justify-content: end;
             color: white;
-            img{
-                
+
+            img {
+
                 width: 30px;
                 margin-left: 10px;
             }
         }
 
-    button {
-        display: none;
+        button {
+            display: none;
+
+        }
+
+        .acceso {
+            display: none;
+        }
+
+
+        nav.visible {
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+        .cnt-logo {
+            padding: 15%;
+        }
+
+        
         
     }
-
-    .acceso {
-        display: none;
-    }
-
-
-    nav.visible {
-        opacity: 1;
-        visibility: visible;
-
-    }
-
-    .cnt-logo {
-        padding: 15%;
-    }
-
     .cnt-hero {
         h2 {
             width: 70%;
         }
-        .boton{
-            
-        }
+
+        .boton {}
     }
 
     .cnt-line {
@@ -977,7 +997,7 @@ footer {
         }
     }
 
-    footer {
+    .footer {
         .arriba {
             flex-direction: column;
 
@@ -985,15 +1005,23 @@ footer {
                 text-align: center;
                 margin: 0 auto;
                 padding: 0;
-                min-width: 70%;
+                width: 100%;
             }
 
+            #encabezado {
+                display: none;
+            }
             .cnt-redes {
-                max-width: 80%;
+                /* border: 2px dotted white; */
+                width: 100%;
 
-                .encabezado {
-                    display: none;
+                .icn-red{
+
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
                 }
+
 
             }
 
@@ -1011,5 +1039,4 @@ footer {
         }
 
     }
-}
 }
