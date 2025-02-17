@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cnt-logo{
+    padding: 10px;
+    margin: 100px auto;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid; */
+    justify-content: end;
+    
+  
+    
+}
+
+
+.svg{
+    position: relative;
+}
+
+#ala1{
+    transform: translate(0%);
+}
+#ala2,
+#ala3,
+#ala4{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+#chle{
+    transform: translateX(100%);
+    filter: opacity(0);
+
+    animation: movchle 5s ease infinite;
+}
+
+@keyframes movchle
+{
+    0%{
+        transform: translateX(100%);
+        filter: opacity(0);
+    }
+
+    100%{
+        transform: translateX(0%);
+        filter: opacity(1);
+    }
+}
+
+svg{
+    border: 2px dotted darkgoldenrod;
+    position: relative;
+}
+
+svg::before, svg::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    border-top: 1px solid;
+    top: 50%;
+    left: 50%;
+}
+
+
+#pluma1{
+    filter: opacity(.5);
+    transform: rotate(50deg);
+    transform-origin: center;
+    animation: movpluma1 5s ease infinite;
+    
+}
+
+@keyframes movpluma1 {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    100%{
+        transform: rotate(20deg);
+        transform: origi;
+    }
+}
+
+#pluma2{
+    transform: rotate(0deg);
+    transform-origin: 386px 576px;
+    animation: movpluma2 5s ease infinite;
+    
+}
+
+@keyframes movpluma2 {
+    0%{
+        transform: rotate(50deg);
+        transform-origin: 0px 0px;
+    }
+}
+
+
+#pluma3,
+#pluma4{
+    display: none;
+}
