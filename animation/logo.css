@@ -4,34 +4,45 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 200vh;
+}
+
+.st0{display:none;}
+.st1{display:inline;fill:#0097C0;}
+.st2{fill:#007AAA;}
+.st3{fill:#0097C0;}
+.st4{fill:#00B2D0;}
+.st5{fill:#67C7DD;}
+.st6{fill:#B5E0ED;}
+
 .cnt-logo{
     padding: 10px;
-    margin: 100px auto;
+    margin: 450px auto;
     display: flex;
     width: 200px;
-    height: 200px;
-    /* border: 2px solid; */
+    height: auto;
+    border: 2px solid;
     justify-content: end;
+    position: relative;    
+
     
-  
-    
 }
 
+#ala1{transform: translateX(-83px);}
+#ala2{}
+#ala3{}
+#ala4{}
+#cuerpo{
 
-.svg{
-    position: relative;
 }
 
-#ala1{
-    transform: translate(0%);
-}
-#ala2,
-#ala3,
-#ala4{
+svg{
     position: absolute;
     bottom: 0;
     left: 0;
 }
+
 
 
 #chle{
@@ -54,10 +65,6 @@
     }
 }
 
-svg{
-    border: 2px dotted darkgoldenrod;
-    position: relative;
-}
 
 svg::before, svg::after{
     position: absolute;
