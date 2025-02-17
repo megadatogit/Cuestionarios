@@ -19,29 +19,30 @@
       <a class="boton" href="#"><button>Inicia tu registro</button></a>
     </div>
 
-    <img id="abrir" class="abrir" src="./src/svg/menu.svg" alt="" />
-    
-    <nav id="nav">
-      <img id="cerrar" class="cerrar" src="./src/svg/cerrar.svg" alt="" />
-      <a class="link" href="#">Inicio</a>
-      <a class="link" href="./html/nosotros.html">Nosotros</a>
-      <a class="link" href="#">Servicios</a>
-      <a class="boton" href="#"><button class="acceso">Acceso</button></a>
-      <a class="boton" href="#"><button>Afiliarse</button></a>
-    </nav>
-    
-    <header>
+    <header class="header">
+      <div class="cnt-logo"><img src="/src/favicon/lsfvc.png" alt="" /></div>
+      <img id="abrir" class="abrir" src="./src/svg/menu.svg" alt="" />
+      <nav id="nav">
+        <img id="cerrar" class="cerrar" src="./src/svg/cerrar.svg" alt="" />
+        <a class="link" href="#">Inicio</a>
+        <a class="link" href="./html/nosotros.html">Nosotros</a>
+        <a class="link" href="#">Servicios</a>
+        <a class="boton" href="#"><button class="acceso">Acceso</button></a>
+        <a class="boton" href="#"><button class="afiliar">Afiliarse</button></a>
+        <a class="link" href="#"><span class="icn-menu"><img class="icn-acss" src="./src/svg/acceso.svg" alt="acceso">Acceso</span></a>
+        <a class="link" href="#"><span class="icn-menu"><img class="icn-acss" src="./src/svg/afiliarse.svg" alt="acceso">Afiliarse</span></a>
+      </nav>
     </header>
 
     <aside>
-      <h2>Historial clínico digital</h2>
+      <h2 class="ani-tit">Historial clínico digital</h2>
       <p>
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout.
       </p>
     </aside>
 
-    <h2 class="tit">Lorem, ipsum dolor.</h2>
+    <h2 class="tit ani-tit">Lorem, ipsum dolor.</h2>
     <div class="cnt-line">
       <div class="line"></div>
       <p class="txt-iza">Lorem ipsum dolor sit amet.</p>
@@ -59,7 +60,7 @@
     </div>
 
     <section class="testimonios">
-      <p>Testimonios</p>
+      <p class="ani-tit">Testimonios</p>
       <div class="cnt-trj">
         <div id="trj">
           <span class="cnt-img"
@@ -104,17 +105,15 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="footer">
       <div class="arriba">
         <div class="cnt-logo"><img src="./src/images/LSblck.png" alt="" /></div>
         <div class="cnt-redes">
-          <p class="encabezado">Síguenos</p>
-          <a href="#"><img src="./src/svg/facebook.svg" alt="Facebook" /></a>
-          <a href="#"><img src="./src/svg/linked.svg" alt="" /></a>
-          <a href="#"><img src="./src/svg/instagram.svg" alt="" /></a>
-          <a class="tt" href="#"
-            ><img src="./src/svg/tiktok_vv.svg" alt=""
-          /></a>
+          <p id="encabezado">Síguenos</p>
+          <div class="icn-red"><a href="#"><img src="./src/svg/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="./src/svg/linked.svg" alt="linkedin" /></a>
+            <a href="#"><img src="./src/svg/instagram.svg" alt="instabram" /></a>
+            <a class="tt" href="#"><img src="./src/svg/tiktok_vv.svg" alt="tiktok"/></a></div>
         </div>
       </div>
 
