@@ -100,23 +100,31 @@ svg{
 
 @keyframes pluma1{
     0% {transform: rotate(0);}
-    50%{transform: rotate(-30deg);}
+    50%{transform: rotate(-30deg);
+        transform-origin: 250px 350px;
+    }
     100%{transform: rotate(0);}
 }
 
 @keyframes pluma2{
     0%{transform: rotate(0deg) translate(0px, 0px);}
-    50%{transform: rotate(-50deg) translate(3px, -35px);}
+    50%{transform: rotate(-50deg) translate(3px, -35px);
+        transform-origin: 250px 350px;
+    }
     100%{transform: rotate(0deg) translate(0px);}
 }
 
 @keyframes pluma3{
     0%{transform: rotate(0deg) translate(0px 0px);}
-    50%{transform: rotate(-70deg) translate(6px, -55px);}
+    50%{transform: rotate(-70deg) translate(6px, -55px);
+        transform-origin: 250px 350px;
+    }
     100%{transform: rotate(0deg) translate(0px);}
 }
 @keyframes pluma4{
     0%{transform: rotate(0deg) translate(0px 0px);}
-    50%{transform: rotate(-90deg) translate(13px, -65px);}
+    50%{transform: rotate(-90deg) translate(13px, -65px);
+        transform-origin: 250px 350px;
+    }
     100%{transform: rotate(0deg) translate(0px);}
 }
