@@ -45,8 +45,8 @@ header {
 }
 
 nav {
-    filter: opacity(0.3);
-    transform: scale(.8) translateX(50px);
+    /*filter: opacity(0.3);
+    transform: scale(.8) translateX(50px);*/
     transition: 1.2s ease;
     width: 50%;
     display: flex;
@@ -731,6 +731,25 @@ canvas {
 }
 
 #trj:hover .nombre {
+
+    transform: scale(.9) translate(50px, -126px);
+}
+
+#trj.hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#trj.hover .cnt-img {
+    transform: translate(-80px, -25px) scale(0.6);
+}
+
+#trj.hover .test {
+    filter: opacity(1);
+    transform: translateY(-30px);
+
+}
+
+#trj.hover .nombre {
 
     transform: scale(.9) translate(50px, -126px);
 }
