@@ -18,12 +18,13 @@ cerrar.addEventListener("click", () => {
 
 // Mostrar/ocultar el menú al desplazarse en la página
 window.addEventListener('scroll', function() {  
-    const footerPosition = footer.getBoundingClientRect().top;  
+    const footerPosition = footer.getBoundingClientRect().top;
+    console.log(this.window.scrollY)
     
     // Si el footer está a menos de 100px de la parte superior de la ventana  
     if (footerPosition <= 500) {  
         menu.style.opacity = '0'; // Desvanece el menú  
-    } else {  
+    } else {
         menu.style.opacity = '1'; // Muestra el menú  
     }  
 });
