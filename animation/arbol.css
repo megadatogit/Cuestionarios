@@ -26,6 +26,7 @@ p{
 
 
 .detPat-txt{
+    border: 2px dotted darkmagenta;
     width: 20%;
     display: flex;
     justify-content: center;
@@ -79,11 +80,34 @@ p{
         width: 80%;
         height: 100%;
         background-color: lightskyblue;
+        
     }
 
-    .fondo:nth-child(1)::before{ width: 65%;}
-    .fondo:nth-child(2)::before{ width: 25%;}
-    .fondo:nth-child(3)::before{ width: 85%;}
+    .fondo:nth-child(1)::before{ width: 65%;animation: barra1 5s ease infinite ;}
+    .fondo:nth-child(2)::before{ width: 35%;animation: barra2 5s ease infinite ;}
+    .fondo:nth-child(3)::before{ width: 95%;animation: barra3 5s ease infinite ;}
+}
+
+@keyframes barra1{
+
+    0%{width: 0%;}
+    50%{width: 65%;}
+    100%{width: 0%;}
+
+}
+@keyframes barra2{
+
+    0%{width: 0%;}
+    50%{width: 25%;}
+    100%{width: 0%;}
+
+}
+@keyframes barra3{
+
+    0%{width: 0%;}
+    50%{width: 95%;}
+    100%{width: 0%;}
+
 }
 
 .sec2{

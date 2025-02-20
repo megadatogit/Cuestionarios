@@ -34,7 +34,7 @@ body{
     transform: translateX(350px);
     transform: rotate(0deg);
     transform-origin: 20% 100%;
-    animation: ala1 5s ease infinite;
+    animation: ala1 5s ease ;
 }
 
 @keyframes ala1 {
@@ -56,21 +56,24 @@ svg{
     left: 0;
 }
 
+/* 
 #chle{
     transform: rotate(0deg);
-    animation: chle 4s ease infinite;
+    transform: scale(1);
+    animation: chle 4s ease ;
 }
 
 @keyframes chle {
     0%{
-        transform: rotate(0deg) translate(0px, 0px);
-        filter: opacity(1);
+        transform: rotate(0deg) translate(100%, 0px) scale(1);
+        filter: opacity(0);
         
     }
     50%{
-        transform: rotate(-10deg) translate(0px, 50px);
-        filter: opacity(.7);
+        transform: rotate(0deg) translate(100%, 50px) scale(.85);
+        filter: opacity(1);
     }
+
     100%{
         transform: translate(0deg) translate(0px, 0px);
         filter: opacity(1);
@@ -80,51 +83,137 @@ svg{
 #pluma1{
     transform: rotate(-0deg);
     transform-origin: center ;
-    animation: pluma1 4s 0s ease infinite;
+    animation: pluma1 4s 0s ease ;
+    transform: scale(1);
 }
 #pluma2{
     transform: rotate(-0deg);
     transform-origin: center ;
-    animation: pluma2 4s 0.2s ease infinite;
+    transform: scale(1);
+    animation: pluma2 4s 0.2s ease ;
+    
 }
 #pluma3{
     transform: rotate(-0deg);
     transform-origin: center ;
-    animation: pluma3 4s 0.4s ease infinite;
+    transform: scale(1);
+    animation: pluma3 4s 0.4s ease ;
 }
 #pluma4{
     transform: rotate(-0deg);
     transform-origin: center ;
-    animation: pluma4 4s 0.6s ease infinite;
+    transform: scale(1);
+    animation: pluma4 4s 0.48s ease ;
 }
 
 @keyframes pluma1{
     0% {transform: rotate(0);}
-    50%{transform: rotate(-30deg);
-        transform-origin: 250px 350px;
+    50%{transform: rotate(-30deg) translateX(-5px);
+        
     }
     100%{transform: rotate(0);}
 }
 
 @keyframes pluma2{
-    0%{transform: rotate(0deg) translate(0px, 0px);}
-    50%{transform: rotate(-50deg) translate(3px, -35px);
-        transform-origin: 250px 350px;
-    }
-    100%{transform: rotate(0deg) translate(0px);}
+    0%{transform: rotate(0deg) translate(0px, 0px) scale(1.0);}
+    50%{transform: rotate(-45deg) translate(0px, 0px) scale(0.0);}
+    100%{transform: rotate(0deg) translate(0px, 0px) scale(1);}
 }
 
 @keyframes pluma3{
-    0%{transform: rotate(0deg) translate(0px 0px);}
-    50%{transform: rotate(-70deg) translate(6px, -55px);
-        transform-origin: 250px 350px;
-    }
+    0%{transform: rotate(0deg) translate(0px, 0px);}
+    35%{transform: rotate(-70deg) translate(-20px, -20px) scale(0.0);}
+    50%{transform: rotate(-70deg) translate(-10px, 0px) scale(0.0);}
     100%{transform: rotate(0deg) translate(0px);}
 }
 @keyframes pluma4{
-    0%{transform: rotate(0deg) translate(0px 0px);}
-    50%{transform: rotate(-90deg) translate(13px, -65px);
-        transform-origin: 250px 350px;
-    }
+    0%{transform: rotate(0deg) translate(0px, 0px);}
+    30%{transform: rotate(-90deg) translate(-10px, -30px) scale(0.0);}
+    50%{transform: rotate(-90deg) translate(-20px, -30px) scale(0.0)}
     100%{transform: rotate(0deg) translate(0px);}
+}
+ */
+
+#chle{
+    transform: rotate(0deg);
+    transform: scale(1);
+    animation: chle 4s ease ;
+}
+
+@keyframes chle {
+    0%{
+        transform: rotate(0deg) translate(100%, 0px) scale(1);
+        filter: opacity(0);
+        
+    }
+    50%{
+        transform: rotate(0deg) translate(100%, 50px) scale(.85);
+        filter: opacity(1);
+    }
+
+    100%{
+        transform: translate(0deg) translate(0px, 0px);
+        filter: opacity(1);
+    }
+}
+
+#pluma1{
+    transform: rotate(-0deg);
+    transform-origin: center ;
+    animation: pluma1 4s 0s ease forwards;
+    transform: scale(0);
+}
+#pluma2{
+    transform: rotate(-0deg);
+    transform-origin: center ;
+    transform: scale(0);
+    animation: pluma2 4s 0.2s ease forwards;
+    
+}
+#pluma3{
+    transform: rotate(-0deg);
+    transform-origin: center ;
+    transform: scale(0);
+    animation: pluma3 4s 0.4s ease forwards;
+}
+#pluma4{
+    transform: rotate(-0deg);
+    transform-origin: center ;
+    transform: scale(0);
+    animation: pluma4 4s 0.48s ease forwards ;
+}
+
+@keyframes pluma1{
+    0% {transform: rotate(0deg) scale(0);}
+    50%{transform: rotate(0deg) translateX(-0px) scale(0);
+        /* transform-origin: 260px 350px; */
+    }
+    100%{transform: rotate(0deg) translateX(-0px) scale(1);}
+}
+
+@keyframes pluma2{
+    0%{transform: rotate(-45deg) translate(0px, 0px) scale(0.0);}
+    50%{transform: rotate(-45deg) translate(0px, 0px) scale(0.0);
+         
+        /* transform-origin: 260px 350px; */
+    }
+    100%{transform: rotate(0deg) translate(0px, 0px) scale(1);}
+}
+
+@keyframes pluma3{
+    0%{transform: rotate(-70deg) translate(-20px, -20px) scale(0.0);}
+    35%{transform: rotate(-70deg) translate(-20px, -20px) scale(0.0);}
+    50%{transform: rotate(-70deg) translate(-10px, 0px) scale(0.0);
+        
+        /* transform-origin: 250px 350px; */
+    }
+    100%{transform: rotate(0deg) translate(0px) scale(1);}
+}
+@keyframes pluma4{
+    0%{transform: rotate(-90deg) translate(-10px, -30px) scale(0);}
+    30%{transform: rotate(-90deg) translate(-10px, -30px) scale(0.0);}
+    50%{transform: rotate(-90deg) translate(-20px, -30px) scale(0.0);
+        /* transform-origin: 250px 350px; */
+    }
+    100%{transform: rotate(0deg) translate(1px) scale(1);}
 }
