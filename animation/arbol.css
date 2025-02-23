@@ -5,6 +5,13 @@
     font-family: "poppins";
     color: rgb(65, 64, 64);
 }
+body{
+    display: flex;
+    flex-direction: column;
+    background: hsla(0, 0%, 100%, 1);
+
+background: linear-gradient(135deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 87%, 1) 100%);
+}
 
 h3{
     font-size: 35px;
@@ -26,7 +33,7 @@ p{
 
 
 .detPat-txt{
-    border: 2px dotted darkmagenta;
+    /* border: 2px dotted darkmagenta; */
     width: 20%;
     display: flex;
     justify-content: center;
@@ -90,23 +97,23 @@ p{
 
 @keyframes barra1{
 
-    0%{width: 0%;}
+    0%{width: 5%;}
     50%{width: 65%;}
-    100%{width: 0%;}
+    100%{width: 5%;}
 
 }
 @keyframes barra2{
 
-    0%{width: 0%;}
+    0%{width: 5%;}
     50%{width: 25%;}
-    100%{width: 0%;}
+    100%{width: 5%;}
 
 }
 @keyframes barra3{
 
-    0%{width: 0%;}
+    0%{width: 5%;}
     50%{width: 95%;}
-    100%{width: 0%;}
+    100%{width: 5%;}
 
 }
 
@@ -142,13 +149,42 @@ p{
     
     
 }
+.cric {  
+    stroke-dasharray: 310 1400; /* Valor inicial de stroke-dasharray */  
+    stroke-dashoffset: 310; /* Offset inicial para ocultar el trazo */  
+    animation: dash 5s ease-in-out infinite; /* Llama a la animación */ 
+    transform: rotate(-180deg);
+    transform-origin: center; 
+}  
+
+@keyframes dash {  
+    0%, 100% {  
+        stroke-dashoffset: 310; /* Offset inicial y final */  
+    }  
+    50% {  
+        stroke-dashoffset: 10; /* Offset en el medio para dar la ilusión de animación */  
+    }  
+}  
 
 .sec2-img{
         
     img{
         filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+        transform: translateY(0);
+        animation: monosombra 5s ease-in-out infinite;
     }
 }
+@keyframes monosombra{
+    0%{filter: drop-shadow(0 0 10px rgba(5, 82, 170, 0.7));
+        transform: translateY(0);}
+    50%{filter: drop-shadow(0 0 10px rgba(5, 82, 170, 0));
+        transform: translateY(10px)}
+    100%{filter: drop-shadow(0 0 10px rgba(5, 82, 170, 0.7));
+        transform: translateY(0);
+        }
+}
+
+
 .sec3{
     width: 120%;
     display: flex;
@@ -187,8 +223,44 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15%;    
+    gap: 15%;
+    transform: scale(.7);
+    position: relative;
 }
+
+.cnt-arbol::before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: darkorange;
+    top: 55%;
+    right: 25%;
+    outline: 14px dashed rgb(9, 0, 139);
+    outline-offset: 10px;
+    border-radius: 50%;
+    animation: brincar 10s ease infinite;
+    
+}
+
+
+
+@keyframes brincar {
+    0%{transform: rotate(360deg);
+        top: 58%;
+        right: 15.5%;}
+    25%{top: 71.2%;
+        right: 49.5%;}
+    50%{top: 45.85%;
+    right: 83.5%;}
+    75%{top: 47%;
+        right: 138%;
+    }
+    100%{transform: rotate(-360deg);
+        top: 58%;
+        right: 15.5%;}
+    
+} 
 
 .usuario, 
 .padre, 
@@ -226,9 +298,9 @@ p{
     border-radius: 15px;
     .img{
         border: 5px dotted rgb(0, 140, 255);
-        background-color: lightblue;
+        background-color: rgba(255, 255, 255, 0.432);
         
-        box-shadow: 0 0 35px rgb(2, 162, 255);
+        box-shadow: 0 0 35px rgba(2, 162, 255, 0.384);
     }
 }
 
@@ -236,6 +308,17 @@ p{
     display: flex;
     flex-direction: column;
     gap: 300px;
+    position: relative;
+    
+}
+
+.cnt-padres::before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    
+    
 }
 
 .cnt-padres, 
@@ -250,12 +333,12 @@ p{
 .cnt-abuelosPadres::before{
     position: absolute;
     content: "";
-    width: 25%;
+    width: 15%;
     height: 40%;
     border-left: 2px solid;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    left: -50%;
+    left: -30%;
     top: calc(50% - 20%);
 }
 .cnt-padres::after,
@@ -264,10 +347,10 @@ p{
 {
     position: absolute;
     content: "";
-    width: 25%;
+    width: 15%;
     border: 2px solid;
     top: 50%;
-    left: -76%;
+    left: -46%;
 
 }
 
@@ -278,7 +361,7 @@ p{
 .madre::before{
     position: absolute;
     content: "";
-    width: 40%;
+    width: 55%;
     height: 60%;
     border-bottom: 5px dotted rgb(0, 140, 255);
     border-left:   5px dotted rgb(0, 140, 255);
@@ -289,10 +372,48 @@ p{
 .madre::after{
     position: absolute;
     content: "";
-    width: 30%;
+    width: 10%;
     border-top: 5px dotted rgb(0, 140, 255);
     top: -45%;
-    left: -97%;
+    left: -82%;
 }
 
+.AM-padre::before{
+    position: absolute;
+    content: "";
+    width: 55%;
+    height: 20%;
+    border-top: 5px dotted rgb(0, 140, 255);
+    border-left:   5px dotted rgb(0, 140, 255);
+    left: -57%;
+    top: 28%;
+    
+}
+
+.AM-padre::after{
+    position: absolute;
+    content: "";
+    width: 20%;
+    border-bottom: 5px dotted rgb(0, 140, 255);
+    top: 48%;
+    left: -80%;
+}
+
+body {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    background-color: #f0f0f0;  
+    margin: 0;  
+}  
+
+.circle {  
+    width: 50px;  
+    height: 50px;  
+    background-color: #3498db;  
+    border-radius: 50%;  
+    position: relative;  
+    animation: bounce 1.5s infinite; /* Duración y repetición de la animación */  
+}  
 
