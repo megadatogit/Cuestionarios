@@ -36,9 +36,9 @@ video, img {
 .overlay{
     width: 65%;
     
-    border: 4px solid rgba(0, 255, 0, 0.8);
+    border: 4px solid rgba(255, 0, 170, 0.8);
     border-radius: 8px;
-    aspect-ratio: 1.043 / 0.7; /* 1.49 / 1 */
+    aspect-ratio: 1.49 / 1; /* 1.49 / 1 */
     z-index: 1;
 }
 

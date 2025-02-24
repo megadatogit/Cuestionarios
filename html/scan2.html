@@ -242,69 +242,68 @@
 
         // Función para capturar la imagen
         function captureImage() {
-            //alert('click captura imagen');
-            if (!video.srcObject) {
-                alert("No hay video disponible.");
-                return;
+            if(window.clientInformation.platform!='Win32'&&(window.innerHeight <= window.innerWidth)){
+                alert('Coloca tu dispositivo en posición vertical')
+                return
             }
+    // Verificar si hay un video disponible
+    if (!video.srcObject) {
+        alert("No hay video disponible.");
+        return;
+    }
 
-            // Obtener dimensiones reales del video
-            const videoWidth = video.videoWidth;
-            const videoHeight = video.videoHeight;
+    // Obtener dimensiones reales del video
+    const videoWidth = video.videoWidth;
+    const videoHeight = video.videoHeight;
 
-            // Configurar el canvas con la resolución real del video
-            canvas.width = videoWidth;
-            canvas.height = videoHeight;
-            ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
+    // Configurar el canvas con la resolución real del video
+    canvas.width = videoWidth;
+    canvas.height = videoHeight;
+    ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
 
-            // Obtener dimensiones del overlay
-            const overlay = document.querySelector(".overlay");
-            const videoRect = video.getBoundingClientRect();
-            const overlayRect = overlay.getBoundingClientRect();
+    // Obtener dimensiones del overlay
+    const overlay = document.querySelector(".overlay");
+    const videoRect = video.getBoundingClientRect();
+    const overlayRect = overlay.getBoundingClientRect();
 
-            // Escalado entre dimensiones del video y la vista en pantalla
-            const scaleX = videoWidth / videoRect.width;
-            const scaleY = videoHeight / videoRect.height;
+    // Escalado entre dimensiones del video y la vista en pantalla
+    const scaleX = videoWidth / videoRect.width;
+    const scaleY = videoHeight / videoRect.height;
 
-            // Obtener coordenadas del overlay en el video
-            let overlayX = (overlayRect.left - videoRect.left) * scaleX;
-            let overlayY = (overlayRect.top - videoRect.top) * scaleY;
-            let overlayWidth = overlayRect.width * scaleX;
-            let overlayHeight = overlayRect.height * scaleY;
+    // Obtener coordenadas del overlay en el video
+    let overlayX = (overlayRect.left - videoRect.left) * scaleX;
+    let overlayY = (overlayRect.top - videoRect.top) * scaleY;
+    let overlayWidth = overlayRect.width * scaleX;
+    let overlayHeight = overlayRect.height * scaleY;
 
-            // Ajuste del recorte eliminando un 10% arriba y abajo
-            const extraCrop = overlayHeight * 0.10;
-            overlayY += extraCrop;
-            overlayHeight -= extraCrop * 2;
+    // Crear canvas para la imagen recortada
+    const croppedCanvas = document.createElement("canvas");
+    croppedCanvas.width = overlayWidth;
+    croppedCanvas.height = overlayHeight;
+    const croppedCtx = croppedCanvas.getContext("2d");
 
-            // Crear canvas para la imagen recortada
-            const croppedCanvas = document.createElement("canvas");
-            croppedCanvas.width = overlayWidth;
-            croppedCanvas.height = overlayHeight;
-            const croppedCtx = croppedCanvas.getContext("2d");
+    // Dibujar imagen recortada con ajustes (sin recorte adicional)
+    croppedCtx.drawImage(
+        canvas, 
+        overlayX, overlayY, overlayWidth, overlayHeight, 
+        0, 0, overlayWidth, overlayHeight
+    );
 
-            // Dibujar imagen recortada con ajustes
-            croppedCtx.drawImage(
-                canvas, 
-                overlayX, overlayY, overlayWidth, overlayHeight, 
-                0, 0, overlayWidth, overlayHeight
-            );
+    // Mostrar la imagen en la vista previa
+    previewImage.src = croppedCanvas.toDataURL("image/jpeg");
 
-            // Mostrar la imagen en la vista previa
-            previewImage.src = croppedCanvas.toDataURL("image/jpeg");
+    // Ocultar la cámara y el botón de captura
+    cameraContainer.style.display = "none";
+    captureContainer.style.display = "none";
 
-            // Ocultar la cámara y botón de captura
-            cameraContainer.style.display = "none";
-            captureContainer.style.display = "none";
+    // Mostrar la vista previa y los botones
+    previewContainer.style.display = "flex";
+    buttonGroup.style.display = "flex";
 
-            // Mostrar la vista previa y los botones
-            previewContainer.style.display = "flex";
-            buttonGroup.style.display = "flex";
+    // Ocultar el canvas de captura
+    canvas.style.display = "none";
+}
 
-            // Ocultar la cámara y botón de captura
-            canvas.style.display = "none";
-            
-        }
 
         // Función para reintentar la captura
         function retryCapture() {
@@ -328,7 +327,9 @@
         // Iniciar la cámara al cargar la página
         window.addEventListener("load", startCamera);
 
-        
+        window.onload = () => {
+            
+        }
     </script>
 </body>
 </html>

@@ -1,75 +1,38 @@
-body {  
-    font-family: Arial, sans-serif;  
-    background-color: #f4f4f9;  
-    margin: 0;  
-    padding: 20px;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    height: 100vh;  
-}  
-
-.carrusel {  
-    background-color: #ffffff;  
-    border-radius: 8px;  
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
-    padding: 30px;  
-    width: 400px;  
-    text-align: center;  
-}  
-
-.seccion {  
-    display: none; /* Ocultar todas las secciones inicialmente */  
-}  
-
-.seccion.active {  
-    display: block; /* Solo mostrar la sección activa */  
-}  
-
-h1 {  
-    font-size: 24px;  
-    color: #333;  
-    margin-bottom: 10px;  
-}  
-
-p {  
-    font-size: 16px;  
-    color: #666;  
-    margin-bottom: 20px;  
-}  
-
-label {  
-    display: block;  
-    margin-top: 15px;  
-    font-weight: bold;  
-}  
-
-input[type="email"],  
-input[type="tel"],  
-input[type="password"],  
-input[type="text"] {  
-    width: 100%;  
-    padding: 10px;  
-    margin-top: 5px;  
-    border: 1px solid #ccc;  
-    border-radius: 4px;  
-}  
-
-button {  
-    background-color: #4CAF50;  
-    color: white;  
-    border: none;  
-    padding: 10px 15px;  
-    border-radius: 5px;  
-    cursor: pointer;  
-    margin-top: 20px;  
-    width: 100%;  
-}  
-
-button:hover {  
-    background-color: #45a049;  
-}  
-
-input[type="checkbox"] {  
-    margin-top: 10px;  
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.cartaRegistro{
+    align-items: center;
+    text-align: center;
+    width: 824px;
+    height: 75%;
+    background-color: #aaa1;
+    display: grid;
+    grid-template-rows: repeat(8, 48px);
+    justify-content: center;
+    gap: 16px;
+}
+.cartaRegistro h1, .cartaRegistro h3{
+    margin: 0;
+}
+.cartaRegistro input{
+    width: 395px;
+    border-radius: 10px;
+    border: none;
+    height: 32px;
+}
+.cartaRegistro button{
+    width: 171px;
+}
+#inputCelular{
+    width: 395px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 8px;
+}
+#inputCelular input{
+    width: auto;
 }
