@@ -48,7 +48,7 @@ video, img {
     height: 100%;
     
     
-
+    
     #capture-btn{
         position: absolute;
         width: 10%;
@@ -75,12 +75,21 @@ video, img {
     border: 2px dotted darkblue;
 }
 
-@media (max-width: 900px){
+.button-group button{
+    margin: 32px auto;
+}
 
+#buttonGroup{
+    margin-top: 34px;
+    flex-direction: column;
+}
+
+@media (max-width: 900px){
+    
     header{
         display: none;
     }
-
+    
     #previewContainer{
         width: 100%;
     }
@@ -100,10 +109,11 @@ video, img {
         .button-group{
             width: 25%;
         }
-
-
+        
+        
     }
 }
+
 
 @media (orientation: landscape) {
 

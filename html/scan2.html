@@ -206,6 +206,8 @@
         <div class="button-group" id="buttonGroup">
             <button class="btn btn-retry" onclick="retryCapture()">Reintentar</button>
             <button class="btn btn-send" onclick="sendImage()">Enviar</button>
+            <div id="ineInformation">
+            </div>
         </div>
     </div>
 
@@ -320,16 +322,28 @@
 
         // Función para enviar la imagen
         function sendImage() {
-            alert("Imagen enviada correctamente");
+            canvas.toBlob(blob => {
+                const formData = new FormData();
+                formData.append('file', blob);
+                fetch('http://35.222.23.63:8007/process_image', {method: 'POST', body: formData})
+                .then(async data => {
+                    /* if(!data.ok) throw await data.json(); */
+                    console.log(data)
+                    return data.json()
+                })
+                .then(data => {
+                    console.log(data);
+                    actInformacion(data);
+                })
+                .catch(error => alert(`Algo salió mal\n${error.message}`))
+            })
             // Aquí puedes agregar la lógica para enviar la imagen a un servidor
         }
 
         // Iniciar la cámara al cargar la página
         window.addEventListener("load", startCamera);
 
-        window.onload = () => {
-            
-        }
     </script>
+    <script src="./../js/ine.js"></script>
 </body>
 </html>
