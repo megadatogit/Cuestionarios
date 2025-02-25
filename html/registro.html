@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <img src="./../src/svg/logoCapas/logo-capas-2.svg" alt="">
+            <img src="./../src/svg/logoCapas/logo-capas-2.svg" alt="" id="logo">
             <a href="">Iniciar sesión</a>
         </header>
         <!-- Bienvenida a campos de registro -->
@@ -18,8 +18,8 @@
             <label for="">Correo electrónico</label>
             <input type="text" placeholder="Correo electrónico">
             <div id="inputCelular">
-                <input type="text" placeholder="+52">
                 <label for="">Teléfono celular</label>
+                <input type="text" placeholder="+52">
                 <input type="text" placeholder="Captura tu número a 10 dígitos">
             </div>
             <label for="">Contraseña</label>
@@ -28,7 +28,7 @@
             <input type="text" placeholder="Confirmar constraseña">
             <input type="checkbox" name="">
             <label for="">He leído y acepto los <a href="./legales.html">Términos y Condiciones</a> y <a href="./legales.html">Políticas de Privacidad</a>.</label>
-            <button>CONTINUAR</button>
+            <button onclick="salidaCartas(0)">CONTINUAR</button>
         </div>
         <!-- Método de confirmación -->
         <div class="cartaRegistro">
@@ -42,7 +42,7 @@
             <input type="radio" name="telefono" id="">
             <input type="radio" name="correo" id="">
             <button>En otro momento</button>
-            <button>Continuar</button>
+            <button onclick="salidaCartas(1)">Continuar</button>
         </div>
         <!-- Captura de código -->
         <div class="cartaRegistro">
@@ -55,6 +55,7 @@
             </p>
             <p id="reenviar">Solicitar nuevo código</p>
             <button>Reenviar</button>
+            <button onclick="salidaCartas(2)">Continuar</button>
         </div>
         <!-- Ya casi -->
         <div class="cartaRegistro">
@@ -62,7 +63,7 @@
             <p>Sólo falta un paso más: configurar tu perfil.</p>
             <p>Completar tu perfil te ayudará a:<br>Personalizar tu experiencia y acceder a todos nuestros servicios.</p>
             <p>Instrucciones:<br>Haz clic en el botón de abajo para comenzar a configurar tu perfil. Es rápido y fácil.</p>
-            <button>Continuar</button>
+            <button onclick="salidaCartas(3)">Continuar</button>
         </div>
         <!-- Selección de perfil -->
         <div>
@@ -84,7 +85,7 @@
                 <p>Tutor</p>
                 <span>?</span>
             </div>
-            <button>Siguiente</button>
+            <button onclick="salidaCartas(4)">Siguiente</button>
         </div>
         <!-- Carga de INE -->
         <div>
@@ -100,4 +101,5 @@
             <label for="INE">Cargar documento</label>
         </div>
     </body>
+    <script src="./../js/registro.js"></script>
 </html>
