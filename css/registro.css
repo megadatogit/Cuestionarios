@@ -11,44 +11,79 @@ body{
     overflow: hidden;
 }
 .cartaRegistro{
-    align-items: center;
+    align-content: center;
     text-align: center;
     width: 824px;
-    height: 75%;
+    height: 80%;
     background-color: #aaa1;
-    grid-template-rows: repeat(8, 48px);
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: 70%;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
+    border-radius: 50px;
 }
 .cartaRegistro h1, .cartaRegistro h3{
     margin: 0;
 }
+.cartaRegistro p, .cartaRegistro label, .cartaRegistro input, .cartaRegistro ul, .cartaRegistro ol{
+    font-size: 20px;
+}
 .cartaRegistro input{
-    width: 395px;
     border-radius: 10px;
     border: none;
     height: 32px;
 }
 .cartaRegistro button{
     width: 171px;
+    justify-self: center;
+}
+.cartaRegistro:first-of-type label input{
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+}
+.cartaRegistro:first-of-type label:last-of-type{
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.cartaRegistro:first-of-type label:last-of-type input{
+    grid-row: 1/2;
+    width: 24px;
+}
+.cartaRegistro:first-of-type label:last-of-type p{
+    margin: 0;
 }
 #inputCelular{
-    width: 395px;
     display: grid;
-    grid-template-columns: 122.4px 332.33px;
+    grid-template-columns: 64px auto;
     gap: 8px;
 }
 #inputCelular input{
     width: auto;
 }
 #inputCelular label{
+    display: block;
     grid-column: 1/3;
 }
 #logo{
     height: 160px;
 }
 header{
-    position: fixed;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+}
+header img{
+    position: absolute;
+    left: 320px;
+    top: 8px;
+}
+header a{
+    position: absolute;
+    right: 320px;
+    top: 64px;
 }
 
 @keyframes entrada{
