@@ -23,16 +23,18 @@
                 <input type="text" placeholder="+52">
                 <input type="text" placeholder="Captura tu número a 10 dígitos" maxlength="10">
             </div>
-            <label for="">Contraseña
+            <div class="cntContra">
+                <label for="" id="labelContraseña">Contraseña</label>
                 <input type="password" placeholder="Crear contraseña">
-            </label>
+                <span class="spanHelp"><img src="../src/svg/help.svg" alt=""></span>
+            </div>
             <label for="">Confirmar contraseña
-                <input type="password" placeholder="Confirmar constraseña">
+                <input type="password" placeholder="Confirmar contraseña">
             </label>
             <label for=""><p>He leído y acepto los <a href="./legales.html">Términos y Condiciones</a> y <a href="./legales.html">Políticas de Privacidad</a>.</p>
                 <input type="checkbox" name="">
             </label>
-            <button onclick="salidaCartas(0)">CONTINUAR</button>
+            <button onclick="validarFormulario()">CONTINUAR</button>
         </div>
         <!-- Método de confirmación -->
         <div class="cartaRegistro">
@@ -103,6 +105,12 @@
             <button>Escanear documentos</button>
             <input type="file" name="INE" id="INE">
             <label for="INE">Cargar documento</label>
+        </div>
+        <!-- Modal de error -->
+        <div id="modalError">
+            <div id="error">
+                
+            </div>
         </div>
     </body>
     <script src="./../js/registro.js"></script>
