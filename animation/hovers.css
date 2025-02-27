@@ -214,3 +214,26 @@
         }  
         
     }
+
+    input{
+        width: 40px;
+        height: 65px;
+        margin: 10px;
+        border-radius: 7px;
+        appearance: none;
+        border-style: none;
+        background-color: rgba(211, 211, 211, 0.5);
+        text-align: center;
+        font-size: 32px;
+    }
+    button{
+        border: none;
+        border-radius: 25px;
+        padding: 15px 35px;
+        font-size: 16px;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: rgba(211, 211, 211) ;
+    }
