@@ -1,7 +1,12 @@
 *{  margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "pOPPINS";
+    font-family: "Inter";
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        src: url(./../src/font/Inter/Inter-VariableFont_opsz\,wght.ttf);
     }
 
     body{
@@ -236,4 +241,42 @@
     }
     button:hover{
         background-color: rgba(211, 211, 211) ;
+    }
+
+    .cnt-logo{
+        margin: 100px auto;
+        width: 200px;
+        border: 2px dotted darkmagenta;
+    }
+
+    #ala1, 
+    #ala2, 
+    #ala3, 
+    #ala4{
+        transform: rotate3d(1, 0, 0, 5deg);
+        animation: vuela 0.5s linear infinite;
+        transform-origin: 50% 65%;
+    }
+
+    @keyframes vuela {
+          0%{transform: rotate3d(1, 0, 0,  5deg) translateY(0); scale: 1; }
+         50%{transform: rotate3d(1, 0, 0, 45deg) translateY(25px); scale: 0.7;}
+        100%{transform: rotate3d(1, 0, 0,  5deg) translateY(0); scale: 1;}
+        
+    }
+    #ala5, 
+    #ala6, 
+    #ala7, 
+    #ala8{
+        transform: rotate3d(1, 0, 0, 5deg) rotateY(90deg);
+        animation: vuela 0.5s linear infinite;
+        animation-delay: .3s;
+        transform-origin: 50% 65%;
+    }
+
+    @keyframes vuela {
+          0%{transform: rotate3d(1, 0, 0,  5deg) translateY(0); scale: 1; }
+         50%{transform: rotate3d(1, 0, 0, 45deg) translateY(25px); scale: 0.7;}
+        100%{transform: rotate3d(1, 0, 0,  5deg) translateY(0); scale: 1;}
+        
     }

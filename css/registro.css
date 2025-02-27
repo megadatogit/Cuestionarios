@@ -1,5 +1,5 @@
 :root{
-    --color-inst: #12478a
+    --color-inst: #007AAA
 }
 
 body > div{
@@ -25,6 +25,7 @@ body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    color: #42464c;
 }
 #modalError{
     display: block;
@@ -58,7 +59,7 @@ body{
     cursor: pointer;
 }
 #error span:first-of-type:hover::before{
-    color: #12478a;
+    color: var(--color-inst);
     animation: bounce-in-left ease 1.1s forwards;
     animation-play-state: running;
 }
@@ -86,9 +87,9 @@ body{
     align-content: center;
     text-align: center;
     width: 824px;
-    height: 80%;
+    max-height: 80%;
+    padding: 64px 0;
     background-color: #aaa1;
-    grid-template-rows: repeat(8, auto);
     grid-template-columns: 70%;
     justify-content: center;
     gap: 32px;
@@ -98,7 +99,9 @@ body{
             width: 20px;
         }
     }
-    
+}
+.cartaRegistro:nth-child(2){
+    grid-template-rows: repeat(8, auto);
 }
 .cartaRegistro:first-of-type label:last-of-type{
     display: grid;
@@ -176,13 +179,29 @@ body{
 }
 .cartaRegistro:first-of-type label input{
     display: block;
-    width: 100%;
     margin-top: 8px;
 }
 .cartaRegistro:first-of-type label:last-of-type input{
     grid-row: 1/2;
     width: 24px;
+    margin: 0;
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid var(--color-inst);
+    width: 24px;
+    height: 24px;
 }
+.cartaRegistro:first-of-type label:last-of-type input:checked{
+    background-color: var(--color-inst);
+}
+.cartaRegistro:first-of-type label:last-of-type input:checked:after{
+    content: '\2714';
+    color: #fff;
+    position: absolute;
+    transform: translate(-15px, -5px);
+    animation: mostElemento .4s ease;
+}
+
 .cartaRegistro:first-of-type label:last-of-type p{
     margin: 0;
 }
@@ -201,6 +220,12 @@ body{
 #logo{
     height: 160px;
 }
+.btnSeleccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
 header{
     position: absolute;
     width: 100vw;
@@ -215,6 +240,56 @@ header a{
     position: absolute;
     right: 320px;
     top: 64px;
+}
+input{
+    padding-left: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input:focus{
+    outline-color: #67c7dd;
+}
+input[type="radio"]{
+    appearance: none;
+    border: 2px solid var(--color-inst);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .1s;
+    position: relative;
+}
+input[type="radio"]:checked:after{
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-inst);
+    top: 50%;
+    left: 50%;
+    animation: mostElemento .3s ease;
+}
+button{
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background-color: #67c7dd;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0097c0;
+}
+#seleccionMetodo{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    text-align: start;
+    gap: 0 32px;
 }
 
 @keyframes entrada{
@@ -298,5 +373,13 @@ header a{
               transform: translateX(0);
       -webkit-animation-timing-function: ease-out;
               animation-timing-function: ease-out;
+    }
+  }
+  @keyframes mostElemento{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
   }

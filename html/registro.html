@@ -38,17 +38,18 @@
         </div>
         <!-- Método de confirmación -->
         <div class="cartaRegistro">
-            <h3>¡Estás a punto de unirte a nosotros!</h3>
-            <p>Para completar tu registro, necesitamos que confirmes tu información. Por favor, elige cómo te gustaría recibir el código de verificación:</p>
-            <ol>
-                <li>Correo Electrónico: [tu-correo@example.com]</li>
-                <li>Número de Teléfono: +34 612 345 678</li>
-            </ol>
-            <p>Selecciona una opción para recibir tu código de verificación. Si prefieres verificar el otro método más adelante, también puedes hacerlo:</p>
-            <input type="radio" name="telefono" id="">
-            <input type="radio" name="correo" id="">
-            <button>En otro momento</button>
-            <button onclick="salidaCartas(1)">Continuar</button>
+            <h1>¡Estás a punto de unirte a nosotros!</h1>
+            <p>Para completar tu registro, necesitamos que confirmes tu información. Por favor, elige cómo te gustaría recibir el código de verificación. Si prefieres verificar el otro método más adelante, también podrás hacerlo</p>
+            <div id="seleccionMetodo">
+                <input type="radio" id="correo" name="aux">
+                <p>Correo Electrónico: [tu-correo@example.com]</p>
+                <input type="radio" id="telefono" name="aux">
+                <p>Número de Teléfono: +34 612 345 678</p>
+            </div>
+            <div class="btnSeleccion">
+                <button>Luego</button>
+                <button onclick="enviarCodigo()">Continuar</button>
+            </div>
         </div>
         <!-- Captura de código -->
         <div class="cartaRegistro">
@@ -61,7 +62,7 @@
             </p>
             <p id="reenviar">Solicitar nuevo código</p>
             <button>Reenviar</button>
-            <button onclick="salidaCartas(2)">Continuar</button>
+            <button onclick="salidaCartas(2, 3)">Continuar</button>
         </div>
         <!-- Ya casi -->
         <div class="cartaRegistro">
@@ -69,7 +70,7 @@
             <p>Sólo falta un paso más: configurar tu perfil.</p>
             <p>Completar tu perfil te ayudará a:<br>Personalizar tu experiencia y acceder a todos nuestros servicios.</p>
             <p>Instrucciones:<br>Haz clic en el botón de abajo para comenzar a configurar tu perfil. Es rápido y fácil.</p>
-            <button onclick="salidaCartas(3)">Continuar</button>
+            <button onclick="salidaCartas(3, 4)">Continuar</button>
         </div>
         <!-- Selección de perfil -->
         <div>
@@ -91,7 +92,7 @@
                 <p>Tutor</p>
                 <span>?</span>
             </div>
-            <button onclick="salidaCartas(4)">Siguiente</button>
+            <button onclick="salidaCartas(4, 5)">Siguiente</button>
         </div>
         <!-- Carga de INE -->
         <div>
