@@ -24,7 +24,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     color: #42464c;
 }
 #modalError{
@@ -225,6 +225,19 @@ body{
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
+}
+.contCodVer{
+    display: grid;
+    grid-template-columns: repeat(7, max-content);
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.codVerificacion{
+    padding: 0;
+    text-align: center;
+    width: 40px;
+    height: 60px;
 }
 header{
     position: absolute;
