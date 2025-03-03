@@ -11,7 +11,8 @@ const datosRegistro = {
     correo: '',
     telefono: '',
     contrasena:'',
-    prefijoTel: 52
+    prefijoTel: 52,
+    codigoConf: ''
 }
 const URIbase = 'http://35.222.23.63:8030'
 
@@ -19,16 +20,29 @@ const liSegCarta = document.querySelectorAll('#seleccionMetodo p');
 
 window.onload = () => {
     cards[0].style.display = 'grid';
-    for(let x = 0; x<cards.length; x++){
-        
-    }
+    document.querySelectorAll('.codVerificacion').forEach((e, i) => {
+        e.addEventListener('input', e => {
+            datosRegistro.codigoConf = Array.from(document.querySelectorAll('.codVerificacion')).map(e => e.value).join('');
+            if(!e.data) {
+                Array.from(document.querySelectorAll('.codVerificacion')).map((e, i) => {
+                    document.querySelector(`.codVerificacion:nth-child(${i+1})`).value = '';
+                })
+                /* document.querySelector(`.codVerificacion:nth-child(${i})`)?.focus(); */
+                document.querySelector(`.codVerificacion`).focus();
+                return;
+            }
+            const aux = document.querySelector(`.codVerificacion:nth-child(${i+2})`);
+            if(!aux) return;
+            aux.focus();
+        })
+    })
 }
 const cambiarAtributos = () => {
     liSegCarta[0].innerHTML = `<b>Correo:</b> <p style="color: var(--color-inst); display: inline">${datosRegistro.correo}</p>`;
     liSegCarta[1].innerHTML = `<b>Teléfono:</b> <p style="color: var(--color-inst); display: inline">+${datosRegistro.prefijoTel} ${datosRegistro.telefono}</p>`;
 }
 const salidaCartas = (i1, i2) => {
-    cards[i1].style.animation = 'salida 1s forwards'
+    cards[i1].style.animation = 'salida .4s forwards'
     setTimeout(() => {
         cards[i1].style = {
             ...cards[i1],
@@ -37,7 +51,7 @@ const salidaCartas = (i1, i2) => {
         }
         cards[i2].style.display = 'grid';
         cards[i1].style.animation = '';
-    }, 1000)
+    }, 400)
 }
 const validarFormulario = () => {
     try {
@@ -88,18 +102,65 @@ inputContrasena.addEventListener('change', e => {
 })
 const obtCodigo = metodo => {
     if(/^\d{10}$/.test(metodo)){
-        fetch(`${URIbase}/preregistro/enviar-codigo-telefono`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({telefono : metodo})})
-        .then(data => data.json())
+        fetch(`${URIbase}/preregistro/preregistro/enviar-codigo-telefono`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({telefono : metodo})})
+        .then(async data => {
+            if(!data.ok) throw await data.json();
+            return data.json();
+        })
         .then(data => console.log(data))
+        .catch(err => console.log(err))
     }
     if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(metodo)){
-        fetch(`${URIbase}/preregistro/enviar-codigo-correo`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({correo : metodo})})
-        .then(data => data.json())
+        fetch(`${URIbase}/preregistro/preregistro/enviar-codigo-correo`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({correo : metodo})})
+        .then(async data => {
+            if(!data.ok) throw await data.json();
+            return data.json();
+        })
         .then(data => console.log(data))
+        .catch(err => console.log(err))
+    }
+}
+const validarCodigo = () => {
+    const identificador = datosRegistro[document.querySelector('input[type=radio]:checked').id];
+    const codigo = datosRegistro.codigoConf;
+    console.log(`${identificador, codigo}`)
+    if(/^\d{10}$/.test(identificador)){
+        fetch(`${URIbase}/preregistro/preregistro/validar-telefono`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({identificador, codigo})})
+        .then(async data => {
+            if(!data.ok) throw await data.json();
+            return data.json();
+        })
+        .then(data => {
+            console.log(data);
+            salidaCartas(2, 3);
+        })
+        .catch(err => {
+            console.log('Valió chupas');
+            console.log(err);
+        })
+    }
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identificador)){
+        fetch(`${URIbase}/preregistro/preregistro/validar-correo`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({identificador, codigo})})
+        .then(async data => {
+            if(!data.ok) throw await data.json();
+            return data.json();
+        })
+        .then(data => {
+            console.log(data)
+            salidaCartas(2, 3);
+        })
+        .catch(err => {
+            console.log('Valió chupas');
+            console.log(err);
+        })
     }
 }
 const enviarCodigo = () => {
     const value = document.querySelector('input[type=radio]:checked').id;
     obtCodigo(datosRegistro[value]);
-    salidaCartas(2, 3);
+    salidaCartas(1, 2);
+}
+const reenviarCodigo = () => {
+    const value = document.querySelector('input[type=radio]:checked').id;
+    obtCodigo(datosRegistro[value]);
 }

@@ -54,7 +54,15 @@
         <!-- Captura de código -->
         <div class="cartaRegistro">
             <h3>Ingresa el código de verificación</h3>
-            <input type="text" maxlength="6">
+            <div class="contCodVer">
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+                —
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+                <input type="text" maxlength="1" class="codVerificacion" pattern="\d">
+            </div>
             <p>
                 ¿No recibiste el código?<br>
                 Asegúrate de que tus datos sean correctos.<br>
@@ -62,7 +70,7 @@
             </p>
             <p id="reenviar">Solicitar nuevo código</p>
             <button>Reenviar</button>
-            <button onclick="salidaCartas(2, 3)">Continuar</button>
+            <button onclick="validarCodigo()">Continuar</button>
         </div>
         <!-- Ya casi -->
         <div class="cartaRegistro">
