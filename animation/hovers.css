@@ -14,7 +14,7 @@
     }
 
     /*Tarjetas*/
-    .cnt-trj, .cnt-tit, .cnt-pat, .cnt-menu, .cnt-cal{
+    .cnt-trj, .cnt-tit, .cnt-pat, .cnt-menu, .cnt-cal, .cnt-select, .cnt-clip{
         border: 2px dashed darkcyan;
         width: 80%;
         padding: 20px;
@@ -280,3 +280,67 @@
         100%{transform: rotate3d(1, 0, 0,  5deg) translateY(0); scale: 1;}
         
     }
+
+    /* #select{
+        width: 100px;
+        text-align: end;
+        padding-right: 16px;
+        appearance: none;
+        position: relative;
+
+    } */
+    /* #select::before{
+        position: absolute;
+        contain: "xxx";
+        width: 30px;
+        height: 30px;
+        background-color: red;
+
+        
+    } */
+
+
+.cnt-clip{
+    height: 80vh;
+    position: relative;
+    & .clip{
+        position: absolute;
+        margin: 50px auto;
+        width: 80%;
+        height: 80%;
+        background-color: #a35fc2;
+        
+        clip-path: polygon(0 100%, 20% 100%, 20% 100%, 0% 100%);
+        
+        
+        
+    }
+    & .front{
+        position: absolute;
+        margin: 50px auto;
+        width: 80%;
+        height: 80%;
+        background-color: #dd1d93;
+
+    }
+
+
+}
+.cnt-clip:hover .clip{
+    animation: extiende 3s linear forwards;
+}
+.cnt-clip:hover .front{
+    animation: extiende 3s linear forwards;
+}
+.cnt-clip:hover .back{
+    animation: extiende 3s linear forwards;
+}
+
+@keyframes extiende{
+      0%{clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0 100%)}
+     20%{clip-path: polygon(0 100%, 50% 100%, 50% 0, 0 0)}
+    40%{clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0)}
+    60%{clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0)}
+    90%{clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)}
+    100%{clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0)}
+}
