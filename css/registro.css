@@ -159,8 +159,17 @@ body{
     grid-column: 1/2;
     display: block;
 }
-.cntContra input{
+.cntContra div{
     grid-row: 2/3;
+    position: relative;
+}
+.eyes img{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
 }
 .cartaRegistro h1, .cartaRegistro h3{
     margin: 0;
@@ -168,7 +177,7 @@ body{
 .cartaRegistro p, .cartaRegistro label, .cartaRegistro input, .cartaRegistro ul, .cartaRegistro ol{
     font-size: 20px;
 }
-.cartaRegistro input{
+.cartaRegistro input, select{
     border-radius: 10px;
     border: none;
     height: 32px;
@@ -207,11 +216,8 @@ body{
 }
 #inputCelular{
     display: grid;
-    grid-template-columns: 64px auto;
+    grid-template-columns: 100px auto;
     gap: 8px;
-}
-#inputCelular input{
-    width: auto;
 }
 #inputCelular label{
     display: block;
@@ -239,6 +245,12 @@ body{
     width: 40px;
     height: 60px;
 }
+#errorCampos{
+    font-size: 16px;
+    margin: 0;
+    color: #f00;
+    display: none;
+}
 header{
     position: absolute;
     width: 100vw;
@@ -258,6 +270,34 @@ input{
     padding-left: 16px;
     width: 100%;
     box-sizing: border-box;
+}
+select{
+    text-align: end;
+    padding-right: 8px;
+    appearance: none;
+    position: relative;
+}
+#prefijoIcon, #flag{
+    position: absolute;
+    width: 16px;
+    height: 24px;
+    color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+#prefijoIcon p{
+    margin: 0;
+}
+#prefijo{
+    width: 100%;
+    padding-left: 38px;
+}
+#flag{
+    left: 2px;
+}
+#flag img{
+    width: 16px;
 }
 input:focus{
     outline-color: #67c7dd;

@@ -20,20 +20,32 @@
             </label>
             <div id="inputCelular">
                 <label for="">Teléfono celular</label>
-                <input type="text" placeholder="+52">
+                <div style="position: relative;">
+                    <span id="flag"><img src="https://flagcdn.com/mx.svg" alt=""></span>
+                    <span id="prefijoIcon"><p>+</p></span>
+                    <input type="text" list="xd" id="prefijo" placeholder="52">
+                </div>
+                <datalist id="xd"></datalist>
                 <input type="text" placeholder="Captura tu número a 10 dígitos" maxlength="10">
             </div>
             <div class="cntContra">
                 <label for="" id="labelContraseña">Contraseña</label>
-                <input type="password" placeholder="Crear contraseña">
+                <div class="eyesCont">
+                    <span class="eyes"><img src="./../src/svg/eyeClosed.svg" alt=""></span>
+                    <input type="password" placeholder="Crear contraseña">
+                </div>
                 <span class="spanHelp"><img src="../src/svg/help.svg" alt=""></span>
             </div>
             <label for="">Confirmar contraseña
-                <input type="password" placeholder="Confirmar contraseña">
+                <div style="position: relative;" class="eyesCont">
+                    <span class="eyes" class="eyesCont"><img src="./../src/svg/eyeClosed.svg" alt=""></span>
+                    <input type="password" placeholder="Confirmar contraseña">
+                </div>
             </label>
             <label for=""><p>He leído y acepto los <a href="./legales.html">Términos y Condiciones</a> y <a href="./legales.html">Políticas de Privacidad</a>.</p>
                 <input type="checkbox" name="">
             </label>
+            <p id="errorCampos">Tus datos son incorrectos, verifica tu correo y número de celular.</p>
             <button onclick="validarFormulario()">CONTINUAR</button>
         </div>
         <!-- Método de confirmación -->

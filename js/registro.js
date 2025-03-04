@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('body > div');
 const inputCorreo = document.querySelector('input[placeholder="Correo electrónico"]');
-const inputPrefijo = document.querySelector('input[placeholder="+52"]');
+const datalistPrefijo = document.querySelector('datalist');
+const inputPrefijo = document.getElementById('prefijo');
 const inputTelefono = document.querySelector('input[placeholder="Captura tu número a 10 dígitos"]');
 const inputContrasena = document.querySelector('input[placeholder="Crear contraseña"]');
 const inputConfContraseña = document.querySelector('input[placeholder="Confirmar contraseña"]');
@@ -19,6 +20,9 @@ const URIbase = 'http://35.222.23.63:8030'
 const liSegCarta = document.querySelectorAll('#seleccionMetodo p');
 
 window.onload = () => {
+    fetch('./../src/json/prefijos.json').then(data => data.json()).then(data => {
+        document.querySelector('datalist').innerHTML = data.map(e => `<option ${e.code == 'MX' ? 'selected' : ''} value="${e.countryCode}">${e.country}</option>`).join('')
+    })
     cards[0].style.display = 'grid';
     document.querySelectorAll('.codVerificacion').forEach((e, i) => {
         e.addEventListener('input', e => {
@@ -27,7 +31,6 @@ window.onload = () => {
                 Array.from(document.querySelectorAll('.codVerificacion')).map((e, i) => {
                     document.querySelector(`.codVerificacion:nth-child(${i+1})`).value = '';
                 })
-                /* document.querySelector(`.codVerificacion:nth-child(${i})`)?.focus(); */
                 document.querySelector(`.codVerificacion`).focus();
                 return;
             }
@@ -36,6 +39,11 @@ window.onload = () => {
             aux.focus();
         })
     })
+    Array.from(document.querySelectorAll('.eyesCont img')).map((e, i) => e.addEventListener('click', () => {
+        const input = document.querySelectorAll('.eyesCont input')[i];
+        input.type = input.type == 'password' ? 'text' : 'password';
+        e.src = (/eyeClosed.svg/.test(e.src)) ? './../src/svg/eyeOpened.svg' : './../src/svg/eyeClosed.svg'
+    }))
 }
 const cambiarAtributos = () => {
     liSegCarta[0].innerHTML = `<b>Correo:</b> <p style="color: var(--color-inst); display: inline">${datosRegistro.correo}</p>`;
@@ -55,16 +63,14 @@ const salidaCartas = (i1, i2) => {
 }
 const validarFormulario = () => {
     try {
-        const errores = []
-        if(!(inputContrasena.value == inputConfContraseña.value)) errores.push('Las contraseñas no coinciden.')
-        if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,20}$/.test(inputContrasena.value)) errores.push('La contraseña tiene un formato inválido.')
-        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputCorreo.value)) errores.push('El correo electrónico tiene un formato inválido.')
-        if(!document.querySelector('.cartaRegistro:first-of-type input[type="checkbox"]').checked) errores.push('Debes aceptar los terminos y condiciones')
-        if(errores.length) throw errores;
+        if(!(inputContrasena.value == inputConfContraseña.value)) throw 'Las contraseñas ingresadas no coinciden. Por favor, asegúrate de que ambas contraseñas sean idénticas.';
+        if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,20}$/.test(inputContrasena.value)) throw 'La contraseña tiene un formato inválido.';
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputCorreo.value) || !/^\d{10}$/.test(inputTelefono.value)) throw 'Tus datos son incorrectos, verifica tu correo y número de celular.';
+        if(!document.querySelector('.cartaRegistro:first-of-type input[type="checkbox"]').checked) throw 'Debes aceptar los terminos y condiciones';
         cambiarAtributos();
         salidaCartas(0, 1);
     } catch (error) {
-        modalError.style.display = 'grid';
+        /*modalError.style.display = 'grid';
         modal.innerHTML = `
         <span><img src="./../src/svg/close.svg"></span>
         <span><img src="./../src/svg/alert.svg"></span>
@@ -80,26 +86,41 @@ const validarFormulario = () => {
                 modalError.style.display = 'none';
                 modal.style.animation = '';
             }, 400)
-        })
+        })*/
+       const errorCampos = document.getElementById('errorCampos');
+       errorCampos.innerHTML = error;
+       errorCampos.style.display = 'block';
     }
 }
 inputCorreo.addEventListener('input', e => {
+    errorCampos.style.display = 'none';
     datosRegistro.correo = inputCorreo.value;
 })
 inputPrefijo.addEventListener('input', e => {
+    errorCampos.style.display = 'none';
     if(!(/^\d$/.test(e.data))) inputPrefijo.value = inputPrefijo.value.replace(/[^\d]/g, '');
     datosRegistro.prefijoTel = Number(inputPrefijo.value ? inputPrefijo.value : 52);
+    fetch('./../src/json/prefijos.json').then(data => data.json()).then(data => {
+        data.map(e => {
+            if(e.countryCode == datosRegistro.prefijoTel){
+                document.querySelector('#flag img').src = e.flag;
+            }
+        })
+    })
 })
 inputTelefono.addEventListener('input', e => {
+    errorCampos.style.display = 'none';
     if(!(/^\d{10}$/.test(e.data))) inputTelefono.value = inputTelefono.value.replace(/[^\d]/g, '');
     datosRegistro.telefono = inputTelefono.value;
 })
 inputContrasena.addEventListener('input', e => {
+    errorCampos.style.display = 'none';
     datosRegistro.contrasena = inputContrasena.value;
 })
 inputContrasena.addEventListener('change', e => {
     if(!(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,20}$/.test(inputContrasena.value)) && inputContrasena.value) alert('Por favor, verifique la contraseña.')
 })
+inputConfContraseña.addEventListener('input', () => errorCampos.style.display = 'none')
 const obtCodigo = metodo => {
     if(/^\d{10}$/.test(metodo)){
         fetch(`${URIbase}/preregistro/preregistro/enviar-codigo-telefono`, {method: 'POST', headers: {"Content-Type": "application/json"}, body: JSON.stringify({telefono : metodo})})
