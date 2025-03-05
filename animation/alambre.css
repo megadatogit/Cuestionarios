@@ -42,14 +42,14 @@ html {
 .centro,
 .inferior {
     position: absolute;
+    cursor: crosshair;
 }
 
 .superior {
     top: -20px;
     width: 410px;
-
+    
 }
-
 .superior::before {
     position: absolute;
     content: "";
@@ -129,11 +129,16 @@ html {
     position: absolute;
     width: 140px;
     height: 70px;
-    /* border: 2px dotted darkgoldenrod; */
+    border: 2px dotted darkgoldenrod;
     display: flex;
     justify-content: center;
     bottom: -110px;
     gap: 15px;
+}
+
+.filtro{
+    position: absolute;
+
 }
 
 .graficaCognitiva::before {

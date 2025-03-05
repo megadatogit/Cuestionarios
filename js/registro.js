@@ -70,23 +70,6 @@ const validarFormulario = () => {
         cambiarAtributos();
         salidaCartas(0, 1);
     } catch (error) {
-        /*modalError.style.display = 'grid';
-        modal.innerHTML = `
-        <span><img src="./../src/svg/close.svg"></span>
-        <span><img src="./../src/svg/alert.svg"></span>
-        <h2>Verifica los siguientes errores</h2>
-        <ol>
-        ${error.map(e => `<li>${e}</li>`).join('')}
-        </ol>
-        `
-        document.querySelector('#error span:first-of-type').addEventListener('click', () => {
-            console.log('xd')
-            modal.style.animation = 'modalSalida ease 0.4s forwards';
-            setTimeout(() => {
-                modalError.style.display = 'none';
-                modal.style.animation = '';
-            }, 400)
-        })*/
        const errorCampos = document.getElementById('errorCampos');
        errorCampos.innerHTML = error;
        errorCampos.style.display = 'block';
@@ -183,5 +166,13 @@ const enviarCodigo = () => {
 }
 const reenviarCodigo = () => {
     const value = document.querySelector('input[type=radio]:checked').id;
-    obtCodigo(datosRegistro[value]);
+    fetch(`${URIbase}/preregistro/preregistro/reenviar-codigo`, {method: 'POST', body: JSON.stringify({identificador: datosRegistro[value]}), headers: {"Content-Type": "application/json"}})
+    .then(async data => {
+        if(!data.ok) await data.json();
+        return data.json();
+    })
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.log(err))
 }

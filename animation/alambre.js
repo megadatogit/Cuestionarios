@@ -1,4 +1,4 @@
-const totalImages = 150;
+const totalImages = 91;
     const imgElement = document.getElementById('rotating-image');
 
     // Función que actualiza la imagen según el scroll
@@ -10,7 +10,7 @@ const totalImages = 150;
       // Determina el índice de la imagen a mostrar (entre 0 y totalImages - 1)
       const imageIndex = Math.min(totalImages - 1, Math.floor(scrollFraction * totalImages));
       // Construye el nombre de la imagen con el formato "unscreen-001.png"
-      const filename = '/src/images/mono/unscreen-' + String(imageIndex + 1).padStart(3, '0') + '.png';
+      const filename = '/src/images/mono/unscreen-' + String(imageIndex + 60).padStart(3, '0') + '.png';
       // Actualiza la imagen solo si es diferente para evitar recargas innecesarias
       if (!imgElement.src.includes(filename)) {
         imgElement.src = filename;
