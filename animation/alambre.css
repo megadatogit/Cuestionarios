@@ -1,4 +1,13 @@
 /* Asegura que la página tenga suficiente altura para generar scroll */
+*{
+font-family: "Inter_28pt-Regular";
+}
+
+@font-face {
+    font-family: "Inter_28pt-Regular" ;
+    src: url("../src/font/Inter/static/Inter_28pt-Regular.ttf");
+}
+
 body,
 html {
     margin: 0;
@@ -6,7 +15,7 @@ html {
     height: 200%;
     overflow-x: hidden;
     position: relative;
-    font-family: "Poppins";
+    font-family: 'Poppins';
 }
 
 /* Contenedor de la imagen */
@@ -71,6 +80,32 @@ html {
 
 }
 
+.iQ{
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    font-size: 10px;
+    span{
+        font-size:25px;
+        padding-right: 3px;
+    }
+}
+.iQ::before{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    left: 60px;
+    top: -15px;
+    background-image: url(../src/images/cerebro.gif);
+    background-size: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    filter: grayscale(1) opacity(0.8);
+
+}
+
 .centro {
     top: 50%;
     right: 0;
@@ -100,6 +135,32 @@ html {
     bottom: -1.5px;
 }
 
+.lpm{
+    position: absolute;
+    top: -130px;
+    right: -50px;
+    font-size: 10px;
+    span{
+        font-size:25px;
+        padding-right: 3px;
+    }
+
+}
+
+.lpm::before{
+    position: absolute;
+    content: "";
+    width:  60px;
+    height: 60px;
+    /* border: 2px dotted darkblue; */
+    left: -70px;
+    top: -15px;
+    background-image: url(../src/images/corazon.gif);
+    background-size: cover;
+    filter: grayscale(1) opacity(0.8);
+
+
+}
 .inferior {
     bottom: 20%;
     width: 380px;
@@ -129,7 +190,7 @@ html {
     position: absolute;
     width: 140px;
     height: 70px;
-    border: 2px dotted darkgoldenrod;
+    /* border: 2px dotted darkgoldenrod; */
     display: flex;
     justify-content: center;
     bottom: -110px;
@@ -137,7 +198,15 @@ html {
 }
 
 .filtro{
+    /* border: 2px dotted darkgoldenrod; */
+    
     position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    top: 0;
+    background-color: #ffffff8c;
+    mask: linear-gradient(#0000, #000)
 
 }
 
@@ -157,20 +226,43 @@ html {
     width: 20px;
     height: 70px;
     background-color: #000;
+    
 }
 
 .barra1{
     transform: translateY(15px);
     filter: opacity(0.8);
+    animation: barra1 5s ease-in-out infinite ;
 }
 .barra2{
     filter: opacity(0.6);
     transform: translateY(0px);
+    animation: barra2 5s 1s ease-in-out infinite ;
 }
 .barra3{
     filter: opacity(0.3);
     transform: translateY(-15px);
+    animation: barra3 5s ease-in-out infinite ;
 }
+
+@keyframes barra1{
+      0%{transform: translateY( 15px);}
+     50%{transform: translateY(-15px);}
+    100%{transform: translateY( 15px);}
+}
+@keyframes barra2{
+      0%{transform: translateY( 0px);}
+     50%{transform: translateY(15px);}
+    100%{transform: translateY( 0px);}
+}
+@keyframes barra3{
+      0%{transform: translateY(-15px);}
+     25%{transform: translateY(0px);}
+     50%{transform: translateY(15px);}
+     75%{transform: translateY(0px);}
+    100%{transform: translateY(-15px);}
+}
+
 
 .graficaCardiaca{
     position: absolute;
@@ -182,7 +274,7 @@ html {
     top: -80px;
     right: 10px;
     gap: 15px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .graficaCardiaca::before{
@@ -199,4 +291,80 @@ html {
 @keyframes frecuencia {
       0%{transform: translateX(-150%);}
     100%{transform: translateX( 150%);}
+}
+
+.graficaBiliar{
+    position: absolute;
+    width: 140px;
+    height: 70px;
+    /* border: 2px dotted darkgoldenrod; */
+    display: flex;
+    justify-content: center;
+    bottom: -0px;
+    left: 0px;
+    gap: 15px;
+    
+}
+
+.linea1{
+    animation: linea1 5s ease-in-out infinite;
+}
+
+.ejeY{
+    font-size: 10px;
+    position: relative;
+    transform: translate(-5px, -5px);
+    line-height: 1.4;
+    text-align: center;
+    
+}
+.ejeY::before{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 1px;
+    border-top: 1px dashed lightgrey;
+    right: -110px;
+}
+.ejeY::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 1px;
+    border-top: 1px dashed lightgrey;
+    right: -110px;
+    top: 20px;
+}
+.ejeX{
+    position: absolute;
+    font-size: 10px;
+    bottom: -5px;
+    top: 30px;
+}
+
+.ejeX::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 40px;
+    border-right: 1px dashed lightgrey;
+    /* box-shadow: 40px 0px 0px lightgray; */
+    top: -45px;
+    left: 80%;
+}
+
+.gluco{
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    font-size: 10px;
+    span{
+        font-size:25px;
+        padding-right: 3px;
+    }
+}
+
+@keyframes linear1{
+    0%{}
+    100%{}
 }

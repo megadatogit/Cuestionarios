@@ -19,6 +19,7 @@
 
         <div class="superior">
             <p>condición cognitiva</p>
+            <p class="iQ"><span>120</span>IQ</p>
             <div class="graficaCognitiva">
                 <div class="filtro"></div>
                 <div class="barra1"></div>
@@ -28,6 +29,7 @@
         </div>
         <div class="centro">
             <p>frecuencia cardiaca</p>
+            <p class="lpm"><span>69</span>lpm</p>
             <div class="graficaCardiaca">
                 <img src="../src/images/electroCapa.png" alt="">
             </div>
@@ -35,9 +37,29 @@
 
         <div class="inferior">
             <p>estado biliar</p>
-            
+            <p class="gluco"><span>130</span>mg/dL</p>
         </div>
-        <div class="graficaBiliar"></div>
+        <div class="graficaBiliar">
+            <p class="ejeY">nivel de <br>glucosa <br>(mg/dL)</p>
+            <p class="ejeX">frecuenica</p>
+            <svg width="240" height="70">
+                <polyline class="linea1" stroke="#000" stroke-width="1" fill="transparent" points="0,25 40,10 80,25 120,15">
+                  <animate
+                    attributeName="points"
+                    from="0,25 40,10 80,25 120,15"
+                      to="0, 5 40,22 80, 5 120,35"
+                     dur="5s"
+                    repeatCount="indefinite" />
+                </polyline>
+
+                
+                
+
+              </svg>
+              
+            
+
+        </div>
 
 
 
