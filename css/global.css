@@ -1,0 +1,95 @@
+/*
+LIBER SALUS SA DE CV
+Propuesta de estilos globales identidad
+20250306 por: Dany Tobar / Deya Jimenez 
+*/
+
+/* ----------VARIABLES---------- */
+
+/* TIPOGRAFGIAS */
+
+    /* tipos */
+
+@font-face {
+    font-family: "Inter_28pt-Regular" ;
+    src: url("../src/font/Inter/static/Inter_28pt-Regular.ttf");
+}
+@font-face {
+    font-family: "Raleway-Regular" ;
+    src: url("../src/font/Raleway/Raleway-Regular.ttf");
+}
+
+/* EDITABLES  <<modif: 06/03/2025 */
+
+:root{
+
+    /* colores */
+
+    --color-LSazul1:#001124;
+    --color-LSazul2:#03254e;
+    --color-LSazul3:#124789;
+    --color-LSazul4:#68c6cd;
+
+    --color-LSgris1:#1c2228;
+    --color-LSgris2:#47697a;
+    --color-LSgris3:#a1b1b7;
+    --color-LSgris4:#e1e3e8;
+
+    --color-LSstndB:#000000;
+    --color-LSstndW:#ffffff;
+
+    /* tipos de fuentes */
+
+    --font-Inter: "Inter_28pt-Regular";
+    --font-Rlway: "Raleway-Regular";
+
+    /* tamaños fuentes fijas */
+
+    --fontSize-bner1:2.074rem;
+    --fontSize-bner2:1.728rem;
+    --fontSize-bner3:1.440rem;
+
+    --fontSize-text1:1.200rem;
+    --fontSize-text2:1.000rem;
+    --fontSize-text3:0.833rem;
+
+    --fontSize-data1:0.694rem;
+    --fontSize-data2:0.579rem;
+
+    /* tamaños fuentes variables */
+
+    --clmp-min720-bner1: clamp(1.167rem, 1.167rem + 0.0007vw, 2.074rem);
+    --clmp-min720-bner2: clamp(0.972rem, 0.972rem + 0.0006vw, 1.728rem);
+    --clmp-min720-bner3: clamp(0.810rem, 0.810rem + 0.0005vw, 1.440rem);
+    
+    --clmp-min720-text1: clamp(0.675rem, 0.675rem + 0.0004vw, 1.200rem);
+    --clmp-min720-text2: 
+    --clmp-min720-text3: 
+    
+    --clmp-min720-data:  
+    --clmp-min720-data:  
+
+    :root {
+        --fontSize-bner1: clamp(1.167rem, 1.167rem + 0.0007vw, 2.074rem);
+        --fontSize-bner2: clamp(0.972rem, 0.972rem + 0.0006vw, 1.728rem);
+        --fontSize-bner3: clamp(0.810rem, 0.810rem + 0.0005vw, 1.440rem);
+      
+        --fontSize-text1: clamp(0.675rem, 0.675rem + 0.0004vw, 1.200rem);
+        --fontSize-text2: clamp(0.562rem, 0.562rem + 0.0003vw, 1.000rem);
+        --fontSize-text3: clamp(0.468rem, 0.468rem + 0.0003vw, 0.833rem);
+      
+        --fontSize-data1: clamp(0.390rem, 0.390rem + 0.0002vw, 0.694rem);
+        --fontSize-data2: clamp(0.326rem, 0.326rem + 0.0002vw, 0.579rem);
+      }
+      
+    
+
+    
+
+}
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+@import url("../css/global.css");
+
+html{
+    font-size: 150%;
+    font-family: var(--font-Inter);
+}
+
+body{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.textos{
+    color: var(--color-LSgris);
+
+    & :nth-child(1){font-size: var(--clmp-min720-bner1);}
+    & :nth-child(2){font-size: var(--fontSize-bner2);}
+    & :nth-child(3){font-size: var(--fontSize-bner3);}
+    & :nth-child(4){font-size: var(--fontSize-text1);}
+    & :nth-child(5){font-size: var(--fontSize-text2);}
+    & :nth-child(6){font-size: var(--fontSize-text3);}
+    & :nth-child(7){font-size: var(--fontSize-data1);}
+    & :nth-child(8){font-size: var(--fontSize-data2);}
+    
+    & :nth-child(9){font-size: var(--fontSize-data3);}
+    & :nth-child(10){font-size: var(--fontSize-text1);}
+}
