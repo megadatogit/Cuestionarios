@@ -75,7 +75,7 @@ body{
     height: 200%;
     top: 0%;
     left: 0;
-    background-image: linear-gradient(var(--color-LSazul3) 50%, var(--color-LSazul2) 100%);
+    background-image: linear-gradient(var(--color-LSazul3) 50%, var(--color-LSazul1) 100%);
     z-index: -1;
     transition: 0.3s ease-in-out;
     
