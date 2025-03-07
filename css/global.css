@@ -58,19 +58,25 @@ Propuesta de estilos globales identidad
 
     /* tamaños fuentes variables */
 
-    --clmp-min720-bner1: (1.167rem, 1.167rem + 0.0007vw, 2.074rem);
-    --clmp-min720-bner2: (0.972rem, 0.972rem + 0.0006vw, 1.728rem);
-    --clmp-min720-bner3: (0.810rem, 0.810rem + 0.0005vw, 1.440rem);
-    
-    --clmp-min720-text1: (0.675rem, 0.675rem + 0.0004vw, 1.200rem);
-    --clmp-min720-text2: (0.562rem, 0.562rem + 0.0003vw, 1.000rem);
-    --clmp-min720-text3: (0.468rem, 0.468rem + 0.0003vw, 0.833rem);
-    
-    --clmp-min720-data1: (0.390rem, 0.390rem + 0.0002vw, 0.694rem);
-    --clmp-min720-data2: (0.326rem, 0.326rem + 0.0002vw, 0.579rem);
+    /* Banner */
+    --clmp-min720-bner1: clamp(1.167rem, calc(1.167rem + 1.5vw), 2.074rem);
+    --clmp-min720-bner2: clamp(0.972rem, calc(0.972rem + 1.2vw), 1.728rem);
+    --clmp-min720-bner3: clamp(0.810rem, calc(0.810rem + 1.0vw), 1.440rem);
+
+    /* Texto */
+    --clmp-min720-text1: clamp(0.675rem, calc(0.675rem + 0.8vw), 1.200rem);
+    --clmp-min720-text2: clamp(0.562rem, calc(0.562rem + 0.6vw), 1.000rem);
+    --clmp-min720-text3: clamp(0.468rem, calc(0.468rem + 0.5vw), 0.833rem);
+
+    /* Datos */
+    --clmp-min720-data1: clamp(0.390rem, calc(0.390rem + 0.4vw), 0.694rem);
+    --clmp-min720-data2: clamp(0.326rem, calc(0.326rem + 0.3vw), 0.579rem);
 
     
 }
+
+
+
 
 
 
