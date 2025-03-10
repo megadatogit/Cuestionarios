@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas</title>
+    <link rel="stylesheet" href="./preguntas.css">
+</head>
+<body>
+    <p>Conteste</p>
+
+<div>
+    <p>Seleccione su enfermedad</p>
+    <input type="radio" id="diabetes" name="enfermedad" value="diabetes">
+    <label for="diabetes">Diabetes Mellitus</label>
+
+    <input type="radio" id="covid" name="enfermedad" value="covid">
+    <label for="covid">COVID H1N1</label>
+
+    <input type="radio" id="opDepre" name="enfermedad" value="depresion">
+    <label for="opDepre">Depresión Construida</label>
+
+    <!-- Contenedor que aparece cuando se selecciona "Depresión" -->
+    <div id="cntDepre" class="oculto">
+        <p>¿Por qué se deprime?</p>
+
+        <input type="radio" id="gusto" name="deprime" value="gusto">
+        <label for="gusto">Le gusta sufrir</label>
+
+        <input type="radio" id="inducido" name="deprime" value="inducido">
+        <label for="inducido">Lo induce el exterior</label>
+
+        <input type="radio" id="pereza" name="deprime" value="pereza">
+        <label for="pereza">Pereza emocional</label>
+
+        <!-- Contenedor que aparece cuando se selecciona "Inducido" -->
+        <div id="cntSufrir" class="oculto">
+            <p>¿Qué lo induce?</p>
+
+            <input type="radio" id="sociedad" name="sufrir" value="sociedad">
+            <label for="sociedad">La sociedad</label>
+
+            <input type="radio" id="familia" name="sufrir" value="familia">
+            <label for="familia">La familia</label>
+
+            <input type="radio" id="trabajo" name="sufrir" value="trabajo">
+            <label for="trabajo">El trabajo</label>
+
+            <!-- Contenedores que aparecen según la elección de "sufrir" -->
+            <div id="cntSocie" class="oculto">
+                <p>Te afecta la sociedad</p>
+            </div>
+            <div id="cntFamil" class="oculto">
+                <p>Te afecta la familia</p>
+            </div>
+            <div id="cntTraba" class="oculto">
+                <p>Te afecta el trabajo</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="./preguntas.js"></script>
+</body>
+</html>

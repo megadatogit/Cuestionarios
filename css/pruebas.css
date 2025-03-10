@@ -328,6 +328,7 @@ body {
     width: 80%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     & .tarjeta {
         display: flex;
         flex-direction: column;
