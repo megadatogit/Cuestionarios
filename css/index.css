@@ -1,13 +1,18 @@
+@import url("./global.css");
+
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins", "Helvetica Neue", Helvetica, Arial;
+    font-family: var(--font-Inter);
     max-width: 1920px;
     transition: 0.3s ease;
 
 }
 
+.cnt-logo-footer{
+    width: 50px;;
+}
 body {
     position: relative;
 }
@@ -26,7 +31,7 @@ header {
     transition: opacity 0.9s ease;
 
     .cnt-logo {
-        opacity: 0;
+        opacity: 1;
         transition: opacity 0.5s ease;
         display: flex;
         justify-content: center;
@@ -37,13 +42,16 @@ header {
         margin-left: 3%;
 
         img {
-            width: 10%;
+            width: 40%;
         }
 
     }
 
 }
 
+.cnt-logo-hero{
+    margin-bottom: 250px;
+}
 nav {
     /*filter: opacity(0.3);
     transform: scale(.8) translateX(50px);*/
@@ -68,7 +76,7 @@ nav {
         z-index: 1;
     }
 
-    button {
+    /* button {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -82,9 +90,9 @@ nav {
         transition: border 0.3s ease;
         color: white;
 
-    }
+    } */
 
-    .acceso {
+    /* .acceso {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -98,7 +106,7 @@ nav {
         color: #1c1c1c;
 
 
-    }
+    } */
 }
 
 .icn-menu {
@@ -111,7 +119,7 @@ nav {
     display: none;
 }
 
-button:hover {
+/* button:hover {
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     color: black;
@@ -120,7 +128,7 @@ button:hover {
 .acceso:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-}
+} */
 
 .link:before {
     position: absolute;
@@ -143,17 +151,17 @@ header:hover #nav {
 
 }
 
-header:hover #nav button {
+/* header:hover #nav button {
     border: 1px solid;
     transition: 0.3s ease-in-out;
-}
+} */
 
-header:hover .acceso {
+/* header:hover .acceso {
     border: 1px solid;
     background-color: #000000;
     color: white;
     transition: 0.3s ease-in-out;
-}
+} */
 
 .cnt-hero {
     /* background-color: #f4f4f7; */

@@ -376,7 +376,7 @@ body {
     text-align: start;
     font-size: var(--fontSize-text3);
     padding: 0 50px 0 30px;
-    transition: transform 1s 0.8s ease, filter 1s 0.8s ease;
+    transition: transform 1s 1.2s ease, filter 1s 1.2s ease;
     
 }
 .tarjeta::before {
@@ -431,6 +431,15 @@ body {
 }
 .tarjeta:hover::before{
     transform: scale(1);
+}
+
+.tarjeta:not(:hover) .trj-des{
+    transition: 0.4s;
+    transition-delay: 0s;
+}
+.tarjeta:not(:hover)::before{
+    transition: 0.8s;
+    transition-delay: 0.2s;
 }
 
 .paleta-cont-color{

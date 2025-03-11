@@ -19,6 +19,11 @@ Propuesta de estilos globales identidad
     src: url("../src/font/Raleway/Raleway-Regular.ttf");
 }
 
+html {
+    font-size: 100%;
+    font-family: var(--font-Inter);
+}
+
 /* EDITABLES  <<modif: 06/03/2025 */
 
 :root{
@@ -75,6 +80,119 @@ Propuesta de estilos globales identidad
 
     
 }
+
+/* Boton claro */
+.LS-btn-lgt {
+    appearance: none;
+    background: var(--color-LSgris5);
+    color: var(--color-LSazul3);
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 25px;
+    width: clamp(50px, auto, 120px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.LS-btn-lgt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(var(--color-LSstndW) 50%, var(--color-LSgris5) 100%);
+    z-index: -1;
+    transition: top 0.2s ease;   
+}
+.LS-btn-lgt::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -25px;
+    width:  30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: transparent;
+    box-shadow: 10px 10px 30px rgb(255, 255, 255);
+    transform: translate(-30px, -30px);
+    transition: transform 0.2s ease;
+}
+
+.LS-btn-lgt:hover {
+    transform: scale(1.03);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+}
+
+.LS-btn-lgt:hover::before  {top: -100%;}
+.LS-btn-lgt:hover::after   {transform: translate(0, 0);}
+.LS-btn-lgt:active::before {background-image: linear-gradient(var(--color-LSgris4), var(--color-LSstndW));}
+.LS-btn-lgt:active         {color: var(--color-LSgris2); transform: scale(1.0);}
+.LS-btn-lgt:active::after  {display: none;}
+
+
+/* Boton oscuro */
+.LS-btn-drk {
+    appearance: none;
+    background: transparent;
+    color: var(--color-LSstndW);
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 25px;
+    width: clamp(50px, auto, 120px);
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.LS-btn-drk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: linear-gradient(var(--color-LSazul3) 50%, var(--color-LSazul1) 100%);
+    z-index: -1;
+    transition: top 0.2s ease;   
+}
+.LS-btn-drk::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -25px;
+    width:  30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: transparent;
+    box-shadow: 10px 10px 30px rgb(255, 255, 255);
+    transform: translate(-30px, -30px);
+    transition: transform 0.2s ease;
+}
+
+.LS-btn-drk:hover {
+    transform: scale(1.03);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+}
+
+.LS-btn-drk:hover::before  {top: -100%;}
+.LS-btn-drk:hover::after   {transform: translate(0, 0);}
+.LS-btn-drk:active::before {background-image: linear-gradient(var(--color-LSazul1), var(--color-LSazul3));}
+.LS-btn-drk:active         {color: var(--color-LSgris3); transform: scale(1);}
+.LS-btn-drk:active::after  {display: none;}
+
 
 
 
