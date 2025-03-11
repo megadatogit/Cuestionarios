@@ -92,7 +92,7 @@ body {
 
 .hover-lgt {
     appearance: none;
-    background-image: linear-gradient(var(--color-LSstndW), var(--color-LSgris4));
+    background-image: linear-gradient(var(--color-LSstndW), var(--color-LSgris5));
     color: var(--color-LSazul3);
     padding: 0.5rem .75rem;
     border: none;
@@ -143,7 +143,7 @@ body {
 
 .LS-btn-lgt {
     appearance: none;
-    background: #F8F9FA;
+    background: var(--color-LSgris5);
     color: var(--color-LSazul3);
     padding: 0.5rem .75rem;
     border: none;
@@ -165,7 +165,7 @@ body {
     left: 0;
     width: 100%;
     height: 200%;
-    background-image: linear-gradient(var(--color-LSstndW) 50%, var(--color-LSgris4) 100%);
+    background-image: linear-gradient(var(--color-LSstndW) 50%, var(--color-LSgris5) 100%);
     z-index: -1;
     transition: top 0.2s ease;   
 }
@@ -329,6 +329,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
     & .tarjeta {
         display: flex;
         flex-direction: column;
@@ -339,14 +340,12 @@ body {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.5s ease, transform 0.5s ease;
         cursor: pointer;
+        position: relative;
 
     }
-    & :hover {
-        box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.1);
-        transform: translateY(-5px);
-        transition: 0.5s ease;
-    }
+    
 
+    
     & :active{
         box-shadow: 0px 0px 65px rgba(35, 56, 115, 0.474);
         border: 2px solid var(--color-LSazul3);
@@ -364,12 +363,32 @@ body {
         background-image: linear-gradient(var(--color-LSazul3), var(--color-LSazul1));
         position: relative;
         overflow: hidden;
+        flex-shrink: 0;
+        transition: transform 1s ease;
 
     }
     
-    & .trj-des {
-        display: none;
-    }
+}
+
+.trj-des {
+    filter: opacity(0);
+    transform: translate(10px, -120px);
+    text-align: start;
+    font-size: var(--fontSize-text3);
+    padding: 0 50px 0 30px;
+    transition: transform 1s 0.8s ease, filter 1s 0.8s ease;
+    
+}
+.tarjeta::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 30%;
+    background-color: #03254E;
+    top: 50%;
+    left: 30px;
+    transform: scale(0);
+    transition: transform 1s 0.5s ease;
 }
 .trj-img::before{
     position: absolute;
@@ -396,6 +415,22 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+}
+.trj-tit{transition: transform 1s ease}
+
+.tarjeta:hover {
+    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: 0.5s ease;
+}
+.tarjeta:hover .trj-img{transform: translate(-70px, -50px) scale(0.6);}
+.tarjeta:hover .trj-tit{transform: translate(70px, -220px) scale(0.9);}
+.tarjeta:hover .trj-des{
+    filter:opacity(1);
+    transform: translate(20px, -120px);
+}
+.tarjeta:hover::before{
+    transform: scale(1);
 }
 
 .paleta-cont-color{
