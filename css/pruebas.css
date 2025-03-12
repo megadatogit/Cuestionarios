@@ -323,14 +323,16 @@ body {
 
 /* tarjeta */
 
-.cnt-tarjetas {
+.cntTarje {
     margin: 50px auto;
     width: 80%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 50px;
+}
 
-    & .tarjeta {
+.tarje {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -339,21 +341,17 @@ body {
         border-radius: 25px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.5s ease, transform 0.5s ease;
+        border: 2px solid transparent;
         cursor: pointer;
         position: relative;
 
-    }
-    
+}
+.tarje.active{
+    box-shadow: 0px 0px 65px rgba(35, 56, 115, 0.474);
+    border: 2px solid var(--color-LSazul3);
+}
 
-    
-    & :active{
-        box-shadow: 0px 0px 65px rgba(35, 56, 115, 0.474);
-        border: 2px solid var(--color-LSazul3);
-        transition: 0.1s ease;
-    }
-
-    
-    & .trj-img{
+.trjImage{
         width: 200px;
         height: 200px;
         display: flex;
@@ -365,12 +363,10 @@ body {
         overflow: hidden;
         flex-shrink: 0;
         transition: transform 1s ease;
-
-    }
-    
+        box-shadow: 3px 9px 25px rgba(0, 0, 0, 0.3);
 }
 
-.trj-des {
+.trjDescr {
     filter: opacity(0);
     transform: translate(10px, -120px);
     text-align: start;
@@ -379,7 +375,7 @@ body {
     transition: transform 1s 1.2s ease, filter 1s 1.2s ease;
     
 }
-.tarjeta::before {
+.tarje::before {
     position: absolute;
     content: '';
     width: 5px;
@@ -390,20 +386,20 @@ body {
     transform: scale(0);
     transition: transform 1s 0.5s ease;
 }
-.trj-img::before{
+.trjImage::before{
     position: absolute;
     content: '';
     width:   70px;
     height:  70px;
     border-radius:50%;
     background-image: linear-gradient(#EBEBEB, #9A9A99);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
-.trj-img::after{
+.trjImage::after{
     position: absolute;
     content: '';
     width:   130px;
@@ -416,30 +412,36 @@ body {
     transform: translateX(-50%);
     z-index: 1;
 }
-.trj-tit{transition: transform 1s ease}
+.trjTitul{transition: transform 1s ease}
 
-.tarjeta:hover {
+.tarje:hover {
     box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
     transition: 0.5s ease;
 }
-.tarjeta:hover .trj-img{transform: translate(-70px, -50px) scale(0.6);}
-.tarjeta:hover .trj-tit{transform: translate(70px, -220px) scale(0.9);}
-.tarjeta:hover .trj-des{
+.tarje:hover .trjImage{transform: translate(-70px, -50px) scale(0.6);}
+.tarje:hover .trjTitul{transform: translate(70px, -220px) scale(0.9);}
+.tarje:hover .trjDescr{
     filter:opacity(1);
     transform: translate(20px, -120px);
 }
-.tarjeta:hover::before{
+.tarje:hover::before{
     transform: scale(1);
 }
 
-.tarjeta:not(:hover) .trj-des{
+.tarje:not(:hover) .trjDescr{
     transition: 0.4s;
     transition-delay: 0s;
 }
-.tarjeta:not(:hover)::before{
+.tarje:not(:hover)::before{
     transition: 0.8s;
     transition-delay: 0.2s;
+}
+
+.tarje:active{
+    box-shadow: 0px 0px 65px rgba(35, 56, 115, 0.474);
+    border: 2px solid var(--color-LSazul3);
+    transition: 0.1s ease;
 }
 
 .paleta-cont-color{
@@ -463,5 +465,56 @@ body {
 .col:nth-child(6){background-color: #47697A ;}
 .col:nth-child(7){background-color: #A1B1B7 ;}
 .col:nth-child(8){background-color: #E1E3E8 ;}
+
+
+.cntBarra{
+    margin: 100px auto;
+    width: 80%;
+    height: 100px;
+    /* border: 2px dotted green; */
+    justify-content: center;
+    align-items: center;
+}
+
+.barra{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 500px;
+    height: 5px;
+    background-color: var(--color-LSazul2);
+}
+.barra::before{
+    width: 100%;
+    height: 5px;
+    
+}
+
+.modul{
+    font-size: var(--fontSize-data2);
+    text-align: center;
+    width: 100px;
+    margin-top: 70px;
+    position: relative;
+}
+.modul::before{
+    position: absolute;
+    content: '';
+    width:  20px;
+    height: 20px;
+    background-color: var(--color-LSazul2);
+    top: -30px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+
+
+    
+}
+.modul:nth-child(all)::before{
+}
+
 
 

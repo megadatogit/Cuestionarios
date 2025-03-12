@@ -83,7 +83,7 @@ html {
 
 /* Estilos Botones (no editables)*/
 
-.LS-btn-lgt, .LS-btn-drk {
+.btnClaro, .btnOscur {
     appearance: none;
     padding: 0.5rem 1.25rem;
     border: none;
@@ -97,7 +97,7 @@ html {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     flex-shrink: 0;
 }
-.LS-btn-lgt::before, .LS-btn-drk::before {
+.btnClaro::before, .btnOscur::before {
     content: '';
     position: absolute;
     top: 0;
@@ -107,7 +107,7 @@ html {
     z-index: -1;
     transition: top 0.2s ease;   
 }
-.LS-btn-lgt::after, .LS-btn-drk::after {
+.btnClaro::after, .btnOscur::after {
     content: "";
     position: absolute;
     top: -40px;
@@ -119,15 +119,15 @@ html {
     transform: translate(-30px, -30px);
     transition: transform 0.2s ease;
 }
-.LS-btn-lgt:hover, .LS-btn-drk:hover {
+.btnClaro:hover, .btnOscur:hover {
     transform: scale(1.03);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.1s ease;
 }
-.LS-btn-lgt:hover::before, .LS-btn-drk:hover::before  {top: -100%;}
-.LS-btn-lgt:hover::after, .LS-btn-drk:hover::after   {transform: translate(0, 0);}
-.LS-btn-lgt:active, .LS-btn-drk:active {color: var(--color-LSgris3); transform: scale(1);}
-.LS-btn-lgt:active::after, .LS-btn-drk:active::after  {display: none;}
+.btnClaro:hover::before, .btnOscur:hover::before  {top: -100%;}
+.btnClaro:hover::after, .btnOscur:hover::after   {transform: translate(0, 0);}
+.btnClaro:active, .btnOscur:active {color: var(--color-LSgris3); transform: scale(1);}
+.btnClaro:active::after, .btnOscur:active::after  {display: none;}
 
 
 /* ***boton Claro*** (variables colores editables) */
@@ -136,30 +136,30 @@ html {
     background: var(--color-LSgris5);
     color: var(--color-LSazul3);
 }
-.LS-btn-lgt::before {
+.btnClaro::before {
     background-image: linear-gradient(var(--color-LSstndW) 50%, var(--color-LSgris5) 100%);
 }
-.LS-btn-lgt::after {
+.btnClaro::after {
     box-shadow: 10px 10px 30px rgb(255, 255, 255);
 }
-.LS-btn-lgt:active::before {background-image: linear-gradient(var(--color-LSgris4), var(--color-LSstndW));}
-.LS-btn-lgt:active {color: var(--color-LSgris2); transform: scale(1.0);}
+.btnClaro:active::before {background-image: linear-gradient(var(--color-LSgris4), var(--color-LSstndW));}
+.btnClaro:active {color: var(--color-LSgris2); transform: scale(1.0);}
 
 
 /* ***boton Oscuro*** (variables colores editables) */
 
-.LS-btn-drk {
+.btnOscur {
     background: transparent;
     color: var(--color-LSstndW);
 }
-.LS-btn-drk::before {
+.btnOscur::before {
     background-image: linear-gradient(var(--color-LSazul3) 50%, var(--color-LSazul1) 100%);
 }
-.LS-btn-drk::after {
+.btnOscur::after {
     background-image: transparent;
     box-shadow: 10px 10px 30px rgb(255, 255, 255);
 }
-.LS-btn-drk:active::before {background-image: linear-gradient(var(--color-LSazul1), var(--color-LSazul3));}
+.btnOscur:active::before {background-image: linear-gradient(var(--color-LSazul1), var(--color-LSazul3));}
 
 
 
