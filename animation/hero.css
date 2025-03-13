@@ -1,0 +1,83 @@
+@import url("../css/global.css");
+
+html { font-size: 125%; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Inter);
+    color: var(--color-LSazul3);
+}
+
+.cntHero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    animation: animateBg 24s linear reverse infinite;
+    background-image: linear-gradient(0deg,#ffffff,#2085ff3b,#ffffff,#ffffff,#a8cefe);
+    background-size: 100% 300%;
+}
+
+  
+  @keyframes animateBg {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+
+.cntFractal {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    filter: opacity(0.6);
+    overflow: hidden;
+    z-index: 0;
+    & svg {
+        float: center;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-50deg) scale(1.85);
+    }
+}
+
+.cntLogo {
+    width: 100%;
+    height: auto;
+    /* border: 2px dashed greenyellow; */
+    text-align: end;
+    padding-right: 5%;
+    img{
+        width: 20%;
+    }
+    
+
+}
+
+.cntInfo {
+    margin-left: 10%;
+    width: 35%;
+    
+    & h3 { font-size: clamp(2rem, 4.5714rem + -11.4286vw, 1rem); };
+    & p  { font-size: var(--clmp-min720-text2); width: 50%;};
+    & button { margin-top: 2rem; };
+}
+
+.cntOption{
+    width: 150px;
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    & :nth-child(1){background-color: var(--color-LSazul3);}
+    span{
+        width:  18px;
+        height: 18px;
+        background-color: var(--color-LSgris3);
+        border-radius: 50%;
+
+    }
+}

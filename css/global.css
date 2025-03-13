@@ -21,7 +21,7 @@ Propuesta de estilos globales identidad
 
 html {
     font-size: 100%;
-    font-family: var(--font-Inter);
+    
 }
 
 /* EDITABLES  <<modif: 06/03/2025 */
@@ -81,11 +81,22 @@ html {
     
 }
 
+/* Reseteo de estilos navegador */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Inter);
+    color: var(--color-LSazul1);
+}
+
+
 /* Estilos Botones (no editables)*/
 
 .btnClaro, .btnOscur {
     appearance: none;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 2rem;
     border: none;
     border-radius: 25px;
     width: clamp(50px, auto, 120px);
