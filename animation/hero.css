@@ -61,7 +61,7 @@ html { font-size: 125%; }
 .cntInfo {
     margin-left: 10%;
     width: 35%;
-    
+    z-index: 1;
     & h3 { font-size: clamp(2rem, 4.5714rem + -11.4286vw, 1rem); };
     & p  { font-size: var(--clmp-min720-text2); width: 50%;};
     & button { margin-top: 2rem; };
@@ -78,6 +78,19 @@ html { font-size: 125%; }
         height: 18px;
         background-color: var(--color-LSgris3);
         border-radius: 50%;
+        cursor: pointer;
 
     }
+}
+
+.elem1, .elem2, .elem3, .elem4 {
+    visibility: hidden;
+    clip-path: inset(0 0 100% 0); /* Oculta el elemento */
+    transition: clip-path 1s ease, visibility 0s linear 1s; /* Visibility se retrasa */
+}
+
+.mostrar {
+    clip-path: inset(0 0 0 0); /* Se muestra completamente */
+    visibility: visible;
+    transition: clip-path 1s ease, visibility 0s; /* Sin retardo en visibility */
 }
