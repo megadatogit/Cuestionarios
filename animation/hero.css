@@ -59,6 +59,7 @@ html { font-size: 125%; }
 }
 
 .cntInfo {
+    
     margin-left: 10%;
     width: 35%;
     z-index: 1;
@@ -85,12 +86,33 @@ html { font-size: 125%; }
 
 .elem1, .elem2, .elem3, .elem4 {
     visibility: hidden;
-    clip-path: inset(0 0 100% 0); /* Oculta el elemento */
-    transition: clip-path 1s ease, visibility 0s linear 1s; /* Visibility se retrasa */
+    
+    transition: clip-path 1s ease, visibility 0s linear 1s; 
 }
 
 .mostrar {
-    clip-path: inset(0 0 0 0); /* Se muestra completamente */
     visibility: visible;
-    transition: clip-path 1s ease, visibility 0s; /* Sin retardo en visibility */
+    transition: clip-path 1s ease, visibility 0s; 
+}
+
+
+.cntFractal {
+    animation: giro 10s linear infinite reverse;
+    
+}
+
+
+.line{
+    transform-origin: 0deg 400px 400px;
+    animation: rotar 10s ease infinite reverse;
+
+}
+
+@keyframes rotar {
+    0%{
+        transform: rotate(0deg, 400px, 400px);
+    }
+    100%{
+        transform: rotate(360deg, 400px, 400px);
+    }
 }
