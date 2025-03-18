@@ -102,17 +102,50 @@ html { font-size: 125%; }
 }
 
 
-.line{
-    transform-origin: 0deg 400px 400px;
-    animation: rotar 10s ease infinite reverse;
 
-}
+path {  
+    stroke-dasharray: 2000;   
+    stroke-dashoffset: 2000;  
+    animation: draw 12s ease infinite alternate-reverse;   
+}  
 
-@keyframes rotar {
-    0%{
-        transform: rotate(0deg, 400px, 400px);
-    }
-    100%{
-        transform: rotate(360deg, 400px, 400px);
-    }
+.path1 { animation-delay: 0.0s; }  
+.path2 { animation-delay: 0.2s; }  
+.path3 { animation-delay: 0.4s; }  
+.path4 { animation-delay: 0.6s; }  
+.path5 { animation-delay: 0.8s; }  
+.path6 { animation-delay: 1.0s; }  
+.path7 { animation-delay: 1.2s; }  
+.path8 { animation-delay: 1.4s; }  
+.path9 { animation-delay: 1.6s; }  
+.path10 { animation-delay: 1.8s; }  
+.path11 { animation-delay: 2.0s; }  
+.path12 { animation-delay: 2.2s; }  
+.path13 { animation-delay: 2.4s; }  
+.path14 { animation-delay: 2.6s; }  
+.path15 { animation-delay: 2.8s; }  
+.path16 { animation-delay: 3.0s; }  
+.path17 { animation-delay: 3.2s; }  
+.path18 { animation-delay: 3.4s; }  
+.path19 { animation-delay: 3.6s; }  
+.path20 { animation-delay: 3.8s; }  
+.path21 { animation-delay: 4.0s; }  
+.path22 { animation-delay: 4.2s; }  
+.path23 { animation-delay: 4.4s; }  
+.path24 { animation-delay: 4.6s; }  
+.path25 { animation-delay: 4.8s; }  
+.path26 { animation-delay: 5.0s; }  
+.path27 { animation-delay: 5.2s; }  
+.path28 { animation-delay: 5.4s; }  
+.path29 { animation-delay: 5.6s; }  
+.path30 { animation-delay: 5.8s; }  
+.path31 { animation-delay: 6.0s; }  
+.path32 { animation-delay: 6.2s; }  
+.path33 { animation-delay: 6.4s; }  
+.path34 { animation-delay: 6.6s; }  
+.path35 { animation-delay: 6.8s; }  
+
+@keyframes draw {
+    to{stroke-dashoffset: 0;}
+
 }
