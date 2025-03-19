@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./svg.css">
-    <title>svg</title>
-</head>
-<body>
-    
-    <svg width="200" height="600" stroke="purple" stroke-width="25" fill="transparent">
-            <circle cx="100" cy="100" r="50" stroke-dasharray=""/>
-            <rect x="50" y="200" width="100" height="100"/>
-            <polygon points="100,350 50,450 150,450"/>
-            
-        
-        
-    </svg>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./svg.css" />
+  <title>svg</title>
+</head>
+
+<body>
+  <svg width="200" height="700" viewBox="0 0 200 700" stroke="purple" stroke-width="5" fill="transparent" xmlns="http://www.w3.org/2000/svg">  
+    <path id="curva" stroke="purple" stroke-width="5" d="M20,230 Q60,205 100,230 T180,230">  
+        <animate   
+            attributeName="d"   
+            values="M20,230 Q60,205 100,230 T180,230;
+                    M20,230 Q50,150 100,230 T180,230;
+                    M20,230 Q60,205 100,230 T180,230"
+            dur="1s"
+            repeatCount="" />
+    </path> 
+
+    <path d="M20 "/>
+</svg>  
 </body>
+<script>
+  const curva = document.querySelector("#curva");
+  const d01 = 
+  curva.setAttribute('d', d01);6
+  
+</script>
 </html>
+<!-- <circle cx="100" cy="100" r="50" stroke-dasharray="" />
+<rect x="50" y="200" width="100" height="100" />
+<polygon points="100,350 50,450 150,450" /> -->
+<!-- <polyline stroke-width="15" points=" 50 500 150 500 150 550 50 550 50 492.5  " /> -->

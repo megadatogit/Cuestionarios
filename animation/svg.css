@@ -2,8 +2,13 @@ svg{
     margin: 0px auto;
     border: 2px solid red;
     border-radius: 25px;
-    
+    transition: 3s ease;
+
+    viewBox: "-40 -40 200 200"
     
     
 }
+
+#curva{
     
+}
