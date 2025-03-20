@@ -1029,7 +1029,11 @@ footer {
         h2, img {
             width: 70%;
         }
-        
+        height: auto;
+
+        .cnt-logo-hero{
+            width: 80%;
+        }
 
         .boton {}
     }
