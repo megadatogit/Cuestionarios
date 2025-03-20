@@ -13,6 +13,10 @@
 .cnt-logo-footer{
     width: 50px;;
 }
+.cnt-logo-hero{
+    margin-bottom: 250px;
+}
+
 body {
     position: relative;
 }
@@ -49,9 +53,7 @@ header {
 
 }
 
-.cnt-logo-hero{
-    margin-bottom: 250px;
-}
+
 nav {
     /*filter: opacity(0.3);
     transform: scale(.8) translateX(50px);*/
@@ -61,7 +63,7 @@ nav {
     justify-content: end;
     align-items: center;
     gap: 10px;
-    /* z-index: 1; */
+    z-index: 1;
 
     .link {
         padding-bottom: 5px;
@@ -73,7 +75,7 @@ nav {
 
     .boton {
         text-decoration: none;
-        /* z-index: 1; */
+        z-index: 1;
     }
 
     /* button {
@@ -205,7 +207,6 @@ header:hover #nav {
         position: absolute;
         top: calc(65%);
         left: calc(50% - 200px/2);
-        z-index: 150;
         font-size: 17px;
         margin-top: 40px;
         padding: none;
@@ -1036,7 +1037,7 @@ footer {
             width: 80%;
         }
 
-        .boton {}
+        .boton {z-index: none;}
     }
 
     .cnt-line {
