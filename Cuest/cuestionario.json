@@ -1,0 +1,43 @@
+{
+  "key": "ENCUESTA123",
+  "name": "CAMBRA ",
+  "description": "de mod de 0-5",
+  "list_questions": [
+    {
+      "type": "radio",
+      "text": "¿Ha tenido la madre o cuidador principal caries en el ultimo año?",
+      "list_answers": [
+        {
+          "text": "Sí",
+          "value": 2,
+          "url": null,
+          "url_type": null
+        },
+        {
+          "text": "No",
+          "value": 2,
+          "url": null,
+          "url_type": null
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "text": "¿Ha tenido la madre o cuidador principal caries en el ultimo año?",
+      "list_answers": [
+        {
+          "text": "Sí",
+          "value": 2,
+          "url": null,
+          "url_type": null
+        },
+        {
+          "text": "No",
+          "value": 2,
+          "url": null,
+          "url_type": null
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
 
-    const heightHero = document.querySelector('.cnt-hero').offsetHeight;
+    const heightHero = document.querySelector('.cntHero').offsetHeight;
     if(this.window.scrollY > heightHero){
         
         logo.style.opacity = '1';

@@ -1,5 +1,5 @@
 const trjContanier = document.querySelector('.cnt-trj');
-let contHeroHeight = document.querySelector('.cnt-hero').clientHeight;
+let contHeroHeight = document.querySelector('.cntHero').clientHeight;
 let header = document.querySelector('header #nav');
 
 trjContanier.addEventListener('mouseover', () => {
