@@ -1,0 +1,18 @@
+<svg width="88" xmlns="http://www.w3.org/2000/svg" height="31" fill="none">
+    <rect rx="0" ry="0" y="15" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="9"
+        height="16" style="fill: rgb(18, 71, 137); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="10" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="9"
+        height="31" style="fill: rgb(177, 178, 181); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="23" y="1" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="30" style="fill: rgb(18, 71, 137); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="33" y="18.5" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="12.5" style="fill: rgb(177, 178, 181); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="46" y="13" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="18" style="fill: rgb(18, 71, 137); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="56" y="8" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="23" style="fill: rgb(177, 178, 181); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="69" y="8" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="23" style="fill: rgb(18, 71, 137); fill-opacity: 1;" class="fills" />
+    <rect rx="0" ry="0" x="79" y="1" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        width="9" height="30" style="fill: rgb(177, 178, 181); fill-opacity: 1;" class="fills" />
+</svg>
