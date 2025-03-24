@@ -12,14 +12,14 @@ html { font-size: 125%; }
 
 .cntHero {
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
-    animation: animateBg 24s linear reverse infinite;
-    background-image: linear-gradient(0deg,#ffffff,#2085ff3b,#ffffff,#ffffff,#a8cefe);
+    /* animation: animateBg 24s linear reverse infinite;
+    background-image: linear-gradient(0deg,#ffffff,#2085ff3b,#ffffff,#ffffff,#a8cefe); */
     background-size: 100% 300%;
 }
 
@@ -32,34 +32,37 @@ html { font-size: 125%; }
 
 .cntFractal {
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    filter: opacity(0.6);
+    width: 70%;
+    right: 0;
+    filter: opacity(0.8);
     overflow: hidden;
     z-index: 0;
+    animation: giro 10s linear infinite reverse;
     & svg {
         float: center;
         width: 100%;
         height: 100%;
-        transform: rotate(-50deg) scale(1.85);
+        transform: rotate(-30deg) scale(1.85);
     }
 }
 
 .cntLogo {
     width: 100%;
     height: auto;
-    /* border: 2px dashed greenyellow; */
     text-align: end;
     padding-right: 5%;
     img{
         width: 20%;
     }
     
-
+    
 }
 
 .cntInfo {
-    
+    display: flex;
+    height: 100vh;
+    align-items: end;
+    margin-top: 25%;
     margin-left: 10%;
     width: 35%;
     z-index: 1;
@@ -80,27 +83,9 @@ html { font-size: 125%; }
         background-color: var(--color-LSgris3);
         border-radius: 50%;
         cursor: pointer;
-
+        
     }
 }
-
-.elem1, .elem2, .elem3, .elem4 {
-    visibility: hidden;
-    
-    transition: clip-path 1s ease, visibility 0s linear 1s; 
-}
-
-.mostrar {
-    visibility: visible;
-    transition: clip-path 1s ease, visibility 0s; 
-}
-
-
-.cntFractal {
-    animation: giro 10s linear infinite reverse;
-    
-}
-
 
 
 path {  
@@ -148,4 +133,58 @@ path {
 @keyframes draw {
     to{stroke-dashoffset: 0;}
 
+}
+
+.cntServi{
+    margin: 700px auto;
+    width: 80%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px dashed greenyellow; */
+    text-align: center;
+    .cntCircu {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        .circu{
+            position: relative;
+            width:  200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle 200px at 20% 30%, 
+            rgba(255, 255, 255, 1) 0%, 
+            rgba(190, 190, 190, 0.7) 70%, 
+            rgba(165, 6, 6, 0) 100%);
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+            filter: opacity(.5);
+            
+            span{
+                position: absolute;
+                bottom: -100px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+    }
+}
+
+.cntAfili{
+    margin: 50px auto;
+    width: 70%;
+    text-align: center;
+    h3{
+        margin-bottom: 70px;
+    }
+}
+
+.cntPasPer{
+    margin: 50px auto;
+    width: 70%;
+    display: flex;
+    .descr{
+        margin: 0 auto;
+        border: 2px dashed;
+        width: 40%;
+    }
 }
