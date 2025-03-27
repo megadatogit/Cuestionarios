@@ -74,6 +74,7 @@ header{
     height: 80vh;
     /* border: 2px dashed; */
     justify-content: center;
+    gap: 20px;
     .btnLateral{
         border-top-right-radius:    50px;
         border-bottom-right-radius: 50px;
