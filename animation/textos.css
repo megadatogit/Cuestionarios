@@ -1,0 +1,66 @@
+@import url("../css/global.css");
+
+html { font-size: 125%; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Inter);
+    color: var(--color-LSazul3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .scroll-content {
+    height: 300vh; /* altura para que haya scroll */
+  }
+  
+ 
+  
+  @keyframes fondoTxt {
+    from { background-position: 0%; }
+    to { background-position: 200%; }
+  }
+  
+  .cntTxt {
+    border: 2px solid;
+    width: 100%;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(
+        135deg, 
+        rgb(203, 172, 216) 0%, 
+        rgb(2, 91, 92) 50%, 
+        rgb(2, 91, 92) 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: fondoTxt linear both;
+    animation-timeline: scroll();
+    animation-duration: 1s; /* no importa, scroll lo maneja */
+  }
+  
+  .cntTxt span {
+    display: block;
+    position: relative;
+    transition: 1s ease;
+  }
+  .scroll-content .cntTxt span:nth-child(odd){
+    transform: translateX(-100px)
+  }
+  .scroll-content .cntTxt span:nth-child(even){
+    transform: translateX(100px)
+  }
