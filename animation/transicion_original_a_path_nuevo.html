@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Transición Path Original a Nuevo</title>
+  <script src="https://unpkg.com/flubber"></script>
+  <style>
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    svg {
+      width: 700px;
+      height: 700px;
+    }
+    path {
+      fill: #00ccff;
+      stroke: none;
+    }
+  </style>
+</head>
+<body>
+  <svg viewBox="0 0 800 800">
+    <path id="morph" d="m395.4 421.3c38.5-12.2 133.6-5.3 194.5 14.3 14-5.4 2.2-34.1 2.2-34.1l-155.3-401.1-26.7 56.8c-23.4 46.7 47.2 213.3 47.2 213.3l-90.6-146.5-17.6 72.4c-11.7 55.8 66.8 151 66.8 151l-86.8-76.9c-18.4 59.9-7 106.6 7.6 137.1 0.2 0.4 18.5 26.3 58.7 13.7z"/>
+  </svg>
+
+  <script>
+    const path = document.getElementById("morph");
+    const interpolator = flubber.interpolate(`m395.4 421.3c38.5-12.2 133.6-5.3 194.5 14.3 14-5.4 2.2-34.1 2.2-34.1l-155.3-401.1-26.7 56.8c-23.4 46.7 47.2 213.3 47.2 213.3l-90.6-146.5-17.6 72.4c-11.7 55.8 66.8 151 66.8 151l-86.8-76.9c-18.4 59.9-7 106.6 7.6 137.1 0.2 0.4 18.5 26.3 58.7 13.7z`, `M109.72,87.5c-3.22-9.18-9.81-17.91-20.21-25.23C81.6,48,67,34.85,45.07,25.16l.32.29C34.09,16.19,19.22,7.55,0,0,72.58,67,40.54,144.28,33.07,159.34h0C116.38,173.89,137.88,114.65,109.72,87.5Z`);
+
+    let t = 0;
+    const duration = 3000;
+    const start = performance.now();
+
+    function animate(now) {
+      t = (now - start) / duration;
+      if (t > 1) t = 1;
+      path.setAttribute("d", interpolator(t));
+      if (t < 1) requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
