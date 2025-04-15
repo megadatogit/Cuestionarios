@@ -59,8 +59,8 @@ body {
     transition: 1s ease;
   }
   .scroll-content .cntTxt span:nth-child(odd){
-    transform: translateX(-100px)
+    transform: translateX(0px)
   }
   .scroll-content .cntTxt span:nth-child(even){
-    transform: translateX(100px)
+    transform: translateX(0px)
   }
