@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Esfera Blanca</title>
+  <style>
+
+    body {
+      margin: 0;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .cntEsfera {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); 
+      left: -5%;
+      width: 50vw;
+      height: auto;
+      border: 2px dashed darkblue;
+    }
+    .esfera {
+      position: relative;
+      width:  600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle 600px at 20% 30%, 
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(190, 190, 190, 0.4) 70%,
+      rgba(165, 6, 6, 0) 100%);
+      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    .orbitador {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      background-color: ;
+      width: 100%;
+      height: 100%;
+      animation: girar 20s linear infinite;
+    }
+  </style>
+
+</head>
+
+
+<body>
+<div class="cntEsfera">
+
+  <div class="esfera">
+    <div class="orbitador" id="orbitador"></div>
+  </div>
+  
+</div>
+
+<script>
+  const unidades = [
+    "Presión arterial", "Glucosa", "Temperatura", "Oxigenación",
+    "Frecuencia cardíaca", "IMC", "Colesterol", "Triglicéridos",
+    "Saturación", "Frecuencia respiratoria", "Hemoglobina", "Ácido úrico",
+    "Lípidos", "Tensión ocular", "pH sanguíneo", "Creatinina", "Vitamina D",
+    "Calcio", "Insulina", "Electrolitos", "Función renal", "Función hepática",
+    "Eritrocitos", "Leucocitos", "Plaquetas", "PCR", "TSH", "T3", "T4", "Cortisol"
+  ];
+
+  const orbitador = document.getElementById('orbitador');
+
+  const radio = 360;
+  const centroX = 400;
+  const centroY = 400;
+
+  unidades.forEach((texto, i) => {
+    const angulo = (i / unidades.length) * Math.PI * 2;
+    const unidad = document.createElement('div');
+    unidad.classList.add('unidad');
+    unidad.textContent = texto;
+
+    const x = centroX + Math.cos(angulo) * radio;
+    const y = centroY + Math.sin(angulo) * radio;
+
+    unidad.style.left = `${x}px`;
+    unidad.style.top = `${y}px`;
+
+    // Ajustamos opacidad inicial según posición (más desvanecido arriba y abajo)
+    const sinVal = Math.sin(angulo);
+    const fade = Math.pow(Math.cos(sinVal), 2); // más opaco arriba/abajo
+    unidad.style.opacity = fade;
+
+    orbitador.appendChild(unidad);
+  });
+</script>
+</body>
+</html>
