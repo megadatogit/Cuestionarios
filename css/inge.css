@@ -1,0 +1,40 @@
+nav {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.cntLogo {
+    width: 12.5rem;
+    & img {
+        width: 100%;
+    }
+}
+
+.cntMenu {
+    display: flex;
+    border: 2px dashed lightgray;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+
+    text-decoration: none;
+    gap: 2rem;
+}
+
+ul li {
+
+
+}
+
+.subMenu {
+    display: none;
+}
+
+.cntBtn { 
+
+}

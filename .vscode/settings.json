@@ -1,6 +1,6 @@
 {
     "svg.preview.background": "dark-transparent",
-    "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5502,
     "workbench.colorCustomizations": {
         "activityBar.background": "#0C3335",
         "titleBar.activeBackground": "#10474A",
