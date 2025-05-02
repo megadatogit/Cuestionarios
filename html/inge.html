@@ -14,8 +14,11 @@
 
   </head>
   <body>
+    <div class="overlay"></div>
     <nav>
-
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
       <div class="cntLogo">
         <a href="../html/inge.html"><img src="../src/images/logoLS/LS-imagotipo-horizontal.png" alt=""></a>
       </div>
@@ -24,36 +27,36 @@
         
         <ul class="menu">
 
-          <li><a href="#">Inicio</a></li>
+          <!-- <li><a href="../html/inge.html">Inicio</a></li> -->
 
           <li>
-            <a href="#">Servicios</a>
+            <a href="#" class="despliega">Servicios</a>
             <ul class="subMenu">
-              <li><a href="#"> Atención Médica PreHospitalaria</a></li>
-              <li><a href="#"> Atención Médica Preventiva</a></li>
+              <li><a href="../html/inge/AMPHospitalaria.html"> Atención Médica PreHospitalaria</a></li>
+              <li><a href="../html/inge/AMPreventiva.html"> Atención Médica Preventiva</a></li>
               <li>
                 <a href="#"> Convenios</a>
                 <ul class="subMenu">
-                  <li><a href="#">Laboratorios</a></li>
-                  <li><a href="#">Farmacias</a></li>
-                  <li><a href="#">Hospitales</a></li>
+                  <li><a href="../html/inge/Laboratos.html">Laboratorios</a></li>
+                  <li><a href="../html/inge/Farmacias.html">Farmacias</a></li>
+                  <li><a href="../html/inge/Hospitales.html">Hospitales</a></li>
                 </ul>
               </li>
             </ul>
           </li>
 
           <li>
-            <a href="#">Hospital Digital</a>
+            <a href="#" class="despliega">Hospital Digital</a>
             <ul class="subMenu">
-              <li><a href="#">Telemedicina</a></li>
-              <li><a href="#">Teleconsulta</a></li>
-              <li><a href="#">Seguimiento médico</a></li>
-              <li><a href="#">Expediente Clínico Digital</a></li>
+              <li><a href="../html/inge/Telemedicina.html">Telemedicina</a></li>
+              <li><a href="../html/inge/Teleconsulta.html">Teleconsulta</a></li>
+              <li><a href="../html/inge/SeguimientoMedico.html">Seguimiento médico</a></li>
+              <li><a href="../html/inge/ExpedienteCilicoDigital.html">Expediente Clínico Digital</a></li>
             </ul>
           </li>
 
           <li>
-            <a href="#">Desarrollo e Investigación</a>
+            <a href="/html/inge/DesarrolloInvestigacion.html" class="despliega">Desarrollo e Investigación</a>
           </li>
 
         </ul>
@@ -61,9 +64,17 @@
       </div>
 
       <div class="cntBtn">
-        <button class="">afiliar</button>
-        <button class="">ingresar</button>
+        <a href="../html/inge/afiliacion.html"><button class="">afiliar</button></a>
+        <a href="../html/inge/ingresar.html"><button class="">ingresar</button></a>
+        
+        
       </div>
     </nav>
+
+    <div class="hero">
+      <p>Inicio</p>
+    </div>
+
+    <script src="../js/ingeMenu.js"></script>
   </body>
 </html>
