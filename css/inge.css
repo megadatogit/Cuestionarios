@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s ease;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.cntLogo {
+    width: 150px;
+
+    & img {
+        width: 100%;
+    }
+}
+
+
+nav:hover~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+nav {
+
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.menu,
+.subMenu {
+    
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & a {
+        position: relative;
+        text-decoration: none;
+        color: rgb(1, 1, 112);
+        transition: 0.3s ease;
+
+        &:hover {
+            text-shadow: 0px 0px 2px rgb(0, 0, 97);
+        }
+
+
+    }
+
+}
+
+
+
+.subMenu {
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    background: white;
+    padding: 35px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+li:hover>.subMenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+button {
+    appearance: none;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+    color: rgb(1, 1, 112);
+}
+
+button:hover {
+    cursor: pointer;
+
+    background-color: rgb(1, 1, 112);
+    color: white;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        font-size: 2rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 30;
+}
+
+@media (max-width: 900px) {
+
+    /* Mostrar el botón hamburguesa */
+    body {overflow-x: hidden;}
+    
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        
+    }
+
+    nav {
+        
+        display: flex;
+        right: 0;
+
+        & .cntLogo {
+            
+        }
+        
+    }
+
+    /* Ocultar menú principal inicialmente */
+    .cntMenu {
+        position: absolute;
+        top: 0;
+        right: -110%;
+        width: 100vw;
+        background: #0A4789;
+        transition: right 0.3s ease;
+        gap: none;
+        padding-top: 5rem;
+        padding-right: 3rem;
+        z-index: 25;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .menu {
+        
+        background: #0A4789;
+        flex-direction: column;
+        text-align: end;
+        padding-right: 5%;
+        & li a {
+            color: white;
+            line-height: 1;
+        }    
+    }
+
+
+    .cntMenu.active {
+        right: 0;
+    }
+
+    /* Mostrar submenús como bloques normales */
+    .subMenu {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: none;
+        background-color: #0A4789;
+        display: flex;
+        margin: 0;
+        padding-right: 0;
+        
+    }
+
+    .cntMenu ul.menu>li {
+        margin-bottom: 1.5rem;
+        
+    }
+}
