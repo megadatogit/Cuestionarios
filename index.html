@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./src/favicon/lsfvc.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <title>LiberSalus</title>
-  </head>
 
-  <body>
-    <div class="cntHero">
-      <div class="cntLogoHero">
-        <img src="./src/images/logoLS/LS-imagotipo-box-eslogan.png" alt="LiberSalus logo"/>
-        <button class="btnOscur">Inicia tu registro</button>
-      </div>
-      <!-- <div class="cntLineas">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./src/favicon/lsfvc.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>LiberSalus</title>
+</head>
+
+<body>
+  <div class="cntHero">
+    <div class="cntLogoHero">
+      <img src="./src/images/logoLS/LS-imagotipo-box-eslogan.png" alt="LiberSalus logo" />
+      <button class="btnOscur">Inicia tu registro</button>
+    </div>
+    <!-- <div class="cntLineas">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -151,235 +152,206 @@
           </g>
         </svg>
       </div> -->
-    </div>
+  </div>
 
-    <header class="header">
+  <header class="header">
+    <div class="cnt-logo">
+      <img src="/src/images/logoLS/LS-imagotipo-horizontal.png" alt="" />
+    </div>
+    <img id="abrir" class="abrir" src="./src/svg/menu.svg" alt="" />
+    <nav id="nav">
+      <img id="cerrar" class="cerrar" src="./src/svg/cerrar.svg" alt="" />
+      <a class="link" href="#">Inicio</a>
+      <a class="link" href="./html/nosotros.html">Nosotros</a>
+      <a class="link" href="#">Servicios</a>
+      <button class="btnClaro">Acceso</button>
+      <button class="btnOscur">Afiliarse</button>
+      <a class="link" href="#"><span class="icn-menu"><img class="icn-acss" src="./src/svg/acceso.svg"
+            alt="acceso" />Acceso</span></a>
+      <a class="link" href="#"><span class="icn-menu"><img class="icn-acss" src="./src/svg/afiliarse.svg"
+            alt="acceso" />Afiliarse</span></a>
+    </nav>
+  </header>
+
+  <aside>
+    <h2 class="ani-tit">Historial Clínico Digital</h2>
+    <p>
+      Bienvenido a nuestra innovadora plataforma de gestión de salud digital, diseñada para empoderarte en tu bienestar.
+      Al afiliarte, tendrás acceso a herramientas avanzadas como análisis de riesgo genético, monitoreo personal, y
+      atención a domicilio. Prioriza tu salud y aprovecha recursos educativos y convenios exclusivos, transformando así
+      tu experiencia de cuidado médico
+    </p>
+  </aside>
+
+  <div class="cntGestion">
+
+  </div>
+
+
+  <div class="mono">
+    <div id="image-container">
+      <!-- La imagen inicial es la primera de la secuencia -->
+      <img id="rotating-image" src="/src/images/mono/unscreen-060.png" alt="Figura humana">
+      <!-- Capa de overlay para agregar elementos adicionales (indicadores, líneas, etc.) -->
+      <div id="overlay">
+        <!-- Puedes agregar aquí tus elementos gráficos -->
+      </div>
+
+      <div class="superior">
+        <p>condición cognitiva</p>
+        <p class="iQ"><span>120</span>IQ</p>
+        <div class="graficaCognitiva">
+          <div class="filtro"></div>
+          <div class="barra1"></div>
+          <div class="barra2"></div>
+          <div class="barra3"></div>
+        </div>
+      </div>
+      <div class="centro">
+        <p>frecuencia cardiaca</p>
+        <p class="lpm"><span>69</span>lpm</p>
+        <div class="graficaCardiaca">
+          <img src="../src/images/electroCapa.png" alt="">
+        </div>
+      </div>
+
+      <div class="inferior">
+        <p>estado biliar</p>
+        <p class="gluco"><span>130</span>mg/dL</p>
+      </div>
+      <div class="graficaBiliar">
+        <p class="ejeY">nivel de <br>glucosa <br>(mg/dL)</p>
+        <p class="ejeX">frecuenica</p>
+        <svg width="240" height="70">
+          <polyline class="linea1" stroke="#000" stroke-width="1" fill="transparent" points="0,25 40,10 80,25 120,15">
+            <animate attributeName="points" from="0,25 40,10 80,25 120,15" to="0, 5 40,22 80, 5 120,35" dur="5s"
+              repeatCount="indefinite" />
+          </polyline>
+
+
+
+
+        </svg>
+
+
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <h2 class="tit ani-tit">Lorem, ipsum dolor.</h2>
+  <div class="cnt-line">
+    <div class="line"></div>
+    <p class="txt-iza">Lorem ipsum dolor sit amet.</p>
+    <p class="txt-izb">Lorem ipsum dolor sit amet.</p>
+    <p class="txt-dea">Lorem ipsum dolor sit amet.</p>
+    <p class="txt-deb">Lorem ipsum dolor sit amet.</p>
+    <div class="izquierda-arriba"></div>
+    <div class="izquierda-abajo"></div>
+    <div class="derecha-arriba"></div>
+    <div class="derecha-abajo"></div>
+    <div class="elm-izqarb"></div>
+    <div class="elm-izqaba"></div>
+    <div class="elm-derarb"></div>
+    <div class="elm-deraba"></div>
+  </div>
+
+  <section class="testimonios">
+    <p class="ani-tit">Testimonios</p>
+    <div class="cnt-trj">
+      <div id="trj" class="hover">
+        <span class="cnt-img"><!-- <img src="./src/img/user.jpg" alt="user"> --></span>
+        <p class="nombre">Nombre Apellido</p>
+        <p class="test">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          efficitur, mauris vitae sollicitudin mattis, nunc
+        </p>
+      </div>
+      <div id="trj">
+        <span class="cnt-img"><!-- <img src="./src/img/user.jpg" alt="user"> --></span>
+        <p class="nombre">Nombre Apellido</p>
+        <p class="test">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          efficitur, mauris vitae sollicitudin mattis, nunc
+        </p>
+      </div>
+      <div id="trj">
+        <span class="cnt-img"><!-- <img src="./src/img/user.jpg" alt="user"> --></span>
+        <p class="nombre">Nombre Apellido</p>
+        <p class="test">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          efficitur, mauris vitae sollicitudin mattis, nunc
+        </p>
+      </div>
+      <div id="trj">
+        <span class="cnt-img"><!-- <img src="./src/img/user.jpg" alt="user"> --></span>
+        <p class="nombre">Nombre Apellido</p>
+        <p class="test">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          efficitur, mauris vitae sollicitudin mattis, nunc
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="arriba">
       <div class="cnt-logo">
-        <img src="/src/images/logoLS/LS-imagotipo-horizontal.png" alt="" />
+        <img src="./src/images/logoLS/LS-imagotipo-horizontal-negativo.png" alt="" />
       </div>
-      <img id="abrir" class="abrir" src="./src/svg/menu.svg" alt="" />
-      <nav id="nav">
-        <img id="cerrar" class="cerrar" src="./src/svg/cerrar.svg" alt="" />
-        <a class="link" href="#">Inicio</a>
-        <a class="link" href="./html/nosotros.html">Nosotros</a>
-        <a class="link" href="#">Servicios</a>
-        <button class="btnClaro">Acceso</button>
-        <button class="btnOscur">Afiliarse</button>
-        <a class="link" href="#"
-          ><span class="icn-menu"
-            ><img
-              class="icn-acss"
-              src="./src/svg/acceso.svg"
-              alt="acceso"
-            />Acceso</span
-          ></a
-        >
-        <a class="link" href="#"
-          ><span class="icn-menu"
-            ><img
-              class="icn-acss"
-              src="./src/svg/afiliarse.svg"
-              alt="acceso"
-            />Afiliarse</span
-          ></a
-        >
-      </nav>
-    </header>
-
-    <aside>
-      <h2 class="ani-tit">Historial Clínico Digital</h2>
-      <p>
-        Bienvenido a nuestra innovadora plataforma de gestión de salud digital, diseñada para empoderarte en tu bienestar. Al afiliarte, tendrás acceso a herramientas avanzadas como análisis de riesgo genético, monitoreo personal, y atención a domicilio. Prioriza tu salud y aprovecha recursos educativos y convenios exclusivos, transformando así tu experiencia de cuidado médico
-      </p>
-    </aside>
-
-    <div class="cntGestion">
-      
-    </div>
-    
-
-    <div class="Mono">
-      <div id="image-container">
-        <!-- La imagen inicial es la primera de la secuencia -->
-        <img id="rotating-image" src="/src/images/mono/unscreen-060.png" alt="Figura humana">
-        <!-- Capa de overlay para agregar elementos adicionales (indicadores, líneas, etc.) -->
-        <div id="overlay">
-            <!-- Puedes agregar aquí tus elementos gráficos -->
+      <div class="cnt-redes">
+        <p id="encabezado">Síguenos</p>
+        <div class="icn-red">
+          <a href="#"><img src="./src/svg/facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="./src/svg/linked.svg" alt="linkedin" /></a>
+          <a href="#"><img src="./src/svg/instagram.svg" alt="instabram" /></a>
+          <a class="tt" href="#"><img src="./src/svg/tiktok_vv.svg" alt="tiktok" /></a>
         </div>
-  
-        <div class="superior">
-            <p>condición cognitiva</p>
-            <p class="iQ"><span>120</span>IQ</p>
-            <div class="graficaCognitiva">
-                <div class="filtro"></div>
-                <div class="barra1"></div>
-                <div class="barra2"></div>
-                <div class="barra3"></div>
-            </div>
-        </div>
-        <div class="centro">
-            <p>frecuencia cardiaca</p>
-            <p class="lpm"><span>69</span>lpm</p>
-            <div class="graficaCardiaca">
-                <img src="../src/images/electroCapa.png" alt="">
-            </div>
-        </div>
-  
-        <div class="inferior">
-            <p>estado biliar</p>
-            <p class="gluco"><span>130</span>mg/dL</p>
-        </div>
-        <div class="graficaBiliar">
-            <p class="ejeY">nivel de <br>glucosa <br>(mg/dL)</p>
-            <p class="ejeX">frecuenica</p>
-            <svg width="240" height="70">
-                <polyline class="linea1" stroke="#000" stroke-width="1" fill="transparent" points="0,25 40,10 80,25 120,15">
-                  <animate
-                    attributeName="points"
-                    from="0,25 40,10 80,25 120,15"
-                      to="0, 5 40,22 80, 5 120,35"
-                     dur="5s"
-                    repeatCount="indefinite" />
-                </polyline>
-  
-                
-                
-  
-              </svg>
-              
-            
-  
-        </div>
-  
-  
-  
-  
-    </div>
+      </div>
     </div>
 
-    <h2 class="tit ani-tit">Lorem, ipsum dolor.</h2>
-    <div class="cnt-line">
-      <div class="line"></div>
-      <p class="txt-iza">Lorem ipsum dolor sit amet.</p>
-      <p class="txt-izb">Lorem ipsum dolor sit amet.</p>
-      <p class="txt-dea">Lorem ipsum dolor sit amet.</p>
-      <p class="txt-deb">Lorem ipsum dolor sit amet.</p>
-      <div class="izquierda-arriba"></div>
-      <div class="izquierda-abajo"></div>
-      <div class="derecha-arriba"></div>
-      <div class="derecha-abajo"></div>
-      <div class="elm-izqarb"></div>
-      <div class="elm-izqaba"></div>
-      <div class="elm-derarb"></div>
-      <div class="elm-deraba"></div>
+    <div class="ligas">
+      <div class="col">
+        <p class="encabezado">Enlaces</p>
+        <a href="#">Inicio</a>
+        <a href="#">Afiliarse</a>
+        <a href="#">Servicios</a>
+        <a href="#">Historial Clínico</a>
+      </div>
+
+      <div class="col">
+        <p class="encabezado">Legales</p>
+        <a href="#">Consentimiento Informado</a>
+        <a href="#">Politicas de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+
+      <div class="col">
+        <p class="encabezado">Ayuda</p>
+        <a href="#">Preguntas frecuentes (FAQ)</a>
+        <a href="#">Chatbot</a>
+        <a href="#">Tutoriales</a>
+      </div>
+
+      <div class="col">
+        <p class="encabezado">Contacto</p>
+        <p>Teléfono: +0152 (55) 4567 6654</p>
+        <p>E-mail: soporte@.libersalus.com</p>
+      </div>
     </div>
+    <div class="abajo">
+      <hr />
+      <p>LiberSalus &reg; 2025 Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="./animation/alambre.js"></script>
+  <script src="./js/peluche.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/hover.js"></script>
+</body>
 
-    <section class="testimonios">
-      <p class="ani-tit">Testimonios</p>
-      <div class="cnt-trj">
-        <div id="trj" class="hover">
-          <span class="cnt-img"
-            ><!-- <img src="./src/img/user.jpg" alt="user"> --></span
-          >
-          <p class="nombre">Nombre Apellido</p>
-          <p class="test">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, mauris vitae sollicitudin mattis, nunc
-          </p>
-        </div>
-        <div id="trj">
-          <span class="cnt-img"
-            ><!-- <img src="./src/img/user.jpg" alt="user"> --></span
-          >
-          <p class="nombre">Nombre Apellido</p>
-          <p class="test">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, mauris vitae sollicitudin mattis, nunc
-          </p>
-        </div>
-        <div id="trj">
-          <span class="cnt-img"
-            ><!-- <img src="./src/img/user.jpg" alt="user"> --></span
-          >
-          <p class="nombre">Nombre Apellido</p>
-          <p class="test">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, mauris vitae sollicitudin mattis, nunc
-          </p>
-        </div>
-        <div id="trj">
-          <span class="cnt-img"
-            ><!-- <img src="./src/img/user.jpg" alt="user"> --></span
-          >
-          <p class="nombre">Nombre Apellido</p>
-          <p class="test">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur, mauris vitae sollicitudin mattis, nunc
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="arriba">
-        <div class="cnt-logo">
-          <img
-            src="./src/images/logoLS/LS-imagotipo-horizontal-negativo.png"
-            alt=""
-          />
-        </div>
-        <div class="cnt-redes">
-          <p id="encabezado">Síguenos</p>
-          <div class="icn-red">
-            <a href="#"><img src="./src/svg/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="./src/svg/linked.svg" alt="linkedin" /></a>
-            <a href="#"
-              ><img src="./src/svg/instagram.svg" alt="instabram"
-            /></a>
-            <a class="tt" href="#"
-              ><img src="./src/svg/tiktok_vv.svg" alt="tiktok"
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="ligas">
-        <div class="col">
-          <p class="encabezado">Enlaces</p>
-          <a href="#">Inicio</a>
-          <a href="#">Afiliarse</a>
-          <a href="#">Servicios</a>
-          <a href="#">Historial Clínico</a>
-        </div>
-
-        <div class="col">
-          <p class="encabezado">Legales</p>
-          <a href="#">Consentimiento Informado</a>
-          <a href="#">Politicas de privacidad</a>
-          <a href="#">Términos y condiciones</a>
-        </div>
-
-        <div class="col">
-          <p class="encabezado">Ayuda</p>
-          <a href="#">Preguntas frecuentes (FAQ)</a>
-          <a href="#">Chatbot</a>
-          <a href="#">Tutoriales</a>
-        </div>
-
-        <div class="col">
-          <p class="encabezado">Contacto</p>
-          <p>Teléfono: +0152 (55) 4567 6654</p>
-          <p>E-mail: soporte@.libersalus.com</p>
-        </div>
-      </div>
-      <div class="abajo">
-        <hr />
-        <p>LiberSalus &reg; 2025 Todos los derechos reservados.</p>
-      </div>
-    </footer>
-    <script src="./animation/alambre.js"></script>
-    <script src="./js/peluche.js"></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/hover.js"></script>
-  </body>
 </html>

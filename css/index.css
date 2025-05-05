@@ -847,16 +847,25 @@ footer {
  */
 
  
-/* Contenedor de la imagen */
+.mono{
+
+height: 500vh;
+
+}
+
+ /* Contenedor de la imagen */
+
+
 #image-container {
+    margin-top: 300px;
     /* border: 2px solid; */
-    position: fixed;
+    position: sticky;
     width: 100%;
     max-width: 800px;
     margin: auto;
     left: 50%;
     transform: translateX(-50%);
-    top: 10%;
+    top: 20%;
 }
 
 /* Imagen que se actualizará según el scroll */
@@ -868,7 +877,7 @@ footer {
 
 /* Overlay para superponer elementos gráficos si fuera necesario */
 #overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

@@ -1,0 +1,27 @@
+<svg id="Capa_1" data-name="Capa 1" viewBox="0 0 300 546.48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #baa8a1;
+      }
+
+      .cls-2 {
+        fill: #eae9e8;
+      }
+
+      .cls-3 {
+        fill: #a8a6a6;
+      }
+    </style>
+  </defs>
+  <image width="300" height="190"/>
+  <g>
+    <rect class="cls-2" x="0" y="376.26" width="278.84" height="170.22" rx="18.5" ry="18.5"/>
+    <path class="cls-1" d="M139.42,427.73h0C41.11,427.73,0,408.97,0,398.75v-3.99C0,384.55,8.28,376.26,18.5,376.26h241.84c10.22,0,18.5,8.28,18.5,18.5v3.99c0,10.22-68.2,28.97-139.42,28.97Z"/>
+    <rect class="cls-3" x="16.73" y="437.05" width="59" height="67" rx="12.5" ry="12.5"/>
+    <rect class="cls-3" x="93.61" y="429.35" width="151" height="30"/>
+    <rect class="cls-3" x="93.84" y="470.55" width="100.15" height="9.18"/>
+    <rect class="cls-3" x="93.84" y="492.17" width="150.55" height="10.47"/>
+    <rect class="cls-3" x="93.84" y="515.08" width="150.55" height="10.47"/>
+  </g>
+</svg>

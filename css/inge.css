@@ -4,14 +4,15 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.3s ease;
+    color: rgb(75, 74, 74);
 }
 
 body {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-.overlay {
+/* .overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -21,7 +22,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
-}
+} */
 
 .cntLogo {
     width: 150px;
@@ -39,12 +40,13 @@ nav:hover~.overlay {
 
 
 nav {
-
+    
     margin-top: 1rem;
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     
 }
 
@@ -144,6 +146,7 @@ button:hover {
         
         display: flex;
         right: 0;
+        
 
         & .cntLogo {
             
@@ -153,11 +156,12 @@ button:hover {
 
     /* Ocultar menú principal inicialmente */
     .cntMenu {
+        
         position: absolute;
         top: 0;
         right: -110%;
         width: 100vw;
-        background: #0A4789;
+        background: linear-gradient(215deg,rgba(10, 71, 137, 1) 0%, rgba(3, 52, 105, 1) 61%);
         transition: right 0.3s ease;
         gap: none;
         padding-top: 5rem;
@@ -170,17 +174,21 @@ button:hover {
     
     .menu {
         
-        background: #0A4789;
+        background: transparent;
         flex-direction: column;
         text-align: end;
         padding-right: 5%;
         & li a {
             color: white;
             line-height: 1;
-        }    
+        }
+        
     }
 
-
+    .menu .subMenu ul li a:hover,
+    .menu ul li a:hover {
+        text-shadow: 0px 0px 3px white;
+    }
     .cntMenu.active {
         right: 0;
     }
@@ -191,7 +199,7 @@ button:hover {
         visibility: visible;
         opacity: 1;
         box-shadow: none;
-        background-color: #0A4789;
+        background-color: transparent;
         display: flex;
         margin: 0;
         padding-right: 0;
