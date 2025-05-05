@@ -8,7 +8,7 @@
 }
 
 .cntMonotxt {
-    display: none;
+    /* display: none; */
     /* border: 2px dashed red; */
     width: 35%;
     
@@ -33,7 +33,7 @@
     width: 45%;
     /* border: 2px solid; */
     text-align: center;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
 
 }
 .mono {
