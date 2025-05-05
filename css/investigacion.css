@@ -34,6 +34,7 @@
     /* border: 2px solid; */
     text-align: center;
     /* transform: scale(1.5); */
+    
 
 }
 .mono {
@@ -84,3 +85,58 @@
 }
    
     
+/* seccion dispositivos */
+
+.dispositivos {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3%;
+}
+
+.cntDispimg {
+    width: 50%;
+    border: 2px dashed red;
+    display: flex;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.cntDispimg img:nth-child(1) {
+    object-fit: contain;
+    border: 2px dashed rgb(151, 191, 20);
+    
+    width: 50%;
+    transform: translateX(calc(100% - 50%));
+}
+.cntDispimg img:nth-child(2) {
+    object-fit: contain;
+    border: 2px dashed rgb(0, 21, 255);
+    
+    width: 25%;
+    transform: translateX(calc(100% - 90%)) translateY(30%);
+}
+
+
+.cntDisptxt {
+    /* display: none; */
+    width: 35%;
+    text-align: end;
+    
+    & :nth-child(1) {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    & :nth-child(2) {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        
+    }
+}
+.cntDispimg:hover img:nth-child(1){
+    transform: translate(0);
+}
+.cntDispimg:hover img:nth-child(2){
+    transform: translate(20%, 0);
+}
