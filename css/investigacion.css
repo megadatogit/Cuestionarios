@@ -30,8 +30,8 @@
 
 .cntMono {
     position: relative;
-    width: 45%;
-    /* border: 2px solid; */
+    width: 50%;
+    /* border: 1px dashed rgb(187, 255, 0); */
     text-align: center;
     /* transform: scale(1.5); */
     
@@ -42,7 +42,7 @@
 }
 .cntSvg, .linea {
     position: absolute;
-    width: 100%;
+    width: 150%;
     height: 110%;
     /* border: 2px dashed; */
     top: 50%;
@@ -139,4 +139,49 @@
 }
 .cntDispimg:hover img:nth-child(2){
     transform: translate(20%, 0);
+}
+
+/* Estado de animo ((trans color */
+
+.do1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC   0%) ;}
+.do2 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.do3 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.do4 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+
+.lu1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC   0%) ;}
+.lu2 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC   0%) ;}
+.lu3 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.lu4 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+
+.ma1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.ma2 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.ma3 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.ma4 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+
+.mi1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.mi2 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%) ;}
+.mi3 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+.mi4 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+
+.ju1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.ju2 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%) ;}
+.ju3 {fill: color-mix(in srgb, #0A4789  50%, #f1EFEC  00%) ;}
+.ju4 {fill: color-mix(in srgb, #0A4789  00%, #f1EFEC 100%) ;}
+
+.vi1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.vi2 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%) ;}
+.vi3 {fill: color-mix(in srgb, #0A4789  50%, #f1EFEC  00%) ;}
+.vi4 {fill: color-mix(in srgb, #0A4789  25%, #f1EFEC  00%) ;}
+
+.sa1 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.sa2 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%) ;}
+.sa3 {fill: color-mix(in srgb, #0A4789  50%, #f1EFEC  00%) ;}
+.sa4 {fill: color-mix(in srgb, #0A4789  25%, #f1EFEC  00%) ;}
+
+.som1 {filter: opacity(0.15);}
+.som2 {fill: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%) ;}
+.som3 {fill: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%) ;}
+
+.sistolica {
+    
 }
