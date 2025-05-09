@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;;
     padding: 0 3%;
+    margin-bottom: 200px;
 }
 
 .cntMonotxt {
@@ -35,6 +36,8 @@
     text-align: center;
     /* transform: scale(2);
     margin-left: 400px; */
+
+    
     
 
 }
@@ -135,12 +138,12 @@
         
     }
 }
-.cntDispimg:hover img:nth-child(1){
+/* .cntDispimg:hover img:nth-child(1){
     transform: translate(0);
 }
 .cntDispimg:hover img:nth-child(2){
     transform: translate(20%, 0);
-}
+} */
 
 /* Estado de animo ((trans color */
 
@@ -186,3 +189,9 @@
 .sistolica {
     
 }
+
+.bajo     {stroke: color-mix(in srgb, #0A4789 100%, #f1EFEC  00%)}
+.moderado {stroke: color-mix(in srgb, #0A4789  75%, #f1EFEC  00%)}
+.alto     {stroke: color-mix(in srgb, #0A4789  50%, #f1EFEC  00%)}
+.riesgoso {stroke: color-mix(in srgb, #0A4789  25%, #f1EFEC  00%)}
+
