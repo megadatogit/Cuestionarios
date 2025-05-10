@@ -101,11 +101,12 @@ button {
     padding: 0.5rem 1.5rem;
     transition: background-color 0.3s ease;
     color: rgb(1, 1, 112);
+    
 }
 
 button:hover {
     cursor: pointer;
-
+    
     background-color: rgb(1, 1, 112);
     color: white;
 }
