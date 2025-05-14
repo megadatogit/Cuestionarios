@@ -364,23 +364,38 @@
             030,700
             " fill="none" stroke="darkblue" stroke-width="1" />
 
-            <g transform="translate(0 70)">
+            <g transform="translate(50 80)">
 
-              <circle class="bajo" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(180 150 800)" />
+              <!-- <circle class="bajo" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(180 150 800)" />
               
               <circle class="moderado" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(225 150 800)" />
               
               <circle class="alto" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(270 150 800)" />
               
-              <circle class="riesgoso" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(315 150 800)" />
+              <circle class="riesgoso" cx="150" cy="800" r="55" fill="transparent" stroke="#0A4789" stroke-width="32" stroke-dasharray="43.20 302.38" transform="rotate(315 150 800)" /> -->
+
+              <rect class="grfCardiovascular"x="100"  y="680" width="50" height="15" fill="#4875A7"/>
+              <rect class="grfCardiovascular"x="150"  y="680" width="50" height="15" fill="#C2D1E1"/>
     
-              <polyline points="
+              <polyline transform="translate(-25 -78)" points="
                 140,800
                 160,800
                 150,785
                 140,800
                 " fill="#0A4789" stroke="darkblue" stroke-width="1" />
+              <polyline transform="translate(25 -130) rotate(180, 149, 790)" points="
+                140,800
+                160,800
+                150,785
+                140,800
+                " fill="#0A4789" stroke="darkblue" stroke-width="1" />
+
+                <text x="107" y="665" font-family="Arial" font-size="11" fill="darkblue">RIESGO</text>
+                <text x="157" y="715" font-family="Arial" font-size="11" fill="darkblue">ESTABLE</text>
+                <text x="20" y="680" font-family="Arial" font-size="11" fill="darkblue">RIESGO</text>
+                <text x="-12" y="700" font-family="Arial" font-size="11" fill="darkblue">CARDIOBASCULAR</text>
             
+                <text x="-15" y="760" font-family="Arial" font-size="22" fill="darkblue">Masa muscular</text>
               </g>
 
 
@@ -391,9 +406,180 @@
 
           <ellipse class="elips" cx="446" cy="750" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="10" stroke-dashoffset="10" />
-          <ellipse class="elips" cx="446" cy="760" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
+          <ellipse class="" cx="446" cy="760" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="360 155" stroke-dashoffset="10" />
-        </svg>
+        
+          <polyline points="
+          440,790
+          300,850
+          35,850 
+          " fill="none" stroke="darkblue" stroke-width="1" />
+          <circle cx="440" cy="790" r="5" fill="#0A4789" />
+
+        <g transform="translate(0 550)">
+          <!-- ejes -->
+
+            <line x1="80" y1="320" x2="80" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="0 0" />
+            <line x1="80" y1="320" x2="80" y2="400" stroke="#f1EFEC" stroke-width="15"
+            stroke-dasharray="1 10" />
+            <text x="50" y="335" font-family="Arial" font-size="10" fill="#E5E5E5">90</text>
+            <text x="50" y="357" font-family="Arial" font-size="10" fill="#E5E5E5">80</text>
+            <text x="50" y="379" font-family="Arial" font-size="10" fill="#E5E5E5">70</text>
+            <text x="50" y="400" font-family="Arial" font-size="10" fill="#E5E5E5">60</text>
+            <text x="-200" y="40" font-family="Arial" font-size="10" fill="darkblue" class="sistolica" transform="rotate(-90, 100, 100)">INCREMENTO</text>
+            <text x="125" y="450" font-family="Arial" font-size="10" fill="darkblue" class="sistolica" >MONITOREO CONTINUO</text>
+
+            <line x1="70" y1="412.5" x2="280" y2="412.5" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="0 0" />
+            <line x1="79" y1="412.5" x2="280" y2="412.5" stroke="#f1EFEC" stroke-width="15"
+            stroke-dasharray="2 45" />
+            <text x="124"    y="435" font-family="Arial" font-size="10" fill="#E5E5E5">1</text>
+            <text x="171" y="435" font-family="Arial" font-size="10" fill="#E5E5E5">2</text>
+            <text x="218"   y="435" font-family="Arial" font-size="10" fill="#E5E5E5">3</text>
+            <text x="265"   y="435" font-family="Arial" font-size="10" fill="#E5E5E5">4</text>
+            
+            <!-- lectura -->
+
+          <path 
+            d="
+            M  80 373 
+            Q 104 333 124 350
+            Q 141 380 174 380
+            Q 210 375 218 350
+            Q 242 320 265 350"
+            fill="none"
+            stroke="royalblue"
+            stroke-width="1"
+          />
+          <!-- puntos guía -->
+          <circle cx="080" cy="373" r="3" fill="darkblue" />
+          <circle cx="124" cy="350" r="3" fill="darkblue" />
+          <circle cx="174" cy="380" r="3" fill="darkblue" />
+          <circle cx="218" cy="350" r="3" fill="darkblue" />
+          <circle cx="265" cy="350" r="3" fill="darkblue" />
+
+            <line x1="80" y1="374" x2="270" y2="350" stroke="#7F7F7F" stroke-width="2"
+            stroke-dasharray="2 10" />
+        </g>
+        
+        <!-- frecuencia -->
+
+        <polyline points="
+          530,270
+          900,270
+          " fill="none" stroke="darkblue" stroke-width="1" />
+          <circle cx="530" cy="270" r="5" fill="#0A4789" />
+        <text x="700" y="260" font-family="Arial" font-size="22" fill="darkblue">Frecuencia cardiaca</text>
+
+        <g transform="translate(650 -30)">
+          <!-- ejes -->
+
+            <line x1="80" y1="320" x2="80" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="0 0" />
+            <line x1="80" y1="320" x2="80" y2="400" stroke="#f1EFEC" stroke-width="15"
+            stroke-dasharray="1 10" />
+            <text x="45" y="335" font-family="Arial" font-size="10" fill="#E5E5E5">100</text>
+            <text x="50" y="357" font-family="Arial" font-size="10" fill="#E5E5E5">80</text>
+            <text x="50" y="379" font-family="Arial" font-size="10" fill="#E5E5E5">60</text>
+            <text x="50" y="400" font-family="Arial" font-size="10" fill="#E5E5E5">40</text>
+            <text x="-195" y="40" font-family="Arial" font-size="10" fill="darkblue" class="sistolica" transform="rotate(-90, 100, 100)">FRECUENCIA</text>
+            <text x="125" y="450" font-family="Arial" font-size="10" fill="darkblue" class="sistolica" >MONITOREO SEMANAL</text>
+
+            <line x1="70" y1="412.5" x2="280" y2="412.5" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="0 0" />
+            <line x1="79" y1="412.5" x2="280" y2="412.5" stroke="#f1EFEC" stroke-width="15"
+            stroke-dasharray="2 45" />
+            <text x="116" y="435" font-family="Arial" font-size="10" fill="#E5E5E5">1a S</text>
+            <text x="163" y="435" font-family="Arial" font-size="10" fill="#E5E5E5">2a S</text>
+            <text x="210" y="435" font-family="Arial" font-size="10" fill="#E5E5E5">3a S</text>
+            <text x="257" y="435" font-family="Arial" font-size="10" fill="#E5E5E5">4a S</text>
+
+            <line x1="127" y1="320" x2="127" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="2 8" />
+            <line x1="174" y1="320" x2="174" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="2 8" />
+            <line x1="221" y1="320" x2="221" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="2 8" />
+            <line x1="268" y1="320" x2="268" y2="420" stroke="#f1EFEC" stroke-width="2"
+            stroke-dasharray="2 8" />
+
+            <!-- lectura -->
+
+            <circle class="s1l1" cx=" 80" cy="379" r="2"/>
+            <circle class="s1l2" cx=" 88" cy="334" r="2"/>
+            <circle class="s1l3" cx=" 96" cy="352" r="2"/>
+            <circle class="s1l4" cx="104" cy="383" r="2"/>
+            <circle class="s1l5" cx="112" cy="337" r="2"/>
+            <circle class="s1l6" cx="120" cy="368" r="2"/>
+            <circle class="s1l7" cx="128" cy="345" r="2"/>
+
+            <circle class="s2l1" cx="136" cy="355" r="2"/>
+            <circle class="s2l2" cx="144" cy="381" r="2"/>
+            <circle class="s2l3" cx="152" cy="347" r="2"/>
+            <circle class="s2l4" cx="160" cy="362" r="2"/>
+            <circle class="s2l5" cx="168" cy="372" r="2"/>
+            <circle class="s2l6" cx="176" cy="339" r="2"/>
+            <circle class="s2l7" cx="184" cy="377" r="2"/>
+
+            <circle class="s3l1" cx="192" cy="350" r="2"/>
+            <circle class="s3l2" cx="200" cy="366" r="2"/>
+            <circle class="s3l3" cx="208" cy="380" r="2"/>
+            <circle class="s3l4" cx="216" cy="360" r="2"/>
+            <circle class="s3l5" cx="224" cy="373" r="2"/>
+            <circle class="s3l6" cx="232" cy="335" r="2"/>
+            <circle class="s3l7" cx="240" cy="384" r="2"/>
+
+            <circle class="s4l1" cx="248" cy="342" r="2"/>
+            <circle class="s4l2" cx="256" cy="374" r="2"/>
+            <circle class="s4l3" cx="264" cy="348" r="2"/>
+            <circle class="s4l4" cx="272" cy="371" r="2"/>
+            
+          <polyline points="
+           80,379
+           88,334
+           96,352
+          104,383
+          112,337
+          120,368
+          128,345
+          136,355
+          144,381
+          152,347
+          160,362
+          168,372
+          176,339
+          184,377
+          192,350
+          200,366
+          208,380
+          216,360
+          224,373
+          232,335
+          240,384
+          248,342
+          256,374
+          264,348
+          272,371
+          " fill="none" stroke="darkblue" stroke-width="1" />
+        </g>
+
+        <!-- PESO -->
+
+        <polyline points="
+          500,940
+          650,670
+          900,670
+          " fill="none" stroke="darkblue" stroke-width="1" />
+          <circle cx="500" cy="940" r="5" fill="#0A4789" />
+        <text x="715" y="660" font-family="Arial" font-size="22" fill="darkblue">Monitoreo de peso</text>
+
+        <g>
+          
+        </g>
+        
+        
+          </svg>
         <svg class="linea" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" style="width:100%; height:100%;">
 
 
@@ -401,6 +587,8 @@
             <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
             <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
           </circle>
+          
+
 
         </svg>
       </div>
