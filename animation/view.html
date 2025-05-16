@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <div class="box uno">translate(50px, 100px)</div> -->
+
+<style>
+.box {
+  width: 150px;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  background-color: teal;
+  transition: transform 0.5s;
+}
+
+.uno {
+  transform: matrix(1, 0, 0, 1, 50, 100); /* equivale a translate(50px, 100px) */
+}
+</style>
+<!-- <div class="box dos">scale(1.5, 0.5)</div> -->
+
+<style>
+.dos {
+  background-color: crimson;
+  transform: matrix(1.5, 0, 0, 0.5, 0, 0); /* escala X: 1.5, Y: 0.5 */
+}
+</style>
+
+<!-- <div class="box tres">skew</div> -->
+
+<style>
+.tres {
+  background-color: darkorange;
+  transform: matrix(1, 0.5, 0.3, 1, 0, 0); 
+  /* skewY: 0.5, skewX: 0.3 */
+}
+</style>
+
+<div class="box cuatro">rotate + scale</div>
+
+<style>
+.cuatro {
+  background-color: purple;
+  transform: matrix(0.866, 0.5, -0.5, 0.866, 0, 0); 
+  /* Rotación de 30° combinada con escala (1) */
+}
+</style>
+
+
+
+    
+</body>
+</html>
