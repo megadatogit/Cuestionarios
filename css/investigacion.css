@@ -195,3 +195,27 @@
 .alto     {stroke: color-mix(in srgb, #0A4789  50%, #f1EFEC  00%)}
 .riesgoso {stroke: color-mix(in srgb, #0A4789  25%, #f1EFEC  00%)}
 
+/* animaciones */
+
+/* estado de animo */
+
+.som1 {animation: seleccionEstado 5s ease infinite}
+@keyframes seleccionEstado {
+    0% {y: 95;}
+    20%{y: 117;}
+    40%{y: 117;}
+    60%{y: 76;}
+    80%{y: 76;}
+}
+.som2 {
+    animation: seleccionDia 5s ease infinite;
+    fill:#0A4789;
+    filter: opacity(0.3);
+}
+@keyframes seleccionDia {
+    0% {x:262.5}
+    20%{x:292.5; y: 118; height: 40px;  }
+    40%{x:292.5; y: 118; height: 40px;}
+    60%{x:202.5; y: 138; height: 20px;}
+    80%{x:202.5; y: 138; height: 20px;}
+}
