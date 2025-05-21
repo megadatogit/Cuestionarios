@@ -9,7 +9,7 @@
 }
 
 .cntMonotxt {
-    display: none;
+    display: block;
     /* border: 2px dashed red; */
     width: 35%;
     
@@ -56,39 +56,6 @@
 }
 
 
-
-
-
-.line {
-    
-    stroke-dasharray: 20 20;
-    x: 700;
-    y: 50;
-    animation: stroke 5s ease reverse infinite;
-}
-@keyframes stroke {
-    to {
-        stroke-dasharray: 5 50;
-        
-    }
-}
-
-
-
-.elips {
-    cy:800;
-    rx: 30;
-    animation: bajar 5s ease alternate infinite;
-}
-
-@keyframes bajar {
-    to {
-        cy:750;
-        rx: 40;
-    }
-}
-   
-    
 /* seccion dispositivos */
 
 .dispositivos {
@@ -314,12 +281,93 @@
     100%{stroke-dashoffset: 300;}
 }
 
+
+
+.sist1  { animation: lineaSisuno     5s ease 0.1s infinite; } 
+.sist2  { animation: lineaSisdos     5s ease 0.2s infinite; } 
+.sist3  { animation: lineaSistres    5s ease 0.3s infinite; } 
+.sist4  { animation: lineaSiscuatro  5s ease 0.4s infinite; } 
+.sist5  { animation: lineaSiscinco   5s ease 0.5s infinite; } 
+.sist6  { animation: lineaSisseis    5s ease 0.6s infinite; } 
+.sist7  { animation: lineaSissiete   5s ease 0.7s infinite; } 
+.sist8  { animation: lineaSisocho    5s ease 0.8s infinite; } 
+.sist9  { animation: lineaSisnueve   5s ease 0.9s infinite; }
+.sist10 { animation: lineaSisdiez    5s ease 1.0s infinite; }
+.sist11 { animation: lineaSisonce    5s ease 1.1s infinite; }
+
+@keyframes lineaSisuno {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisdos {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSistres {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSiscuatro {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSiscinco {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisseis {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSissiete {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisocho {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisnueve {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisdiez {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes lineaSisonce {
+    0%  {filter: opacity(0);}
+    20% {filter: opacity(0);}
+    80% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+
 /* 2da grafica */
 
 .puntosSIS1  {animation: puntosSISuno      5s ease 0.1s infinite;}
 .puntosSIS2  {animation: puntosSISdos      5s ease 0.2s infinite;}
 .puntosSIS3  {animation: puntosSIStres     5s ease 0.3s infinite;}
-.puntosSIS4  {animation: puntosSIScuantro  5s ease 0.4s infinite;}
+.puntosSIS4  {animation: puntosSIScuatro   5s ease 0.4s infinite;}
 .puntosSIS5  {animation: puntosSIScinco    5s ease 0.5s infinite;}
 .puntosSIS6  {animation: puntosSISseis     5s ease 0.6s infinite;}
 .puntosSIS7  {animation: puntosSISsiete    5s ease 0.7s infinite;}
@@ -394,3 +442,271 @@
     80% {y: 343;}
     100%{y: 410;}
 }
+.lineaSis { animation: trazoSis 5s ease infinite; }
+
+@keyframes trazoSis {
+    0%  {stroke-dashoffset: 300;}
+    20% {stroke-dashoffset: 300;}
+    80% {stroke-dashoffset: 00;}
+    100%{stroke-dashoffset: 300;}
+}
+
+/* division */
+.division { animation: division 5s ease infinite alternate; }
+@keyframes division { to {stroke-dasharray: 1 1;}}
+
+/* aros en cintura */
+
+.aroCinUno { animation: baja 5s ease infinite alternate;}
+.aroCinDos { animation: sube 5s ease infinite alternate;}
+
+@keyframes baja { to {transform: translateY(30px);}}
+/* @keyframes sube { to {transform: translateY(-30px);}} */
+
+/* arcos en pantorrilla */
+
+.elips {
+    cy:800;
+    rx: 30;
+    animation: bajar 5s ease alternate infinite;
+}
+
+@keyframes bajar {
+    to {
+        cy:750;
+        rx: 40;
+    }
+}
+
+/* frecuencia cardiaca */
+
+/* semana 1 */
+
+.s1l1{ animation: sem1lun 5.6s ease 0.2s alternate infinite;}
+.s1l2{ animation: sem1mar 5.6s ease 0.4s alternate infinite;}
+.s1l3{ animation: sem1mie 5.6s ease 0.6s alternate infinite;}
+.s1l4{ animation: sem1jue 5.6s ease 0.8s alternate infinite;}
+.s1l5{ animation: sem1vie 5.6s ease 1.0s alternate infinite;}
+.s1l6{ animation: sem1sab 5.6s ease 1.2s alternate infinite;}
+.s1l7{ animation: sem1dom 5.6s ease 1.4s alternate infinite;}
+
+@keyframes sem1lun { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1mar { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1mie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1jue { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1vie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1sab { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem1dom { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+
+/* semana 2 */
+
+.s2l1{ animation: sem2lun 5.6s ease 1.6s alternate infinite;}
+.s2l2{ animation: sem2mar 5.6s ease 1.8s alternate infinite;}
+.s2l3{ animation: sem2mie 5.6s ease 2.0s alternate infinite;}
+.s2l4{ animation: sem2jue 5.6s ease 2.2s alternate infinite;}
+.s2l5{ animation: sem2vie 5.6s ease 2.4s alternate infinite;}
+.s2l6{ animation: sem2sab 5.6s ease 2.6s alternate infinite;}
+.s2l7{ animation: sem2dom 5.6s ease 2.8s alternate infinite;}
+
+@keyframes sem2lun { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2mar { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2mie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2jue { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2vie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2sab { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem2dom { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+
+/* semana 3 */
+
+.s3l1{ animation: sem3lun 5.6s ease 3.0s alternate infinite;}
+.s3l2{ animation: sem3mar 5.6s ease 3.2s alternate infinite;}
+.s3l3{ animation: sem3mie 5.6s ease 3.4s alternate infinite;}
+.s3l4{ animation: sem3jue 5.6s ease 3.6s alternate infinite;}
+.s3l5{ animation: sem3vie 5.6s ease 3.8s alternate infinite;}
+.s3l6{ animation: sem3sab 5.6s ease 4.0s alternate infinite;}
+.s3l7{ animation: sem3dom 5.6s ease 4.2s alternate infinite;}
+
+@keyframes sem3lun { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3mar { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3mie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3jue { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3vie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3sab { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem3dom { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+
+/* semana 4 */
+
+.s4l1{ animation: sem4lun 5.6s ease 4.4s alternate infinite;}
+.s4l2{ animation: sem4mar 5.6s ease 4.6s alternate infinite;}
+.s4l3{ animation: sem4mie 5.6s ease 4.8s alternate infinite;}
+.s4l4{ animation: sem4jue 5.6s ease 5.0s alternate infinite;}
+.s4l5{ animation: sem4vie 5.6s ease 5.2s alternate infinite;}
+.s4l6{ animation: sem4sab 5.6s ease 5.4s alternate infinite;}
+.s4l7{ animation: sem4dom 5.6s ease 5.6s alternate infinite;}
+
+@keyframes sem4lun { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4mar { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4mie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4jue { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4vie { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4sab { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+@keyframes sem4dom { 
+    5%  {filter: opacity(0);}
+    10% {filter: opacity(1);}
+    90% {filter: opacity(1);}
+    100%{filter: opacity(0);}
+}
+
+.lineFrecuencia { animation: trazoFrecuenica 11.2s ease 2.5s infinite;}
+
+@keyframes trazoFrecuenica {
+    0%  {stroke-dashoffset: 800;}
+    20% {stroke-dashoffset: 800;}
+    80% {stroke-dashoffset:  00;}
+    100%{stroke-dashoffset: 800;}
+}
+
+
+/* .lineaSis { animation: trazoSis 5s ease infinite; }
+
+@keyframes trazoSis {
+    0%  {stroke-dashoffset: 300;}
+    20% {stroke-dashoffset: 300;}
+    80% {stroke-dashoffset: 00;}
+    100%{stroke-dashoffset: 300;}
+} */

@@ -345,7 +345,7 @@
             <rect   class="sist11"x="266"  y="337" width="2" height="15" fill="#0A4789"/>
             <rect   class="puntosSIS11" x="265"  y="343" width="4" height="4" rx="2" ry="2" fill="#0A4789"/>
             
-            <polyline points="
+            <polyline class="lineaSis" points="
           096,337
           113,342
           131,351
@@ -357,7 +357,11 @@
           233,352
           250,352
           267,344
-          " fill="none" stroke="#acacac" stroke-width="1" />
+          " fill="none" 
+          stroke="#acacac" 
+          stroke-width="1"
+          stroke-dasharray= "301"
+          stroke-dashoffset="301" />
           
           </g>
 
@@ -366,7 +370,7 @@
           
 
           <!-- division -->
-          <line x1="500" y1="200" x2="500" y2="950" stroke="rgba(1, 1, 112, 0.4)" stroke-width="2"
+          <line class="division" x1="500" y1="200" x2="500" y2="950" stroke="rgba(1, 1, 112, 0.4)" stroke-width="2"
             stroke-dasharray="20 20" />
 
 
@@ -375,11 +379,11 @@
 
 
 
-          <ellipse cx="500" cy="440" rx="130" ry="40" fill="none" stroke="darkblue" stroke-width="1"
+          <ellipse class="aroCinUno" cx="500" cy="440" rx="130" ry="40" fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="360 155" stroke-dashoffset="10" stroke-opacity="1" />
 
 
-          <ellipse cx="500" cy="470" rx="130" ry="40" fill="none" stroke="darkblue" stroke-width="1"
+          <ellipse class="aroCinDos" cx="500" cy="470" rx="130" ry="40" fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="360 155" stroke-dashoffset="10" />
 
             <text x="30" y="690" font-family="Arial" font-size="22" fill="darkblue">Monitoreo cardiovascular</text>
@@ -430,9 +434,10 @@
 
           <!--arcos en pantorrilla -->
 
-          <ellipse class="elips" cx="446" cy="750" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
+            <ellipse class="elips" cx="446" cy="750" rx="35" ry="8"   fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="10" stroke-dashoffset="10" />
-          <ellipse class="" cx="446" cy="760" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
+          
+            <ellipse class="" cx="446" cy="760" rx="35" ry="8" fill="none" stroke="darkblue" stroke-width="1"
             stroke-dasharray="360 155" stroke-dashoffset="10" />
         
           <polyline points="
@@ -561,7 +566,7 @@
             <circle class="s4l3" cx="264" cy="348" r="2"/>
             <circle class="s4l4" cx="272" cy="371" r="2"/>
             
-          <polyline points="
+          <polyline class="lineFrecuencia" points="
            80,379
            88,334
            96,352
@@ -587,7 +592,8 @@
           256,374
           264,348
           272,371
-          " fill="none" stroke="darkblue" stroke-width="1" />
+          " fill="none" stroke="darkblue" stroke-width="1" stroke-dasharray= "801"
+          stroke-dashoffset="801"/>
         </g>
 
         <!-- PESO -->
@@ -680,7 +686,32 @@
         <svg class="linea" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" style="width:100%; height:100%;">
 
 
-          <circle cx="520" cy="250" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+          <circle class="ondaHvr" cx="530" cy="269" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+            <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle class="ondaHvr" cx="500" cy="59" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+            <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle class="ondaHvr" cx="400" cy="479" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+            <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle class="ondaHvr" cx="365" cy="349" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+            <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle class="ondaHvr" cx="440" cy="789" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
+            <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle class="ondaHvr" cx="500" cy="940" r="0" fill="none" stroke="darkblue" stroke-width="2" opacity="1">
             <animate attributeName="r" from="0" to="20" dur="2s" repeatCount="indefinite" />
             <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
           </circle>
