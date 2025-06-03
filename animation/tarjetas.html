@@ -3,60 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Carrusel con Hover</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    .carrusel {
-      width: 50vw;
-      height: 400px;
-      overflow: hidden;
-      position: relative;
-			border: 2px dashed darkmagenta;
-    }
-
-    .carrusel-inner {
-      display: flex;
-      gap: 50px;
-      height: 100%;
-      width: max-content;
-      animation: mover 200s linear infinite;
-			align-items: center;
-    }
-
-    .tarjeta {
-      width: 300px	;
-      height: 50%;
-      background-color: #f36;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      color: white;
-      transition: transform 0.3s;
-    }
-
-    .tarjeta:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes mover {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .pausado {
-      animation-play-state: paused !important;
-    }
-  </style>
+  <link rel="stylesheet" href="./tarjetas.css">
 </head>
 <body>
 
@@ -75,6 +22,19 @@
     <div class="tarjeta">Tarjeta 5</div>
   </div>
 </div>
+
+<div class="contenedor-enlaces">
+    <a href="#info-revelada">Mostrar Información</a>
+</div>
+
+<div class="contenedor-informacion">
+    <div id="info-revelada" class="contenido-oculto">
+        ¡Esta es la información revelada!
+    </div>
+</div>
+
+
+
 
 <script>
   const carrusel = document.getElementById("carrusel");
